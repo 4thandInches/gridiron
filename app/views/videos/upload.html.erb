@@ -1,0 +1,9 @@
+<h1>Videos#upload</h1>
+<p>Find me in app/views/videos/upload.html.erb</p>
+
+<%= form_tag videos_uploaded_path do %>
+
+  <%= file_field_tag "video" %>
+  <%= submit_tag "Upload Video" %>
+
+<% end %>
