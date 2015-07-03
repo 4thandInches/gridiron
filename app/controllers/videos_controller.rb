@@ -3,6 +3,6 @@ class VideosController < ApplicationController
   end
 
   def uploaded
-    
+    @video = params[:video]
   end
 end
