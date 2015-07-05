@@ -17,7 +17,23 @@
 @import "neat";
 @import "base/base";
 
+.page-container{
+  margin: 0px;
+}
 
-h1{
-    color: whitesmoke;
+
+#login-container{
+  //position and sizing of login
+  @include position(relative, 10px 25% );
+  @include padding(20px 20px 20px 20px);
+  @include span-columns(6);
+
+  background-color: #383838;
+  color: whitesmoke;
+
+}
+
+#navbar{
+  background-color: grey;
+  margin: 0px;
 }
