@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :edit, :update, :destroy]
+  before_action :set_player, only: [:show, :edit, :update, :destroy, :stats]
   before_action :set_positions_and_statuses, only: [:new, :edit]
 
   # GET /players
@@ -11,6 +11,9 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
+  end
+
+  def stats
   end
 
   # GET /players/new

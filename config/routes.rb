@@ -4,7 +4,13 @@ Rails.application.routes.draw do
   resources :special_teams_stats
   resources :defensive_stats
   resources :offensive_stats
-  resources :players
+  
+  resources :players do
+    member do
+        get 'stats'
+    end
+  end
+
   resources :positions
   resources :dashboards
   devise_for :users

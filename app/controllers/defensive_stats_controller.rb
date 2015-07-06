@@ -69,6 +69,6 @@ class DefensiveStatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def defensive_stat_params
-      params.require(:defensive_stat).permit(:tackle, :asst_tackle, :combined_tackle, :sacks, :yards_lost_sack, :forced_fumble, :fumble_recovery, :pass_defend, :interception, :yards_return_interception, :touchdown)
+      params.require(:defensive_stat).permit(:tackle, :asst_tackle, :combined_tackle, :sacks, :yards_lost_sack, :forced_fumble, :fumble_recovery, :pass_defend, :interception, :yards_return_interception, :touchdown, :player_id)
     end
 end

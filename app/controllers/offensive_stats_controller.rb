@@ -14,7 +14,7 @@ class OffensiveStatsController < ApplicationController
 
   # GET /offensive_stats/new
   def new
-    @offensive_stat = OffensiveStat.new
+    @offensive_stat = OffensiveStat.new(player_id: params[:player_id])
   end
 
   # GET /offensive_stats/1/edit
@@ -69,6 +69,6 @@ class OffensiveStatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offensive_stat_params
-      params.require(:offensive_stat).permit(:passing_yards, :passing_attempts, :pass_completions, :completion_percentage, :twenty_pass, :passing_td, :longest_pass, :sacks, :interceptions, :rushing_yards, :longest_rush, :rushing_attempts, :twenty_rush, :average_yards_rush, :rushing_td, :fumbles, :receiving_yards, :receptions, :targets, :drops, :receiving_td, :twenty_reception, :longest_reception, :average_reception)
+      params.require(:offensive_stat).permit(:passing_yards, :passing_attempts, :pass_completions, :completion_percentage, :twenty_pass, :passing_td, :longest_pass, :sacks, :interceptions, :rushing_yards, :longest_rush, :rushing_attempts, :twenty_rush, :average_yards_rush, :rushing_td, :fumbles, :receiving_yards, :receptions, :targets, :drops, :receiving_td, :twenty_reception, :longest_reception, :average_reception, :player_id)
     end
 end
