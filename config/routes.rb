@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
 
-
-  resources :special_teams_stats
-
   resources :players do
     member do
         get 'stats'
+        post 'make_stats'
     end
   end
 

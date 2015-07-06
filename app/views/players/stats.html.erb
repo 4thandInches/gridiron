@@ -1,3 +1,20 @@
 <h1>future player stats page</h1>
 
-<p><%= link_to 'Add Stats', new_offensive_stat_path(player_id: @player.id) %></p>
+<% @player.stats.each do |s| %>
+    <p><%= s.stat_type.name %></p>
+    <p><%= s.value %></p>
+<% end %>
+
+
+<%= form_tag(make_stats_player_path) do %>
+  <% @stat_types.each do |s|%>
+
+    <div class="field">
+      <%= label_tag s.name %>
+      <%= text_field_tag "stat[#{s.id}]" %>
+    </div>
+
+  <% end %>
+
+  <%= submit_tag "Submit Stats" %>
+<% end %>
