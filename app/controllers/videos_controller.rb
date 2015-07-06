@@ -3,6 +3,7 @@ class VideosController < ApplicationController
   end
 
   def uploaded
-    @video = params[:video]
+    @film = params[:film]
+    @video = Video.create!(film: @film)
   end
 end

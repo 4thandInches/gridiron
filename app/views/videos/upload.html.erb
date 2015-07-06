@@ -3,7 +3,7 @@
 
 <%= form_tag videos_uploaded_path, multipart: true do %>
 
-  <%= file_field_tag "video" %>
+  <%= file_field_tag :film %>
   <%= submit_tag "Upload Video" %>
 
 <% end %>

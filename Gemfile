@@ -18,7 +18,9 @@ gem 'bourbon'
 gem 'neat'
 gem 'refills'
 
-
+gem 'aws-sdk', '~> 1.6'
+gem "paperclip-ffmpeg", "~> 1.0.1"
+gem "paperclip", "~> 4.3"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

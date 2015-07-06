@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post 'videos/uploaded'
   resources :my_scaffolds
 
-  root 'my_scaffolds#index'
+  root 'videos#upload'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
