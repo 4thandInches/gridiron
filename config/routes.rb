@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
 
   resources :special_teams_stats
-  resources :defensive_stats
-  resources :offensive_stats
 
   resources :players do
     member do
