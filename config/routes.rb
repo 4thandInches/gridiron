@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :players
+  resources :positions
   resources :dashboards
   devise_for :users
 
