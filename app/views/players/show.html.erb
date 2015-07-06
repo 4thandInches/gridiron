@@ -1,49 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="show-container">
+  <ul class="show-list"></ul>
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @player.first_name %>
-</p>
+        <li>
+          <strong>First name:</strong>
+          <%= @player.first_name %>
+        </li>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @player.last_name %>
-</p>
+        <li>
+          <strong>Last name:</strong>
+          <%= @player.last_name %>
+        </li>
 
-<p>
-  <strong>Jersey number:</strong>
-  <%= @player.jersey_number %>
-</p>
+        <li>
+          <strong>Jersey number:</strong>
+          <%= @player.jersey_number %>
+        </li>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @player.phone_number %>
-</p>
+        <li>
+          <strong>Phone number:</strong>
+          <%= @player.phone_number %>
+        </li>
 
-<p>
-  <strong>Email:</strong>
-  <%= @player.email %>
-</p>
+        <li>
+          <strong>Email:</strong>
+          <%= @player.email %>
+        </li>
 
-<p>
-  <strong>Weight:</strong>
-  <%= @player.weight %>
-</p>
+        <li>
+          <strong>Weight:</strong>
+          <%= @player.weight %>
+        </li>
 
-<p>
-  <strong>Height:</strong>
-  <%= @player.height %>
-</p>
+        <li>
+          <strong>Height:</strong>
+          <%= @player.height %>
+        </li>
 
-<p>
-  <strong>Position:</strong>
-  <%= @player.position.name %>
-</p>
+        <li>
+          <strong>Position:</strong>
+          <%= @player.position.name %>
+        </li>
 
-<p>
-  <strong>Class status:</strong>
-  <%= @player.class_status.name %>
-</p>
+        <li>
+          <strong>Class status:</strong>
+          <%= @player.class_status.name %>
+        </li>
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
-<%= link_to 'Back', players_path %>
+        <%= link_to 'Edit', edit_player_path(@player) %> |
+        <%= link_to 'Back', players_path %>
+  </ul>
+</div>

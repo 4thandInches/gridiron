@@ -21,7 +21,31 @@
 .page-container{
   margin: 0px;
 }
+//show page styles
+.show-container{
+  @include position(relative, 10px 25% );
+  @include padding(20px 20px 20px 20px);
+  @include span-columns(6);
+  background-color: #383838;
+  color: whitesmoke;
+}
 
+.show-list{
+}
+
+
+
+
+
+//edit page styles
+.edit-container{
+  @include position(relative, 10px 25% );
+  @include padding(20px 200px 20px 200px);
+  @include span-columns(6);
+
+  background-color: #383838;
+  color: whitesmoke;
+}
 
 #login-container{
   //position and sizing of login
