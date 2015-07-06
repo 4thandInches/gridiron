@@ -41,11 +41,11 @@
   </div>
   <div class="field">
     <%= f.label :position_id %><br>
-    <%= f.number_field :position_id %>
+    <%= f.select :position_id, @positions.map {|p| [p.name, p.id] } %>
   </div>
   <div class="field">
     <%= f.label :class_status_id %><br>
-    <%= f.number_field :class_status_id %>
+    <%= f.select :class_status_id, @class_statuses.map {|c| [c.name, c.id] } %>
   </div>
   <div class="actions">
     <%= f.submit %>

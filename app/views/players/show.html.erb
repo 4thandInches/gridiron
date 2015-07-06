@@ -37,12 +37,12 @@
 
 <p>
   <strong>Position:</strong>
-  <%= @player.position_id %>
+  <%= @player.position.name %>
 </p>
 
 <p>
   <strong>Class status:</strong>
-  <%= @player.class_status_id %>
+  <%= @player.class_status.name %>
 </p>
 
 <%= link_to 'Edit', edit_player_path(@player) %> |
