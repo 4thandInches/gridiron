@@ -1,11 +1,5 @@
 <h1>future player stats page</h1>
 
-<% @player.stats.each do |s| %>
-    <p><%= s.stat_type.name %></p>
-    <p><%= s.value %></p>
-<% end %>
-
-
 <%= form_tag(make_stats_player_path) do %>
   <% @stat_types.each do |s|%>
 

@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats]
+  before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats]
   before_action :set_positions_and_statuses, only: [:new, :edit]
 
   # GET /players
@@ -15,6 +15,10 @@ class PlayersController < ApplicationController
 
   def stats
     @stat_types = StatType.all
+  end
+
+  def show_stats
+    @stats = @player.stats
   end
 
   # GET /players/new

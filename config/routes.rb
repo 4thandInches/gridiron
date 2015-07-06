@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     member do
         get 'stats'
         post 'make_stats'
+        get 'show_stats'
     end
   end
 
