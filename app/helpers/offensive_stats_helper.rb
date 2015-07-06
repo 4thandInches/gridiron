@@ -1,2 +1,0 @@
-module OffensiveStatsHelper
-end

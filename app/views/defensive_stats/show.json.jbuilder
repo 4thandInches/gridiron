@@ -1,1 +1,0 @@
-json.extract! @defensive_stat, :id, :tackle, :asst_tackle, :combined_tackle, :sacks, :yards_lost_sack, :forced_fumble, :fumble_recovery, :pass_defend, :interception, :yards_return_interception, :touchdown, :created_at, :updated_at
