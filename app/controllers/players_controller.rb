@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
+  before_action :set_positions_and_statuses, only: [:new, :edit]
 
   # GET /players
   # GET /players.json
@@ -15,8 +16,6 @@ class PlayersController < ApplicationController
   # GET /players/new
   def new
     @player = Player.new
-    @positions = Position.all
-    @class_statuses = ClassStatus.all
   end
 
   # GET /players/1/edit
@@ -67,6 +66,11 @@ class PlayersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_player
       @player = Player.find(params[:id])
+    end
+
+    def set_positions_and_statuses
+      @positions = Position.all
+      @class_statuses = ClassStatus.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
