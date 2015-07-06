@@ -33,9 +33,7 @@ gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'bourbon'
-gem 'neat'
-gem 'refills'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
