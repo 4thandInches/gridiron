@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class OffensiveStatTest < ActiveSupport::TestCase
+class StatTypeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
