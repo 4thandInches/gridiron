@@ -1,0 +1,2 @@
+module OffensiveStatsHelper
+end

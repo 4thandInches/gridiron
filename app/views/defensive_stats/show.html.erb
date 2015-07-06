@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tackle:</strong>
+  <%= @defensive_stat.tackle %>
+</p>
+
+<p>
+  <strong>Asst tackle:</strong>
+  <%= @defensive_stat.asst_tackle %>
+</p>
+
+<p>
+  <strong>Combined tackle:</strong>
+  <%= @defensive_stat.combined_tackle %>
+</p>
+
+<p>
+  <strong>Sacks:</strong>
+  <%= @defensive_stat.sacks %>
+</p>
+
+<p>
+  <strong>Yards lost sack:</strong>
+  <%= @defensive_stat.yards_lost_sack %>
+</p>
+
+<p>
+  <strong>Forced fumble:</strong>
+  <%= @defensive_stat.forced_fumble %>
+</p>
+
+<p>
+  <strong>Fumble recovery:</strong>
+  <%= @defensive_stat.fumble_recovery %>
+</p>
+
+<p>
+  <strong>Pass defend:</strong>
+  <%= @defensive_stat.pass_defend %>
+</p>
+
+<p>
+  <strong>Interception:</strong>
+  <%= @defensive_stat.interception %>
+</p>
+
+<p>
+  <strong>Yards return interception:</strong>
+  <%= @defensive_stat.yards_return_interception %>
+</p>
+
+<p>
+  <strong>Touchdown:</strong>
+  <%= @defensive_stat.touchdown %>
+</p>
+
+<%= link_to 'Edit', edit_defensive_stat_path(@defensive_stat) %> |
+<%= link_to 'Back', defensive_stats_path %>

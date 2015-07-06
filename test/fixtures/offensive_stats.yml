@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  passing_yards: 1
+  passing_attempts: 1
+  pass_completions: 1
+  completion_percentage: 9.99
+  twenty_pass: 1
+  passing_td: 1
+  longest_pass: 1
+  sacks: 1
+  interceptions: 1
+  rushing_yards: 1
+  longest_rush: 1
+  rushing_attempts: 1
+  twenty_rush: 1
+  average_yards_rush: 9.99
+  rushing_td: 1
+  fumbles: 1
+  receiving_yards: 1
+  receptions: 1
+  targets: 1
+  drops: 1
+  receiving_td: 1
+  twenty_reception: 1
+  longest_reception: 1
+  average_reception: 1
+
+two:
+  passing_yards: 1
+  passing_attempts: 1
+  pass_completions: 1
+  completion_percentage: 9.99
+  twenty_pass: 1
+  passing_td: 1
+  longest_pass: 1
+  sacks: 1
+  interceptions: 1
+  rushing_yards: 1
+  longest_rush: 1
+  rushing_attempts: 1
+  twenty_rush: 1
+  average_yards_rush: 9.99
+  rushing_td: 1
+  fumbles: 1
+  receiving_yards: 1
+  receptions: 1
+  targets: 1
+  drops: 1
+  receiving_td: 1
+  twenty_reception: 1
+  longest_reception: 1
+  average_reception: 1

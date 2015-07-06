@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Special Teams Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field goals attempted</th>
+      <th>Field goals made</th>
+      <th>Field goal percentage</th>
+      <th>Longest field goal</th>
+      <th>Range one to nineteen</th>
+      <th>Range twenty to twentynine</th>
+      <th>Range thirty to thirtynine</th>
+      <th>Range forty to fortynine</th>
+      <th>Range fifty plus</th>
+      <th>Point made</th>
+      <th>Point attempt</th>
+      <th>Punt</th>
+      <th>Total yards punt</th>
+      <th>Longest punt</th>
+      <th>Average yards punt</th>
+      <th>Net punt average</th>
+      <th>Blocked punt</th>
+      <th>Punts in redzone</th>
+      <th>Touchbacks</th>
+      <th>Fair catch</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @special_teams_stats.each do |special_teams_stat| %>
+      <tr>
+        <td><%= special_teams_stat.field_goals_attempted %></td>
+        <td><%= special_teams_stat.field_goals_made %></td>
+        <td><%= special_teams_stat.field_goal_percentage %></td>
+        <td><%= special_teams_stat.longest_field_goal %></td>
+        <td><%= special_teams_stat.range_one_to_nineteen %></td>
+        <td><%= special_teams_stat.range_twenty_to_twentynine %></td>
+        <td><%= special_teams_stat.range_thirty_to_thirtynine %></td>
+        <td><%= special_teams_stat.range_forty_to_fortynine %></td>
+        <td><%= special_teams_stat.range_fifty_plus %></td>
+        <td><%= special_teams_stat.point_made %></td>
+        <td><%= special_teams_stat.point_attempt %></td>
+        <td><%= special_teams_stat.punt %></td>
+        <td><%= special_teams_stat.total_yards_punt %></td>
+        <td><%= special_teams_stat.longest_punt %></td>
+        <td><%= special_teams_stat.average_yards_punt %></td>
+        <td><%= special_teams_stat.net_punt_average %></td>
+        <td><%= special_teams_stat.blocked_punt %></td>
+        <td><%= special_teams_stat.punts_in_redzone %></td>
+        <td><%= special_teams_stat.touchbacks %></td>
+        <td><%= special_teams_stat.fair_catch %></td>
+        <td><%= link_to 'Show', special_teams_stat %></td>
+        <td><%= link_to 'Edit', edit_special_teams_stat_path(special_teams_stat) %></td>
+        <td><%= link_to 'Destroy', special_teams_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Special teams stat', new_special_teams_stat_path %>

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Defensive Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tackle</th>
+      <th>Asst tackle</th>
+      <th>Combined tackle</th>
+      <th>Sacks</th>
+      <th>Yards lost sack</th>
+      <th>Forced fumble</th>
+      <th>Fumble recovery</th>
+      <th>Pass defend</th>
+      <th>Interception</th>
+      <th>Yards return interception</th>
+      <th>Touchdown</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @defensive_stats.each do |defensive_stat| %>
+      <tr>
+        <td><%= defensive_stat.tackle %></td>
+        <td><%= defensive_stat.asst_tackle %></td>
+        <td><%= defensive_stat.combined_tackle %></td>
+        <td><%= defensive_stat.sacks %></td>
+        <td><%= defensive_stat.yards_lost_sack %></td>
+        <td><%= defensive_stat.forced_fumble %></td>
+        <td><%= defensive_stat.fumble_recovery %></td>
+        <td><%= defensive_stat.pass_defend %></td>
+        <td><%= defensive_stat.interception %></td>
+        <td><%= defensive_stat.yards_return_interception %></td>
+        <td><%= defensive_stat.touchdown %></td>
+        <td><%= link_to 'Show', defensive_stat %></td>
+        <td><%= link_to 'Edit', edit_defensive_stat_path(defensive_stat) %></td>
+        <td><%= link_to 'Destroy', defensive_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Defensive stat', new_defensive_stat_path %>

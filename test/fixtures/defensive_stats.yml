@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tackle: 1
+  asst_tackle: 1
+  combined_tackle: 1
+  sacks: 1
+  yards_lost_sack: 1
+  forced_fumble: 1
+  fumble_recovery: 1
+  pass_defend: 1
+  interception: 1
+  yards_return_interception: 1
+  touchdown: 1
+
+two:
+  tackle: 1
+  asst_tackle: 1
+  combined_tackle: 1
+  sacks: 1
+  yards_lost_sack: 1
+  forced_fumble: 1
+  fumble_recovery: 1
+  pass_defend: 1
+  interception: 1
+  yards_return_interception: 1
+  touchdown: 1
