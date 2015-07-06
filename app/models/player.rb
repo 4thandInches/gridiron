@@ -5,6 +5,7 @@ class Player < ActiveRecord::Base
   has_many :defensive_stats
   has_many :special_teams_stats
 
-  validates :position_id, :class_status, presence: true
+  validates :first_name, :last_name, presence: true
+  validates :jersey_number, uniqueness: true
 
 end
