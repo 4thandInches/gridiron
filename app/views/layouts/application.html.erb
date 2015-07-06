@@ -5,14 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% end %>
-<%= yield %>
+    <div id="navbar">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <% if user_signed_in? %>
+        Signed in as <%= current_user.email %>
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <% end %>
+    </div>
+    <%= yield %>
+
+
 </body>
 </html>

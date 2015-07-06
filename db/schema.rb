@@ -62,15 +62,4 @@ ActiveRecord::Schema.define(version: 20150706145244) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-  create_table "videos", force: :cascade do |t|
-    t.integer  "game_id"
-    t.string   "name"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "film_file_name"
-    t.string   "film_content_type"
-    t.integer  "film_file_size"
-    t.datetime "film_updated_at"
-  end
-
 end
