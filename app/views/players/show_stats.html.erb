@@ -1,4 +1,7 @@
-<% @stats.each do |s| %>
-    <p><%= s.stat_type.name %></p>
-    <p><%= s.value %></p>
+<div class="show-player-stats-container">
+    <% @stats.each do |s| %>
+       <div>
+         <%= s.stat_type.name %> <%= s.value %>
+       </div>
 <% end %>
+</div>
