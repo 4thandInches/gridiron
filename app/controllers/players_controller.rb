@@ -39,7 +39,9 @@ class PlayersController < ApplicationController
         format.html { redirect_to @player, notice: 'Player was successfully created.' }
         format.json { render :show, status: :created, location: @player }
       else
-        format.html { redirect_to new_player_path, notice: 'Please fill in required fields' }
+        @positions = Position.all
+        @class_statuses = ClassStatus.all
+        format.html { render :new, locals: { :positions => @positions, :class_statuses => @class_statuses} }
         format.json { render json: @player.errors, status: :unprocessable_entity }
       end
     end
