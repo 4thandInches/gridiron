@@ -63,7 +63,7 @@ function pickDate() {
 $(pickDate);
 
 
-//paralax windo---------------------------------------------------
+//paralax window---------------------------------------------------
 
 $(document).ready(function() {
     if ($("#js-parallax-window").length) {
