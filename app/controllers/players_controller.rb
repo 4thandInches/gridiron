@@ -39,7 +39,9 @@ class PlayersController < ApplicationController
         format.html { redirect_to @player, notice: 'Player was successfully created.' }
         format.json { render :show, status: :created, location: @player }
       else
-        format.html { redirect_to new_player_path, notice: 'Please fill in required fields' }
+        @positions = Position.all
+        @class_statuses = ClassStatus.all
+        format.html { render :new, locals: { :positions => @positions, :class_statuses => @class_statuses} }
         format.json { render json: @player.errors, status: :unprocessable_entity }
       end
     end
@@ -89,6 +91,6 @@ class PlayersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def player_params
-      params.require(:player).permit(:first_name, :last_name, :jersey_number, :phone_number, :email, :weight, :height, :position_ids, :class_status_id)
+      params.require(:player).permit(:first_name, :last_name, :jersey_number, :phone_number, :email, :weight, :height, :position_ids, :class_status_id, :game_id)
     end
 end
