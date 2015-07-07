@@ -3,13 +3,12 @@
 
     <%= form_tag(make_stats_player_path) do %>
       <% @stat_types.each do |s|%>
-
-          <div class="player-stats-field">
-            <div class="field">
-              <%= label_tag s.name %>
-              <%= text_field_tag "stat[#{s.id}]" %>
-            </div>
+        <div class="player-stats-field">
+          <div class="field">
+            <%= label_tag s.name %>
+            <%= text_field_tag "stat[#{s.id}]" %>
           </div>
+        </div>
       <% end %>
       <div id="player-stat-submit">
         <%= submit_tag "Submit Stats" %>

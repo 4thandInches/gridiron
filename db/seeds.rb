@@ -7,8 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(email: "test@test.com", password: "password")
-
-User.create!(email: "test@test.com", password: "password")
 count = 0
 # jersey_num = rand(1..999)
 
