@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require jquery-ui
  */
 
 @import "bourbon";
@@ -792,3 +791,45 @@ header.navigation {
     }
   }
 }
+
+
+//findparalax/////////////////////////////////////////
+
+$parallax-window-height: 30em;
+$parallax-background-height: $parallax-window-height * 2;
+
+.parallax-window {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.parallax-static-content {
+  color: #9A9A8A;
+  padding: 8em 0;
+  position: relative;
+  z-index: 9;
+}
+
+.parallax-background {
+  background:
+    /* top, transparent red, faked with gradient */
+  linear-gradient(
+                  rgba(69, 182, 195, 0.5),
+                  rgba(69, 182, 195, 0.5)
+  ),
+    /* bottom, image */
+  url('big_football.jpg');
+  background-size: 100%;
+  height: 700px;
+  padding: 50px 20px 0;
+  height: $parallax-background-height;
+  left: 0;
+  position: absolute;
+  top: - $parallax-window-height / 3;
+  width: 100%;
+}
+
+// Based on http://codepen.io/skeurentjes/
