@@ -41,9 +41,10 @@
         <%= f.text_field :height %>
       </div>
       <div class="field">
-        <%= f.label :position_id %><br>
-        <%= f.select :position_id, @positions.map {|p| [p.name, p.id] } %>
+        <%= f.label :position %><br>
+        <%= f.collection_select :position_ids, @positions.to_a.collect, :id, :name  %>
       </div>
+
       <div class="field">
         <%= f.label :class_status_id %><br>
         <%= f.select :class_status_id, @class_statuses.map {|c| [c.name, c.id] } %>

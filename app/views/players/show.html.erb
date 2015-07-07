@@ -1,6 +1,6 @@
 <div class="show-container">
   <p id="notice"><%= notice %></p>
-  <h3> <%= @player.first_name %> <%= @player.last_name %>:  <%= @player.position.name %></h3>
+  <h3> <%= @player.first_name %> <%= @player.last_name %>:  <%= @player.positions.first.name %></h3>
     <br>
   <div class="side-image-container"></div>
   <ul class="show-list">
@@ -32,7 +32,7 @@
 
         <li>
           <strong>Position:</strong>
-          <%= @player.position.name %>
+          <%= @player.positions.first.name %>
         </li>
 
         <li>
@@ -44,9 +44,3 @@
         <%= link_to 'Back', players_path %>
   </ul>
 </div>
-
-
-
-
-
-

@@ -28,7 +28,7 @@
         <td><%= player.email %></td>
         <td><%= player.weight %></td>
         <td><%= player.height %></td>
-        <td><%= player.position.name %></td>
+        <td><%= player.positions.first.name %></td>
         <td><%= player.class_status.name %></td>
         <td><%= link_to 'Show', player %></td>
         <td><%= link_to "Show Stats", show_stats_player_path(player) %></td>
