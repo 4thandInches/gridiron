@@ -14,7 +14,7 @@
     <% @positions.each do |position| %>
       <tr>
         <td><%= position.name %></td>
-        <td><% position.players.each do |player| %>
+        <td><% position.players.order(:depth_chart_position).each do |player| %>
           <p><%= link_to capitalize_name(player.first_name, player.last_name), show_stats_player_path(player) %></p>
             <% end %></td>
       </tr>

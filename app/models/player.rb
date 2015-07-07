@@ -1,5 +1,7 @@
 class Player < ActiveRecord::Base
   has_many :roles
+  has_many :memberships
+  has_many :games, :through => :memberships
   has_many :positions, :through => :roles
   belongs_to :class_status
   has_many :stats
