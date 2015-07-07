@@ -15,8 +15,9 @@
       <tr>
         <td><%= position.name %></td>
         <td><%= link_to 'Show', position %></td>
-        <td><%= link_to 'Edit', edit_position_path(position) %></td>
-        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% position.players.each do |player| %>
+          <p><%= "#{player.first_name} #{player.last_name}" %></p>
+            <% end %></td>
       </tr>
     <% end %>
   </tbody>
