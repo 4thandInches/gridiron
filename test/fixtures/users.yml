@@ -6,7 +6,7 @@
 #
 one:
   email: "email@email.com"
-  encrypted_password: <%= BCrypt::Password.create("password") %>
+  encrypted_password: "password"
 
 two:
   email: "zack@zack.com"

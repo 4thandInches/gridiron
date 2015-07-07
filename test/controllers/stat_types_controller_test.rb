@@ -2,6 +2,7 @@ require 'test_helper'
 
 class StatTypesControllerTest < ActionController::TestCase
   setup do
+    sign_in users(:one)
     @stat_type = stat_types(:one)
   end
 
