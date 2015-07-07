@@ -14,7 +14,7 @@ class PlayersController < ApplicationController
   end
 
   def stats
-    @stat_types = StatType.all
+    @stat_types = @player.get_stat_types
   end
 
   def show_stats

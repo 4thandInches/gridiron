@@ -6,8 +6,14 @@ class Player < ActiveRecord::Base
   validates :first_name, :last_name, presence: true
   validates :jersey_number, uniqueness: true
 
-  def get_stats_position
-
+  def get_stat_types
+    if position_id <= 8
+      StatType.where(id: 1..23)
+    elsif position_id <= 14
+      StatType.where(id: 24.. 34)
+    else
+      StatType.where(id: 35..42)
+    end
   end
 
 end
