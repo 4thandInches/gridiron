@@ -2,24 +2,25 @@
 
 <h1>Listing Positions</h1>
 
-<table class="tables">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Player</th>
-    </tr>
-  </thead>
+<div class="depth-chart">
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Athlete</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @positions.each do |position| %>
-      <tr>
-        <td><%= position.name %></td>
-        <td><% position.players.order(:depth_chart_position).each do |player| %>
-          <p><%= link_to capitalize_name(player.first_name, player.last_name), show_stats_player_path(player) %></p>
-            <% end %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+      <tbody>
+        <% @positions.each do |position| %>
+          <tr>
+            <td class="depth-position"><%= position.name %></td>
+            <td class="depth-player"><% position.players.order(:depth_chart_position).each do |player| %>
+              <p><%= link_to capitalize_name(player.first_name, player.last_name), show_stats_player_path(player) %></p>
+                <% end %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
 <br>
