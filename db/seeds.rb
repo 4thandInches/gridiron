@@ -6,9 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#user = User.create!(email: "test@test.com", password: "password")
-
 User.create!(email: "test@test.com", password: "password")
+
 count = 0
 # jersey_num = rand(1..999)
 
