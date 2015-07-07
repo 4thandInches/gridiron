@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= requre jquery_ui
 //= require jquery_ujs
 //= require_tree .
 
@@ -52,3 +53,11 @@ $(function() {
         e.stopPropagation();
     });
 });
+
+//DATEPICKER for game creation
+
+function pickDate() {
+    $( "#datepicker" ).datepicker();
+}
+
+$(pickDate);

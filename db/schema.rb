@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707145413) do
+ActiveRecord::Schema.define(version: 20150707174051) do
 
   create_table "class_statuses", force: :cascade do |t|
     t.string   "name"
@@ -81,6 +81,11 @@ ActiveRecord::Schema.define(version: 20150707145413) do
 
   end
 
+  create_table "memberships", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "game_id"
+  end
+
   create_table "players", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -90,8 +95,9 @@ ActiveRecord::Schema.define(version: 20150707145413) do
     t.decimal  "weight"
     t.string   "height"
     t.integer  "class_status_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "depth_chart_position"
   end
 
   create_table "positions", force: :cascade do |t|
