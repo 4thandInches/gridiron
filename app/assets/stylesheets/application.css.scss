@@ -17,9 +17,10 @@
 @import "neat";
 @import "base/base";
 @import "reset";
+@import url(http://fonts.googleapis.com/css?family=Kreon);
 
-.page-container{
-  margin: 0px;
+body{
+  font-family: 'Kreon', serif;
 }
 //show page styles
 .show-container{
@@ -28,9 +29,40 @@
   @include span-columns(6);
   background-color: #383838;
   color: whitesmoke;
-}
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
 
-.show-list{
+  h3{
+    font-size: 50px;
+  }
+
+  .show-list{
+    font-size: 20px;
+  }
+
+  .side-image-container{
+    //@include background(url()
+  }
+}
+//styles for player stats////////////
+
+.player-stats-container{
+  //@include position(relative, 10px 25% );
+  //@include padding(20px 200px 20px 200px);
+  @include span-columns(12);
+
+  background-color: #383838;
+  color: whitesmoke;-webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  .player-stats-field{
+    @include span-columns(2 of 12);
+  }
+  #player-stat-submit{
+    @include  span-columns(2)
+  }
+
 }
 
 
@@ -44,7 +76,10 @@
   @include span-columns(6);
 
   background-color: #383838;
-  color: whitesmoke;
+  color: whitesmoke;-webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+
 }
 
 #login-container{
@@ -55,6 +90,9 @@
 
   background-color: #383838;
   color: whitesmoke;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
 
 }
 
@@ -410,4 +448,6 @@ header.navigation {
     }
   }
 }
+
+
 

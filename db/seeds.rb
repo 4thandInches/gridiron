@@ -71,7 +71,7 @@ StatType.create(name: "Forced Fumbles")
 StatType.create(name: "Fumble Recoveries")
 StatType.create(name: "Pass Defended")
 StatType.create(name: "Interceptions")
-StatType.create(name: "Yards Returned on Interception")
+StatType.create(name: "Yards From Interception")
 StatType.create(name: "Defensive TD")
 
 #Special Teams

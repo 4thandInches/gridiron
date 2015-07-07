@@ -1,16 +1,9 @@
 <div class="show-container">
-  <ul class="show-list"></ul>
-        <p id="notice"><%= notice %></p>
-
-        <li>
-          <strong>First name:</strong>
-          <%= @player.first_name %>
-        </li>
-
-        <li>
-          <strong>Last name:</strong>
-          <%= @player.last_name %>
-        </li>
+  <p id="notice"><%= notice %></p>
+  <h3> <%= @player.first_name %> <%= @player.last_name %>:  <%= @player.position.name %></h3>
+    <br>
+  <div class="side-image-container"></div>
+  <ul class="show-list">
 
         <li>
           <strong>Jersey number:</strong>
@@ -51,3 +44,9 @@
         <%= link_to 'Back', players_path %>
   </ul>
 </div>
+
+
+
+
+
+
