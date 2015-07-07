@@ -19,6 +19,11 @@ ActiveRecord::Schema.define(version: 20150707011919) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dashboards", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "defensive_stats", force: :cascade do |t|
     t.integer  "tackle"
     t.integer  "asst_tackle"
