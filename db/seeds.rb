@@ -10,7 +10,7 @@
 
 User.create!(email: "test@test.com", password: "password")
 count = 0
-jersey_num = rand(1..999)
+# jersey_num = rand(1..999)
 
 
 
