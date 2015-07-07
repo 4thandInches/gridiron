@@ -9,6 +9,7 @@ class Player < ActiveRecord::Base
   validates :first_name, :last_name, presence: true
   validates :jersey_number, uniqueness: true
 
+
   def get_stat_types
     if positions.count < 2
       if positions.first.id <= 8
