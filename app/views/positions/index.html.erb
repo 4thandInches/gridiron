@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th>Player</th>
     </tr>
   </thead>
 
@@ -14,9 +14,8 @@
     <% @positions.each do |position| %>
       <tr>
         <td><%= position.name %></td>
-        <td><%= link_to 'Show', position %></td>
         <td><% position.players.each do |player| %>
-          <p><%= "#{player.first_name} #{player.last_name}" %></p>
+          <p><%= link_to capitalize_name(player.first_name, player.last_name), show_stats_player_path(player) %></p>
             <% end %></td>
       </tr>
     <% end %>
@@ -24,5 +23,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Position', new_position_path %>

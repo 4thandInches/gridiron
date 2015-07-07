@@ -22,6 +22,30 @@
 body{
   font-family: 'Kreon', serif;
 }
+
+//homepage image
+.home-image{
+  background:
+    /* top, transparent red, faked with gradient */
+  linear-gradient(
+                  rgba(53, 149, 161, 0.5),
+                  rgba(53, 149, 161, 0.5)
+  ),
+    /* bottom, image */
+  url('old_football.jpg');
+  background-size: 100%;
+  height: 1000px;
+  padding: 50px 20px 0;
+  button{
+      @include position(relative, 10px 25% );;
+  }
+}
+
+
+
+
+
+
 //show page styles
 .show-container{
   @include position(relative, 10px 25% );
@@ -460,6 +484,285 @@ header.navigation {
       input {
         @include box-sizing(border-box);
         display: block;
+      }
+    }
+  }
+}
+
+//findmodal///////////////////////////////////////////
+
+
+.modal {
+  $base-border-color: #dcdcdc !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: #fff !default;
+  $base-font-size: 1em !default;
+  $base-line-height: 1.5em !default;
+  $action-color: #477dca !default;
+  $dark-gray: #333 !default;
+  $light-gray: #ddd !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  $modal-padding: 3em;
+  $modal-background: $base-background-color;
+  $modal-close-color: $light-gray;
+  $modal-image-height: 135px;
+  $modal-image-width: $modal-image-height;
+  $modal-trigger-image-width: 300px;
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  label img {
+    border-radius: $modal-trigger-image-width / 2;
+    display: block;
+    max-width: $modal-trigger-image-width;
+  }
+
+  .modal-state {
+    display: none;
+  }
+
+  .modal-trigger {
+    @include position(relative, 100px 43% );
+    font-size: 30px;
+
+    @include button(flat, #45b6c3);
+    color:whitesmoke;
+    padding: 0.8em 1em;
+  }
+
+  .modal-fade-screen { // overlay
+    @include transition(opacity 0.25s ease);
+    @include position(fixed, 0);
+    background-color: rgba(#000, 0.85);
+    opacity: 0;
+    padding-top: 0.6em;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    @include media($large-screen) {
+      padding-top: 10em;
+    }
+
+    .modal-bg {
+      @include position(absolute, 0);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
+    @include size(1.5em);
+    background: $modal-background;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      @include position(absolute, 3px 3px 0 50%);
+      @include transform(rotate(45deg));
+      @include size(0.15em 1.5em);
+      background: $modal-close-color;
+      content: '';
+      display: block;
+      margin: -3px 0 0 -1px;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken($modal-close-color, 10%);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  .modal-inner {
+    @include transition(opacity 0.25s ease);
+    background: $modal-background;
+    border-radius: $base-border-radius;
+    margin-top: 0;
+    margin: auto;
+    max-height: 95%;
+    overflow: auto;
+    padding: $modal-padding / 2;
+    position: relative;
+    width: 95%;
+
+    @include media($medium-screen) {
+      max-height: 70%;
+      padding: $modal-padding;
+      width: 60%;
+    }
+
+    @include media($large-screen) {
+      width: 50%;
+    }
+
+    h1 {
+      color: $base-font-color;
+      margin-bottom: 0 0 0.6em 0;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+    }
+
+    .modal-intro {
+      font-weight: 800;
+    }
+
+    .modal-content {
+      color: $base-font-color;
+
+      @include media($medium-screen) {
+        @include columns(2 8em);
+      }
+    }
+
+    a.cta {
+      color: $base-background-color;
+      display: inline-block;
+      margin-right: 0.5em;
+      margin-top: 1em;
+
+      &:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .modal-state:checked + .modal-fade-screen {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-fade-screen .modal-inner {
+    top: 0.5em;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+// Based on code by Kasper Mikiewicz
+
+
+
+
+//findtable//////////////////////////////////////////////////
+
+.tables {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: em(640) !default;
+  $large-screen: em(860) !default;
+  $base-font-color: $dark-gray !default;
+  $table-border-color: $base-border-color;
+  $table-border: 1px solid $table-border-color;
+  $table-background: lighten($table-border-color, 12%);
+  $table-header-background: lighten($table-background, 10%);
+  $table-hover-background: darken($table-background, 5%);
+  $table-stripe-background: darken($table-background, 2%);
+  $table-stripe-background-hover: darken($table-stripe-background, 5%);
+  $table-padding: 0.75em 1em;
+
+  border-collapse: separate;
+  border-left: 0px;
+  border-radius: $base-border-radius;
+  border-spacing: 0;
+  border: $table-border;
+  width: 100%;
+
+  tbody {
+    background-color: $table-background;
+
+    tr:hover > td, tr:hover > th {
+      background-color: $table-hover-background;
+    }
+    tr:nth-child(even) {
+      background-color: $table-stripe-background;
+      &:hover > td {
+        background-color: $table-stripe-background-hover;
+      }
+    }
+  }
+
+  thead:first-of-type {
+    tr:first-child > th:first-child {
+      border-top-left-radius: $base-border-radius;
+    }
+
+    tr:first-child > th:last-child {
+      border-top-right-radius: $base-border-radius;
+    }
+  }
+
+  tbody:last-child {
+    tr:last-child > td:first-child {
+      border-bottom-left-radius: $base-border-radius;
+    }
+
+    tr:last-child > td:last-child {
+      border-bottom-right-radius: $base-border-radius;
+    }
+  }
+
+  thead {
+    th {
+      background-color: $table-header-background;
+      border-bottom: 0px;
+      border-left: 1px solid $table-border-color;
+      padding: $table-padding;
+      text-align: left;
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  tbody {
+    background-color: $table-background;
+
+    td {
+      border-bottom: 0px;
+      border-left: 1px solid $table-border-color;
+      border-top: 1px solid $table-border-color;
+      padding: $table-padding;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      button {
+        display: inline-block;
+        font-size: 0.7em;
+        line-height: $base-line-height;
+        margin-bottom: 0.3em;
+        margin-right: 0.5em;
+        outline: none;
+        padding: 0.3em 1em;
+        width: 100%;
+
+        @include media($medium-screen) {
+          margin-bottom: 0;
+          width: auto;
+        }
       }
     }
   }
