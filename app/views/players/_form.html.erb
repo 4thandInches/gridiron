@@ -40,12 +40,6 @@
         <%= f.label :height %><br>
         <%= f.text_field :height %>
       </div>
-      <div id="hidden-position-1">
-        <div class="field">
-          <%= f.label :position %><br>
-          <%= f.collection_select :position_ids, @positions.to_a.collect, :id, :name  %>
-        </div>
-      </div>
       <div class="field">
         <%= f.label :position %><br>
         <%= f.collection_select :position_ids, @positions.to_a.collect, :id, :name  %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707011919) do
+ActiveRecord::Schema.define(version: 20150707145413) do
 
   create_table "class_statuses", force: :cascade do |t|
     t.string   "name"
@@ -19,51 +19,13 @@ ActiveRecord::Schema.define(version: 20150707011919) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "defensive_stats", force: :cascade do |t|
-    t.integer  "tackle"
-    t.integer  "asst_tackle"
-    t.integer  "combined_tackle"
-    t.integer  "sacks"
-    t.integer  "yards_lost_sack"
-    t.integer  "forced_fumble"
-    t.integer  "fumble_recovery"
-    t.integer  "pass_defend"
-    t.integer  "interception"
-    t.integer  "yards_return_interception"
-    t.integer  "touchdown"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.integer  "player_id"
-  end
-
-  create_table "offensive_stats", force: :cascade do |t|
-    t.integer  "passing_yards"
-    t.integer  "passing_attempts"
-    t.integer  "pass_completions"
-    t.decimal  "completion_percentage"
-    t.integer  "twenty_pass"
-    t.integer  "passing_td"
-    t.integer  "longest_pass"
-    t.integer  "sacks"
-    t.integer  "interceptions"
-    t.integer  "rushing_yards"
-    t.integer  "longest_rush"
-    t.integer  "rushing_attempts"
-    t.integer  "twenty_rush"
-    t.decimal  "average_yards_rush"
-    t.integer  "rushing_td"
-    t.integer  "fumbles"
-    t.integer  "receiving_yards"
-    t.integer  "receptions"
-    t.integer  "targets"
-    t.integer  "drops"
-    t.integer  "receiving_td"
-    t.integer  "twenty_reception"
-    t.integer  "longest_reception"
-    t.integer  "average_reception"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.integer  "player_id"
+  create_table "games", force: :cascade do |t|
+    t.string   "opponent"
+    t.string   "location"
+    t.datetime "time"
+    t.boolean  "home"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "players", force: :cascade do |t|
@@ -74,7 +36,6 @@ ActiveRecord::Schema.define(version: 20150707011919) do
     t.string   "email"
     t.decimal  "weight"
     t.string   "height"
-    t.integer  "position_id"
     t.integer  "class_status_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
@@ -91,32 +52,6 @@ ActiveRecord::Schema.define(version: 20150707011919) do
     t.integer  "position_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "special_teams_stats", force: :cascade do |t|
-    t.integer  "field_goals_attempted"
-    t.integer  "field_goals_made"
-    t.decimal  "field_goal_percentage"
-    t.integer  "longest_field_goal"
-    t.integer  "range_one_to_nineteen"
-    t.integer  "range_twenty_to_twentynine"
-    t.integer  "range_thirty_to_thirtynine"
-    t.integer  "range_forty_to_fortynine"
-    t.integer  "range_fifty_plus"
-    t.integer  "point_made"
-    t.integer  "point_attempt"
-    t.integer  "punt"
-    t.integer  "total_yards_punt"
-    t.integer  "longest_punt"
-    t.decimal  "average_yards_punt"
-    t.decimal  "net_punt_average"
-    t.integer  "blocked_punt"
-    t.integer  "punts_in_redzone"
-    t.integer  "touchbacks"
-    t.integer  "fair_catch"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.integer  "player_id"
   end
 
   create_table "stat_types", force: :cascade do |t|

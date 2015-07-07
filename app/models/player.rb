@@ -16,6 +16,8 @@ class Player < ActiveRecord::Base
       else
         StatType.where(id: 35..42)
       end
+    else
+      StatType.all
     end
   end
 
