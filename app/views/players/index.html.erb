@@ -9,12 +9,12 @@
       <th>Last name</th>
       <th>Jersey number</th>
       <th>Phone number</th>
-      <th>Email</th>
+      <th colspan="2">Email</th>
       <th>Weight</th>
       <th>Height</th>
       <th>Position</th>
       <th>Class status</th>
-      <th colspan="5">Table Options</th>
+      <th colspan="4">Table Options</th>
     </tr>
   </thead>
 
@@ -26,7 +26,7 @@
         <td><%= player.last_name %></td>
         <td><%= player.jersey_number %></td>
         <td><%= player.phone_number %></td>
-        <td><%= player.email %></td>
+        <td colspan="2"><%= player.email %></td>
         <td><%= player.weight %></td>
         <td><%= player.height %></td>
         <td><%= player.positions.first.name %></td>
