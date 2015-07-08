@@ -19,7 +19,7 @@ class PlayersControllerTest < ActionController::TestCase
 
   test "should create player" do
     assert_difference('Player.count') do
-      post :create, player: { class_status_id: @player.class_status_id, email: @player.email, first_name: @player.first_name, height: @player.height, jersey_number: @player.jersey_number, last_name: @player.last_name, phone_number: @player.phone_number, position_id: @player.position_id, weight: @player.weight }
+      post :create, player: { class_status_id: @player.class_status_id, email: @player.email, first_name: @player.first_name, height: @player.height, jersey_number: 3, last_name: @player.last_name, phone_number: @player.phone_number, depth_chart_position: @player.depth_chart_position, weight: @player.weight }
     end
 
     assert_redirected_to player_path(assigns(:player))
@@ -36,7 +36,7 @@ class PlayersControllerTest < ActionController::TestCase
   end
 
   test "should update player" do
-    patch :update, id: @player, player: { class_status_id: @player.class_status_id, email: @player.email, first_name: @player.first_name, height: @player.height, jersey_number: @player.jersey_number, last_name: @player.last_name, phone_number: @player.phone_number, position_id: @player.position_id, weight: @player.weight }
+    patch :update, id: @player, player: { class_status_id: @player.class_status_id, email: @player.email, first_name: @player.first_name, height: @player.height, jersey_number: @player.jersey_number, last_name: @player.last_name, phone_number: @player.phone_number, depth_chart_position: @player.depth_chart_position, weight: @player.weight }
     assert_redirected_to player_path(assigns(:player))
   end
 

@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats]
-  before_action :set_positions_and_statuses, only: [:new, :edit]
+  before_action :set_positions_and_statuses, only: [:new, :edit, :create]
 
   # GET /players
   # GET /players.json
@@ -35,8 +35,6 @@ class PlayersController < ApplicationController
         format.html { redirect_to @player, notice: 'Player was successfully created.' }
         format.json { render :show, status: :created, location: @player }
       else
-        @positions = Position.all
-        @class_statuses = ClassStatus.all
         format.html { render :new, locals: { :positions => @positions, :class_statuses => @class_statuses} }
         format.json { render json: @player.errors, status: :unprocessable_entity }
       end

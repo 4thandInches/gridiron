@@ -54,15 +54,6 @@ $(function() {
     });
 });
 
-//DATEPICKER for game creation
-
-function pickDate() {
-    $( "#datepicker" ).datepicker();
-}
-
-$(pickDate);
-
-
 //paralax window---------------------------------------------------
 
 $(document).ready(function() {
@@ -94,4 +85,15 @@ function parallax(){
 
         plxBackground.css('top', - (plxWindowTopToWindowTop * plxSpeed) + 'px');
     }
+}
+
+//hide-me div
+
+$(function() {
+  $('.hide-me').hide();
+});
+
+//show-me div
+function showMe() {
+  $(this).find('.hide-me').show();
 }
