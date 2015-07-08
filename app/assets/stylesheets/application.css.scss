@@ -38,7 +38,7 @@ body{
                   rgba(69, 182, 195, 0.5)
   ),
     /* bottom, image */
-  url('big_football.jpg');
+  asset_url('big_football.jpg');
   background-size: 100%;
   height: 700px;
   padding: 50px 20px 0;
@@ -55,7 +55,7 @@ body{
                   rgba(53, 149, 161, 0.5)
   ),
     /* bottom, image */
-  url('old_football.jpg');
+  asset_url('old_football.jpg');
   background-size: 100%;
   height: 1000px;
   padding: 50px 20px 0;
@@ -849,7 +849,7 @@ $parallax-background-height: $parallax-window-height * 2;
                   rgba(69, 182, 195, 0.5)
   ),
     /* bottom, image */
-  url('big_football.jpg');
+  asset_url('big_football.jpg');
   background-size: 100%;
   height: 700px;
   padding: 50px 20px 0;
