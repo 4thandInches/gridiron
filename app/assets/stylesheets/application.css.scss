@@ -657,7 +657,7 @@ header.navigation {
       @include span-columns(3);
     }
     #player-stat-submit{
-      //@include  span-columns(2)
+      @include  span-columns(12)
     }
 
     @include media($medium-screen) {
