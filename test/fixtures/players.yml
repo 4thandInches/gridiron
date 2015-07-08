@@ -8,7 +8,7 @@ one:
   email: MyString
   weight: 9.99
   height: MyString
-  class_status_id: 1
+  class_status: :one
 
 two:
   first_name: George
@@ -18,4 +18,4 @@ two:
   email: MyString
   weight: 9.99
   height: MyString
-  class_status_id: 1
+  class_status: :one
