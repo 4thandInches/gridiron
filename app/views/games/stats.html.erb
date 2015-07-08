@@ -2,21 +2,48 @@
     <h1>future player stats page</h1>
 
     <%= form_tag(make_stats_game_path) do %>
+    <table class="tables">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Jersey number</th>
+          <th>Phone number</th>
+          <th>Email</th>
+          <th>Class status</th>
+          <th colspan="2">Table Options</th>
+        </tr>
+      </thead>
+
       <% @positions.each do |position| %>
-        <h3><%= position.name %></h4>
-        <% position.players.each do |p| %>
-        <h1><%= p.first_name %></h1>
-        <% @stat_types = p.get_stat_types %>
-          <% @stat_types.each do |s|%>
-            <div class="player-stats-field">
-              <div class="field">
-                <%= label_tag s.name %>
-                <%= text_field_tag "stat[#{p.id}][#{s.id}]" %>
+        <% position.players.each do |player| %>
+        <tbody>
+            <tr>
+              <td><%= player.positions.first.name %></td>
+              <td><%= player.first_name %></td>
+              <td><%= player.last_name %></td>
+              <td><%= player.jersey_number %></td>
+              <td><%= player.phone_number %></td>
+              <td><%= player.email %></td>
+              <td><%= player.class_status.name %></td>
+              <td><%= link_to "add stats", "#" %></td>
+            </tr>
+        <div class="hide-me">
+          <% @stat_types = player.get_stat_types %>
+            <% @stat_types.each do |s|%>
+              <div class="player-stats-field">
+                <div class="field">
+                  <%= label_tag s.name %>
+                  <%= text_field_tag "stat[#{player.id}][#{s.id}]" %>
+                </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       <% end %>
+      </tbody>
+    </table>
           <div id="player-stat-submit">
             <%= submit_tag "Submit Stats" %>
           </div>

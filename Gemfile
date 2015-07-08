@@ -18,9 +18,8 @@ gem 'bourbon'
 gem 'neat'
 gem 'refills'
 
-gem 'faker'
 gem "mailgun"
-
+gem 'acts_as_list'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -31,7 +30,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
-
+gem 'table_print'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
