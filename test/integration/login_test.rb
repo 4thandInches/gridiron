@@ -1,21 +1,23 @@
 require 'test_helper'
 
 class LoginTest < ActionDispatch::IntegrationTest
+  def setup
+    @user = users(:one)
+  end
+
   test "successful login" do
     get new_user_session_path
+    assert_response :success
 
-    assert_select "input[type='password']"
-    post new_user_session_path, email: "test@test.com", password: "password"
-    assert_redirected_to root_path
-
-    follow_redirect!
-    assert response.body.match("Signed in as test@test.com")
+    post_via_redirect user_session_path, :user => { :email => @user.email, :password => "password"}
+    assert_equal '/', path
+    assert response.body.match("Signed in as email@email.com")
 
 
     get players_path
     assert_response :success
     post players_path, player: {first_name: "Zack", last_name: "Strickland", jersey_number: 88 }
-    assert_redirected_to player_path
+    assert_redirected_to player_path(assigns(:player))
 
     follow_redirect!
     assert response.body.match("Zack")
@@ -24,8 +26,8 @@ class LoginTest < ActionDispatch::IntegrationTest
 
     assert_select "a[href='#{destroy_user_session_path}']"
 
-    get destroy_user_session_path
-    assert_redirected_to new_user_session_path
-    
+    delete destroy_user_session_path
+    assert_redirected_to root_path
+
   end
 end

@@ -32,6 +32,11 @@
                 <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
                 <div class="modal-fade-screen">
 
+
+
+
+
+                <!--<div class="player-stats-container">-->
                   <div class="modal-inner">
                     <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
                     <h1><i  class="fa fa-bullseye"></i>VS. <%= @game.opponent %></h1>
@@ -47,6 +52,15 @@
                         </div>
                       </div>
                     <% end %>
+                  <!--</div>-->
+
+
+
+
+
+
+
+
 
                     <div id="player-stat-submit">
                       <%= submit_tag "Submit Stats" %>
