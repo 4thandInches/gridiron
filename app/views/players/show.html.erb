@@ -1,6 +1,5 @@
 <div class="show-container">
   <p id="notice"><%= notice %></p>
-  <%= puts @player.first_name %>
   <h3> <%= @player.first_name %> <%= @player.last_name %>:  <%= @player.primary_position_name %></h3>
     <br>
   <div class="side-image-container"></div>
@@ -38,7 +37,7 @@
 
         <li>
           <strong>Class status:</strong>
-          <%= @player.class_status.name %>
+          <%= @player.class_name %>
         </li>
 
         <%= link_to 'Edit', edit_player_path(@player) %> |

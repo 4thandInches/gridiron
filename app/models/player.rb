@@ -28,4 +28,8 @@ class Player < ActiveRecord::Base
     positions.blank? ? "N/A" : positions.first.name
   end
 
+  def class_name
+    class_status.blank? ? "N/A" : class_status.name
+  end
+
 end
