@@ -905,12 +905,6 @@ $parallax-background-height: $parallax-window-height * 2;
   margin-bottom: 15px;
 }
 
-[data-icon]:before {
-  font-family: icons; /* BYO icon font, mapped smartly */
-  content: attr(data-icon);
-  speak: none; /* Not to be trusted, but hey. */
-}
-
 .modal-ul {
   text-align: center;
   li {
@@ -918,6 +912,14 @@ $parallax-background-height: $parallax-window-height * 2;
   display: inline;
   }
   margin-bottom: 10px;
+}
+
+// depth-chart
+
+.depth-chart {
+  .tables {
+    display: inline;
+  }
 }
 
 // Based on http://codepen.io/skeurentjes/
