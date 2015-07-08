@@ -33,7 +33,6 @@
         <td><%= player.class_status.name %></td>
         <td><%= link_to 'Athlete Info', player %></td>
         <td><%= link_to "Show Stats", show_stats_player_path(player) %></td>
-        <td><%= link_to "Add Stats", stats_player_path(player) %></td>
         <td><%= link_to 'Edit', edit_player_path(player) %></td>
         <td><%= link_to 'Delete', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -44,4 +43,3 @@
 <br>
 
 <%= link_to 'New Player', new_player_path %>
-

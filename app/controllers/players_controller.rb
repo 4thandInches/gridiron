@@ -13,10 +13,6 @@ class PlayersController < ApplicationController
   def show
   end
 
-  def stats
-    @stat_types = @player.get_stat_types
-  end
-
   def show_stats
     @stats = @player.stats
   end
@@ -45,13 +41,6 @@ class PlayersController < ApplicationController
         format.json { render json: @player.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def make_stats
-    params[:stat].each do |k, v|
-      Stat.create!(stat_type_id: k, player_id: @player.id, value: v) unless v == ""
-    end
-    redirect_to players_path
   end
 
   # PATCH/PUT /players/1

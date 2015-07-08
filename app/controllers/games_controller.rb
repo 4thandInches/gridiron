@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy]
+  before_action :set_game, only: [:show, :edit, :update, :destroy, :make_stats]
 
   # GET /games
   # GET /games.json
@@ -15,6 +15,19 @@ class GamesController < ApplicationController
   # GET /games/new
   def new
     @game = Game.new
+  end
+
+  def stats
+    @positions = Position.all
+  end
+
+  def make_stats
+    params[:stat].each do |k, v|
+      v.each do |key, value|
+        stat = Stat.create!(player_id: k, game_id: @game.id, stat_type_id: key, value: value) unless value == ""
+      end
+    end
+    redirect_to players_path
   end
 
   # GET /games/1/edit

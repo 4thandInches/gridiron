@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :games
+  resources :games do
+    member do
+      get 'stats'
+      post 'make_stats'
+    end
+  end
+
   resources :players do
     member do
-        get 'stats'
-        post 'make_stats'
         get 'show_stats'
     end
   end
