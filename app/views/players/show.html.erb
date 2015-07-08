@@ -1,6 +1,6 @@
 <div class="show-container">
   <p id="notice"><%= notice %></p>
-  <h3> <%= @player.first_name %> <%= @player.last_name %>:  <%= @player.positions.first.name %></h3>
+  <h3> <%= @player.first_name %> <%= @player.last_name %>:  <%= @player.primary_position_name %></h3>
     <br>
   <div class="side-image-container"></div>
   <ul class="show-list">
@@ -32,12 +32,12 @@
 
         <li>
           <strong>Position:</strong>
-          <%= @player.positions.first.name %>
+          <%= @player.primary_position_name %>
         </li>
 
         <li>
           <strong>Class status:</strong>
-          <%= @player.class_status.name %>
+          <%= @player.class_name %>
         </li>
 
         <%= link_to 'Edit', edit_player_path(@player) %> |
