@@ -31,7 +31,6 @@
               <td><%= player.class_status.name %></td>
               <td><%= link_to "add stats", "#" %></td>
             </tr>
-        <div class="hide-me">
           <% @stat_types = player.get_stat_types %>
             <% @stat_types.each do |s|%>
               <div class="player-stats-field">
@@ -42,7 +41,6 @@
               </div>
             <% end %>
           <% end %>
-        </div>
       <% end %>
       </tbody>
     </table>
