@@ -17,6 +17,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'refills'
 
+gem "font-awesome-rails"
 gem "mailgun"
 gem 'acts_as_list'
 # Use jquery as the JavaScript library

@@ -28,13 +28,17 @@
 
               <div class="modal">
                 <label for='modal-<%= "#{player.id}" %>'>
-                  <div class="modal-trigger">Add Stats</div>
+                  <div class="modal-trigger"><i class="fa fa-book"></i> Add Stats</div>
                 </label>
                 <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
                 <div class="modal-fade-screen">
                   <div class="modal-inner">
                     <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
-                    <h1>Stats</h1>
+                    <h1><i  class="fa fa-bullseye"></i>VS. <%= @game.opponent %></h1>
+                    <ul class="modal-ul">
+                      <li><%= position.name %></li>
+                      <li><%= player.first_name + " " + player.last_name %></li>
+                    </ul>
                     <% player.get_stat_types.each do |s|%>
                       <div class="player-stats-field">
                         <div class="field">
