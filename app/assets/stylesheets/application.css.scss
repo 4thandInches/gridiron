@@ -10,7 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
-*= require font-awesome
+ *= require font-awesome
  */
 
 @import "bourbon";
@@ -672,6 +672,7 @@ header.navigation {
     position: relative;
     width: 95%;
     background-color: #383838;
+    color:whitesmoke;
 
     @include media($medium-screen) {
       max-height: 70%;
@@ -688,6 +689,7 @@ header.navigation {
       margin-bottom: 0 0 0.6em 0;
       text-align: left;
       text-transform: capitalize;
+      color:whitesmoke;
     }
 
     p {
@@ -765,6 +767,7 @@ header.navigation {
   border-spacing: 0;
   border: $table-border;
   width: 100%;
+  margin-top: 60px;
 
   tbody {
     background-color: $table-background;
@@ -899,11 +902,6 @@ $parallax-background-height: $parallax-window-height * 2;
 
 //modal-ul
 
-
-.modal-inner h1 {
-  margin-top: -20px;
-  margin-bottom: 15px;
-}
 
 .modal-ul {
   text-align: center;
