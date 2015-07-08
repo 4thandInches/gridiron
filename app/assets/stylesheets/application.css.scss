@@ -594,13 +594,13 @@ header.navigation {
   }
 
   .modal-trigger {
-    @include position(relative, 100px 43%  );
-    font-size: 30px;
-    margin-top: 1em;
-
-    @include button(flat, #45b6c3);
-    color:whitesmoke;
-    padding: 0.8em 1em;
+    //@include position(relative, 100px 43%  );
+    //font-size: 30px;
+    ////margin-top: 1em;
+    //
+    //@include button(flat, #45b6c3);
+    //color:whitesmoke;
+    //padding: 0.8em 1em;
   }
 
   .modal-fade-screen { // overlay
