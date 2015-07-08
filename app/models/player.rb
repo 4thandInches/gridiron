@@ -24,4 +24,8 @@ class Player < ActiveRecord::Base
     end
   end
 
+  def primary_position_name
+    positions.blank? ? "N/A" : positions.first.name
+  end
+
 end
