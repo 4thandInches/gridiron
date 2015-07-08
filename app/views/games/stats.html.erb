@@ -1,12 +1,14 @@
-<div class="stats">
+<div class="player-stats-container">
+
+
     <h1>future player stats page</h1>
 
     <%= form_tag(make_stats_game_path) do %>
       <% @positions.each do |position| %>
-        <h3><%= position.name %></h4>
+        <h3><%= position.name %></h3>
         <% position.players.each do |p| %>
-        <h1><%= p.first_name %></h1>
-        <% @stat_types = p.get_stat_types %>
+          <h1><%= p.first_name %></h1>
+          <% @stat_types = p.get_stat_types %>
           <% @stat_types.each do |s|%>
             <div class="player-stats-field">
               <div class="field">
@@ -14,6 +16,7 @@
                 <%= text_field_tag "stat[#{p.id}][#{s.id}]" %>
               </div>
             </div>
+
           <% end %>
         <% end %>
       <% end %>
@@ -21,4 +24,6 @@
             <%= submit_tag "Submit Stats" %>
           </div>
     <% end %>
+
+
 </div>
