@@ -1,63 +1,60 @@
-
-
-    <h1>future player stats page</h1>
-
-    <%= form_tag(make_stats_game_path) do %>
-    <table class="tables">
-      <thead>
-        <tr>
-          <th>Position</th>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Jersey number</th>
-          <th>Phone number</th>
-          <th>Email</th>
-          <th>Class status</th>
-          <th colspan="2">Table Options</th>
-        </tr>
-      </thead>
+<%= form_tag(make_stats_game_path) do %>
+  <h1>future player stats page</h1>
+  <table class="tables">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Jersey number</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Class status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
       <% @positions.each do |position| %>
-      <h1><%= position.name %></h1>
         <% position.players.each do |player| %>
-        <h2><%= player.first_name %></h2>
-        <tbody>
-            <tr>
-              <td><%= player.positions.first.name %></td>
-              <td><%= player.first_name %></td>
-              <td><%= player.last_name %></td>
-              <td><%= player.jersey_number %></td>
-              <td><%= player.phone_number %></td>
-              <td><%= player.email %></td>
-              <td><%= player.class_status.name %></td>
-              <td><%= link_to "add stats", "#" %></td>
-            </tr>
-          <div class="modal">
-            <label for='modal-<%= "#{player.id}" %>'>
-              <div class="modal-trigger">Add Stats</div>
-            </label>
-            <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
-            <div class="modal-fade-screen">
-              <div class="modal-inner">
-                <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
-                <h1>Stats</h1>
-                    <h2>Log in</h2>
-                    <% @stat_types = player.get_stat_types %>
-                      <% @stat_types.each do |s|%>
-                        <div class="player-stats-field">
-                          <div class="field">
-                            <%= label_tag s.name %>
-                            <%= text_field_tag "stat[#{player.id}][#{s.id}]" %>
-                          </div>
+          <tr>
+            <td><%= position.name %></td>
+            <td><%= player.first_name %></td>
+            <td><%= player.last_name %></td>
+            <td><%= player.jersey_number %></td>
+            <td><%= player.phone_number %></td>
+            <td><%= player.email %></td>
+            <td><%= player.class_status && player.class_status.name %></td>
+            <td>
+
+              <div class="modal">
+                <label for='modal-<%= "#{player.id}" %>'>
+                  <div class="modal-trigger">Add Stats</div>
+                </label>
+                <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
+                <div class="modal-fade-screen">
+                  <div class="modal-inner">
+                    <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
+                    <h1>Stats</h1>
+                    <% player.get_stat_types.each do |s|%>
+                      <div class="player-stats-field">
+                        <div class="field">
+                          <%= label_tag s.name %>
+                          <%= text_field_tag "stat[#{player.id}][#{s.id}]" %>
                         </div>
-                      <% end %>
+                      </div>
                     <% end %>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+
+            </td>
+          </tr>
+        <% end %>
       <% end %>
-      </tbody>
-    </table>
-          <div id="player-stat-submit">
-            <%= submit_tag "Submit Stats" %>
-          </div>
-    <% end %>
+    </tbody>
+  </table>
+
+  <div id="player-stat-submit">
+    <%= submit_tag "Submit Stats" %>
+  </div>
+<% end %>
