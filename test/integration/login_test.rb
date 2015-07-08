@@ -20,14 +20,14 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_redirected_to player_path(assigns(:player))
 
     follow_redirect!
-    # assert response.body.match("Zack")
-    # assert response.body.match("Strickland")
-    # assert response.body.match("Jersey number")
-    #
-    # assert_select "a[href='#{destroy_user_session_path}']"
-    #
-    # get destroy_user_session_path
-    # assert_redirected_to new_user_session_path
+    assert response.body.match("Zack")
+    assert response.body.match("Strickland")
+    assert response.body.match("Jersey number")
+
+    assert_select "a[href='#{destroy_user_session_path}']"
+
+    delete destroy_user_session_path
+    assert_redirected_to root_path
 
   end
 end
