@@ -3,9 +3,15 @@
 
 <div id="js-parallax-window" class="parallax-window">
   <div class="parallax-static-content">
-    <b>Parallax Window</b>
+    <h1>Get an Overview of Your Team on This Page</h1>
   </div>
   <div id="js-parallax-background" class="parallax-background"></div>
+</div>
+
+<div class="stat-leaders">
+    <%  feature_player = Player.find_by_id(1)%>
+    <%= feature_player.first_name %> <%= feature_player.last_name %>
+
 </div>
 
 <p>a</p> <br>
