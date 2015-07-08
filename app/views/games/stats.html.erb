@@ -1,4 +1,3 @@
-<div class="player-stats-container">
 
 
     <h1>future player stats page</h1>
@@ -17,8 +16,8 @@
           <th colspan="2">Table Options</th>
         </tr>
       </thead>
-
       <% @positions.each do |position| %>
+      <h1><%= position.name %></h1>
         <% position.players.each do |player| %>
         <tbody>
             <tr>
@@ -31,16 +30,30 @@
               <td><%= player.class_status.name %></td>
               <td><%= link_to "add stats", "#" %></td>
             </tr>
-          <% @stat_types = player.get_stat_types %>
-            <% @stat_types.each do |s|%>
-              <div class="player-stats-field">
-                <div class="field">
-                  <%= label_tag s.name %>
-                  <%= text_field_tag "stat[#{player.id}][#{s.id}]" %>
+                <div class="modal">
+                  <p><%= player.first_name %></p>
+                  <label for='modal-<%= "#{player.id}" %>'>
+                    <div class="modal-trigger">Add Stats</div>
+                  </label>
+                  <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
+                  <div class="modal-fade-screen">
+                    <div class="modal-inner">
+                      <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
+                      <h1>Stats</h1>
+                          <h2>Log in</h2>
+                          <% @stat_types = player.get_stat_types %>
+                            <% @stat_types.each do |s|%>
+                              <div class="player-stats-field">
+                                <div class="field">
+                                  <%= label_tag s.name %>
+                                  <%= text_field_tag "stat[#{player.id}][#{s.id}]" %>
+                                </div>
+                              </div>
+                            <% end %>
+                          <% end %>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            <% end %>
-          <% end %>
       <% end %>
       </tbody>
     </table>
@@ -48,6 +61,3 @@
             <%= submit_tag "Submit Stats" %>
           </div>
     <% end %>
-
-
-</div>
