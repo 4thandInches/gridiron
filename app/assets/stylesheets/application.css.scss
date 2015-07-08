@@ -122,8 +122,8 @@ body{
 }
 
 .depth-chart{
-  @include span-columns(4);
-  @include position(relative, 10px 30% );
+  @include span-columns(12);
+  @include position(relative, 100px 3%);
   //td.depth-position{
   //  @include span-columns(1 of 4);
   //}
@@ -915,9 +915,13 @@ $parallax-background-height: $parallax-window-height * 2;
 // depth-chart
 
 .depth-chart {
-  .tables {
-    display: inline;
+  table {
+    vertical-align: top;
+    margin: 20px;
+    width: 15%;
+    display: inline-block;
   }
 }
+
 
 // Based on http://codepen.io/skeurentjes/
