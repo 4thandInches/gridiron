@@ -4,7 +4,7 @@ module PositionsHelper
     name = ""
     name += first_name.capitalize + " "
     name += last_name.capitalize
-    name
+    return name
   end
 
 end
