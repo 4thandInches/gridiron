@@ -27,7 +27,7 @@ class GamesController < ApplicationController
         stat = Stat.create!(player_id: k, game_id: @game.id, stat_type_id: key, value: value) unless value == ""
       end
     end
-    redirect_to players_path
+    redirect_to stats_game_path(@game)
   end
 
   # GET /games/1/edit

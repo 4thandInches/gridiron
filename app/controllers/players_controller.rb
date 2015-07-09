@@ -21,7 +21,6 @@ class PlayersController < ApplicationController
   def new
     @player = Player.new
     @player.roles.build
-
   end
 
   # GET /players/1/edit
@@ -34,6 +33,9 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
     respond_to do |format|
       if @player.save
+        role = Role.get_role(params, @player)
+        role.depth_chart_position = role.next_available
+        role.save
         format.html { redirect_to @player, notice: 'Player was successfully created.' }
         format.json { render :show, status: :created, location: @player }
       else
@@ -83,6 +85,6 @@ class PlayersController < ApplicationController
     def player_params
       params.require(:player).permit(:first_name, :last_name, :jersey_number, :phone_number, :email, :weight, :height, :position_ids,
                                      :class_status_id, :game_id,
-                                     roles_attributes: [ :depth_chart_position, :position_id ])
+                                     roles_attributes: [ :position_id ])
     end
 end
