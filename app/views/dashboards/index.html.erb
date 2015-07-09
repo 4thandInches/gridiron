@@ -7,16 +7,7 @@
 
 
 <div id="stat-dashboard">
-  <h1> Single Game Leaders</h1>
 
-  <h3 class="lead-category"> Leading Passer</h3> <br>
-  <%  lead_pass = Stat.where(stat_type_id: 1)  %>
-  <%  lead_pass = lead_pass.order(:value).last  %>
-  <p class="potato-category">
-    <%= Player.find_by_id(lead_pass.player_id).first_name %>
-    <%= Player.find_by_id(lead_pass.player_id).last_name %>
-    <%= lead_pass.value.to_i  %> yards
-  </p>
 </div>
 
 
@@ -42,6 +33,3 @@
       </tbody>
     </table>
   </div>
-
-
-

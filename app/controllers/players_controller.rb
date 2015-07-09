@@ -78,7 +78,6 @@ class PlayersController < ApplicationController
     def set_positions_and_statuses
       @positions = Position.all
       @class_statuses = ClassStatus.all
-      @depth_chart_positions = [1, 2, 3, 4, 5, 6]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -9,11 +9,11 @@
         <%= position.name %>
       </div>
       <div class="card-copy">
-        <ol class="sortable">
+        <ul class="sortable">
         <% position.players.each do |player| %>
-        <li><%= link_to "#{player.first_name} #{player.last_name}", show_stats_player_path(player) %></li>
+        <li><%= link_to "#{player.first_name}" + " " + "#{player.last_name}", show_stats_player_path(player) %></li>
         <% end %>
-      </ol>
+      </ul>
       </div>
     </div>
     <% end %>

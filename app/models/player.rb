@@ -8,6 +8,8 @@ class Player < ActiveRecord::Base
   belongs_to :class_status
   has_many :stats
 
+  belongs_to :team
+
   validates :first_name, :last_name, presence: true
   validates :jersey_number, uniqueness: true
 
