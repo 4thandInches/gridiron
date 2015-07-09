@@ -89,8 +89,11 @@ function parallax(){
 
 //DATEPICKER
 $(function() {
-  $('#datepicker').datepicker();
+  $('#datepicker').datepicker({
+    dateFormat: 'dd-mm-YYYY'
+  });
 });
+
 
 //SORTABLE
 $(function() {
