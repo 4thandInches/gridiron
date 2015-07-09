@@ -115,4 +115,4 @@ class_status_array = [1,2,3,4]
 #
 # Player.all.each do |p|
 #   Role.create(position_id: rand(1..12), player_id: p.id)
-end
+# end
