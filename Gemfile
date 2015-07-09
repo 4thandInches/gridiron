@@ -34,6 +34,8 @@ gem 'table_print'
 
 gem 'puma'
 
+gem 'rails-observers'
+
 # Spring speeds
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
