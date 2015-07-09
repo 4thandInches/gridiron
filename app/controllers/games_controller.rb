@@ -1,4 +1,4 @@
-gclass GamesController < ApplicationController
+class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy, :make_stats, :stats]
 
   # GET /games
@@ -84,4 +84,5 @@ gclass GamesController < ApplicationController
     def game_params
       params.require(:game).permit(:opponent, :location, :time, :home)
     end
+
 end
