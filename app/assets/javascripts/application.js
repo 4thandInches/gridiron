@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= requre jquery_ui
 //= require jquery_ujs
+//= require jquery-ui
 //= require_tree .
 
 
@@ -87,13 +87,7 @@ function parallax(){
     }
 }
 
-//hide-me div
-
+//DATEPICKER
 $(function() {
-  $('.hide-me').hide();
+  $('#datepicker').datepicker();
 });
-
-//show-me div
-function showMe() {
-  $(this).find('.hide-me').show();
-}
