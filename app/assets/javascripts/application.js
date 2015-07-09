@@ -91,3 +91,10 @@ function parallax(){
 $(function() {
   $('#datepicker').datepicker();
 });
+
+//SORTABLE
+$(function() {
+  $( ".sortable" ).sortable({
+    axis: "y"
+  });
+});
