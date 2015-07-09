@@ -8,9 +8,35 @@
   <div id="js-parallax-background" class="parallax-background"></div>
 </div>
 
-<div class="stat-leaders">
+<div id="stat-dashboard">
 
-    
+
+</div>
+
+
+<div id="schedule-dashboard">
+
+  <table class="tables table-homepage" >
+    <thead>
+      <tr>
+        <th>Opponent</th>
+        <th>Location</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+      <% Game.all.each do |game| %>
+        <tr>
+          <td> <%= game.opponent %> </td>
+          <td> <%= game.location %> </td>
+          <td> <%= game.time %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
 
 </div>
 
