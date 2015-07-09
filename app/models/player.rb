@@ -1,5 +1,7 @@
 class Player < ActiveRecord::Base
   has_many :roles
+  accepts_nested_attributes_for :roles
+
   has_many :memberships
   has_many :games, :through => :memberships
   has_many :positions, :through => :roles
@@ -8,6 +10,7 @@ class Player < ActiveRecord::Base
 
   validates :first_name, :last_name, presence: true
   validates :jersey_number, uniqueness: true
+
 
 
   def get_stat_types

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708001634) do
+ActiveRecord::Schema.define(version: 20150709154659) do
 
   create_table "class_statuses", force: :cascade do |t|
     t.string   "name"
@@ -45,9 +45,8 @@ ActiveRecord::Schema.define(version: 20150708001634) do
     t.decimal  "weight"
     t.string   "height"
     t.integer  "class_status_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.integer  "depth_chart_position"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -59,8 +58,9 @@ ActiveRecord::Schema.define(version: 20150708001634) do
   create_table "roles", force: :cascade do |t|
     t.integer  "player_id"
     t.integer  "position_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "depth_chart_position"
   end
 
   add_index "roles", ["player_id"], name: "index_roles_on_player_id"
@@ -79,6 +79,17 @@ ActiveRecord::Schema.define(version: 20150708001634) do
     t.decimal  "value"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.string   "school"
+    t.string   "head_coach"
+    t.string   "location"
+    t.string   "division"
+    t.string   "conference"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

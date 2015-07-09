@@ -133,8 +133,8 @@ body{
 }
 
 .cards{
-  @include span-columns(12);
-  @include position(relative, 100px 3%);
+  @include span-columns(10);
+  @include position(relative, 100px );
   //td.depth-position{
   //  @include span-columns(1 of 4);
   //}
