@@ -10,7 +10,7 @@
       </div>
       <div class="card-copy">
         <ul class="sortable">
-        <% position.players.each do |player| %>
+        <% position.get_team_players(@team).each do |player| %>
         <li><%= link_to "#{player.first_name}" + " " + "#{player.last_name}", show_stats_player_path(player) %></li>
         <% end %>
       </ul>
