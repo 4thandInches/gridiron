@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150708001634) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "games", force: :cascade do |t|
     t.string   "opponent"
     t.string   "location"
@@ -26,6 +27,27 @@ ActiveRecord::Schema.define(version: 20150708001634) do
     t.boolean  "home"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+  create_table "dashboards", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "defensive_stats", force: :cascade do |t|
+    t.integer  "tackle"
+    t.integer  "asst_tackle"
+    t.integer  "combined_tackle"
+    t.integer  "sacks"
+    t.integer  "yards_lost_sack"
+    t.integer  "forced_fumble"
+    t.integer  "fumble_recovery"
+    t.integer  "pass_defend"
+    t.integer  "interception"
+    t.integer  "yards_return_interception"
+    t.integer  "touchdown"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+
   end
 
   create_table "memberships", force: :cascade do |t|
