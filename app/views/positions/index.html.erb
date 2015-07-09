@@ -1,0 +1,20 @@
+<div class="depth-chart">
+  <div class="cards">
+    <% @positions.each do |position| %>
+    <div class="card">
+      <div class="card-image">
+        <img src='<%= asset_path("position_#{position.id}.jpg") %>' alt="">
+      </div>
+      <div class="card-header">
+        <%= position.name %>
+      </div>
+      <div class="card-copy">
+        <ul>
+        <% position.players.order(:depth_chart_position).each do |player| %>
+          <li><%= link_to "#{player.first_name}" + " " + "#{player.last_name}", show_stats_player_path(player) %></li>
+        <% end %>
+      </ul>
+      </div>
+    </div>
+    <% end %>
+</div>

@@ -1,0 +1,8 @@
+<div class="show-container">
+  <h3><%= @player.first_name %> <%= @player.last_name %> </h3>
+    <% @stats.each do |s| %>
+       <div>
+         <%= s.stat_type.name %> <%= s.value %>
+       </div>
+<% end %>
+</div>

@@ -1,0 +1,83 @@
+<%= form_tag(make_stats_game_path) do %>
+  <table class="tables">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Jersey number</th>
+        <th>Phone number</th>
+        <th>Email</th>
+        <th>Class status</th>
+        <th>thing</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @positions.each do |position| %>
+        <% position.players.each do |player| %>
+          <tr>
+            <td><%= position.name %></td>
+            <td><%= player.first_name %></td>
+            <td><%= player.last_name %></td>
+            <td><%= player.jersey_number %></td>
+            <td><%= player.phone_number %></td>
+            <td><%= player.email %></td>
+            <td><%= player.class_status && player.class_status.name %></td>
+            <td>
+
+              <div class="modal">
+                <label for='modal-<%= "#{player.id}" %>'>
+                  <div class="modal-trigger"><i class="fa fa-book"></i> Add Stats</div>
+                </label>
+                <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
+                <div class="modal-fade-screen">
+
+
+
+
+
+                <!--<div class="player-stats-container">-->
+                  <div class="modal-inner">
+                    <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
+                    <h1><i  class="fa fa-bullseye"></i>VS. <%= @game.opponent %></h1>
+                    <ul class="modal-ul">
+                      <li><%= position.name %></li>
+                      <li><%= player.first_name + " " + player.last_name %></li>
+                    </ul>
+                    <% player.get_stat_types.each do |s|%>
+                      <div class="player-stats-field">
+                        <div class="field">
+                          <%= label_tag s.name %>
+                          <%= text_field_tag "stat[#{player.id}][#{s.id}]" %>
+                        </div>
+                      </div>
+                    <% end %>
+                  <!--</div>-->
+
+
+
+
+
+
+
+
+
+                    <div id="player-stat-submit">
+                      <%= submit_tag "Submit Stats" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <div id="player-stat-submit">
+    <%= submit_tag "Submit Stats" %>
+  </div>
+
+<% end %>

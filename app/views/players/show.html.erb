@@ -1,0 +1,46 @@
+<div class="show-container">
+  <p id="notice"><%= notice %></p>
+  <h3> <%= @player.first_name %> <%= @player.last_name %>:  <%= @player.primary_position_name %></h3>
+    <br>
+  <div class="side-image-container"></div>
+  <ul class="show-list">
+
+        <li>
+          <strong>Jersey number:</strong>
+          <%= @player.jersey_number %>
+        </li>
+
+        <li>
+          <strong>Phone number:</strong>
+          <%= @player.phone_number %>
+        </li>
+
+        <li>
+          <strong>Email:</strong>
+          <%= @player.email %>
+        </li>
+
+        <li>
+          <strong>Weight:</strong>
+          <%= @player.weight %>
+        </li>
+
+        <li>
+          <strong>Height:</strong>
+          <%= @player.height %>
+        </li>
+
+        <li>
+          <strong>Position:</strong>
+          <%= @player.primary_position_name %>
+        </li>
+
+        <li>
+          <strong>Class status:</strong>
+          <%= @player.class_name %>
+        </li>
+
+        <%= link_to 'Edit', edit_player_path(@player) %> |
+        <%= link_to 'Back', players_path %>
+  </ul>
+</div>

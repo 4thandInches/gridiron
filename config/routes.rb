@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
 
+  resources :games do
+    member do
+      get 'stats'
+      post 'make_stats'
+    end
+  end
 
+  resources :players do
+    member do
+        get 'show_stats'
+    end
+  end
+
+  resources :stat_types
+  resources :players
+  resources :positions
   resources :dashboards
   devise_for :users
 
