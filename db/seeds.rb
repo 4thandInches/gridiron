@@ -48,17 +48,17 @@ ClassStatus.create(name: "Senior")
 StatType.create(name: "Passing Yards")
 StatType.create(name: "Passing Attempts")
 StatType.create(name: "Pass Completions")
-StatType.create(name: "Completion Percentage")
+StatType.create(name: "Completion %")
 StatType.create(name: "20 + Yard Passes")
 StatType.create(name: "Passing TD's")
 StatType.create(name: "Longest Pass")
 StatType.create(name: "Sacks Taken")
-StatType.create(name: "Interceptions Thrown")
+StatType.create(name: "INT Thrown")
 StatType.create(name: "Rushing Yards")
 StatType.create(name: "Longest Rush")
 StatType.create(name: "20 + Yard Rush")
 StatType.create(name: "Rushing Attempts")
-StatType.create(name: "Average Yards Per Rush")
+StatType.create(name: "Avg. YD Per Rush")
 StatType.create(name: "Rushing TD's")
 StatType.create(name: "Fumbles")
 StatType.create(name: "Receiving Yards")
@@ -66,7 +66,7 @@ StatType.create(name: "Receptions")
 StatType.create(name: "Targets")
 StatType.create(name: "Drops")
 StatType.create(name: "Receiving TD's")
-StatType.create(name: "20 + Yard Receptions")
+StatType.create(name: "20+ YD Receptions")
 StatType.create(name: "Longest Reception")
 
 #Stat Type Defense
@@ -108,7 +108,7 @@ class_status_array = [1,2,3,4]
 
 52.times do
   Player.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", jersey_number: count,
-                 phone_number: "#{Faker::PhoneNumber.phone_number}", email: "#{Faker::Name.first_name}@gmai.com", height: 1, weight: 1,
+                 phone_number: "#{Faker::PhoneNumber.phone_number}", email: "#{Faker::Name.first_name}@gmail.com", height: 1, weight: 1,
                  class_status_id: class_status_array.sample.to_i)
   count += 1
 end
