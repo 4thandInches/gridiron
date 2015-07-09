@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "gridiron@gridiron.com"
+  default from: "Gridiron"
   layout 'mailer'
 end
