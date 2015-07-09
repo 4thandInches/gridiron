@@ -106,13 +106,13 @@ StatType.create(name: "Total Punts")
 
 class_status_array = [1,2,3,4]
 
-# 52.times do
-#   Player.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", jersey_number: count,
-#                  phone_number: "#{Faker::PhoneNumber.phone_number}", email: "#{Faker::Name.first_name}@gmail.com", height: 1, weight: 1,
-#                  class_status_id: class_status_array.sample.to_i)
-#   count += 1
-# end
-#
-# Player.all.each do |p|
-#   Role.create(position_id: rand(1..12), player_id: p.id)
-# end
+52.times do
+  Player.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", jersey_number: count,
+                 phone_number: "#{Faker::PhoneNumber.phone_number}", email: "#{Faker::Name.first_name}@gmail.com", height: 1, weight: 1,
+                 class_status_id: class_status_array.sample.to_i)
+  count += 1
+end
+
+Player.all.each do |p|
+  Role.create(position_id: rand(1..12), player_id: p.id)
+end
