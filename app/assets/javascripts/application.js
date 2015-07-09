@@ -90,7 +90,7 @@ function parallax(){
 //DATEPICKER
 $(function() {
   $('#datepicker').datepicker({
-    dateFormat: 'dd-mm-YYYY'
+    dateFormat: 'dd-mm-yy'
   });
 });
 
