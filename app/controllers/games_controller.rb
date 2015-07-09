@@ -85,4 +85,5 @@ class GamesController < ApplicationController
       params.require(:game).permit(:opponent, :location, :time, :home)
     end
 
+
 end

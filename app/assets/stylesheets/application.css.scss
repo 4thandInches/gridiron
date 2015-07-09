@@ -41,11 +41,19 @@ body{
 //  height: 700px;
 //  padding: 50px 20px 0;
 //}
-//#stat-dashboard{
-//  width: 500px;
-//  height: 500px;
-//  background-color: red;
-//}
+#stat-dashboard{
+  @include outer-container();
+  .lead-category{
+    @include span-columns(3);
+  }
+  .potato-category{
+    @include span-columns(9);
+  }
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+}
+
 
 #schedule-dashboard{
   width:500px;
@@ -785,7 +793,7 @@ header.navigation {
   border-left: 0px;
   border-radius: $base-border-radius;
   border-spacing: 0;
-  border: $table-border;
+  //border: $table-border;
   width: 100%;
   margin-top: 60px;
 
@@ -1037,4 +1045,33 @@ $parallax-background-height: $parallax-window-height * 2;
      background-color: $card-background;
    }
  }
+}
+
+
+//findfadein////////////////////////////////////////////////////////
+
+.fade-in-element {
+
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+
+
+  @include clearfix;
+
+  line-height: $base-line-height;
+  margin-bottom: 4em;
+  padding: $base-spacing;
+  text-align: center;
+  width: 100%;
+
+
+}
+
+.js-fade-element-hide {
+  opacity: 0;
+}
+
+.js-fade-element-show {
+  @include transition (all 0.4s ease-in-out);
+  opacity: 1;
 }
