@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(email: "test@test.com", password: "password")
+
 
 count = 0
 # jersey_num = rand(1..999)
@@ -105,12 +105,15 @@ StatType.create(name: "Longest Punt")
 StatType.create(name: "Total Punts")
 
 if Rails.env.development?
+
+  User.create!(email: "test@test.com", password: "password")
+
   class_status_array = [1,2,3,4]
 
   52.times do
     Player.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", jersey_number: count,
                    phone_number: "#{Faker::PhoneNumber.phone_number}", email: "#{Faker::Name.first_name}@gmail.com", height: 1, weight: 1,
-                   class_status_id: class_status_array.sample.to_i, depth_chart_position: rand(1..5))
+                   class_status_id: class_status_array.sample.to_i)
     count += 1
   end
 
