@@ -11,6 +11,9 @@ class Player < ActiveRecord::Base
   validates :first_name, :last_name, presence: true
   validates :jersey_number, uniqueness: true
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 
 
   def get_stat_types
@@ -33,6 +36,15 @@ class Player < ActiveRecord::Base
 
   def class_name
     class_status.blank? ? "N/A" : class_status.name
+  end
+
+
+  def self.lead_player_for(stat_type)
+    best_stat = stat_type.stats.order(:value).last
+
+    player_name = (best_stat ? best_stat.player.full_name : "N/A")
+    value = (best_stat ? best_stat.value.to_i : 0)
+    return {player_name: player_name, value: value}
   end
 
 end

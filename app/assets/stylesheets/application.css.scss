@@ -30,6 +30,7 @@ body{
   background-color: #eee;
 }
 //dashboard//////////////////////////////////////////////////////
+
 //.dash-image { I MAY NO LONGER NEED, UNSURE DONT DELETE
 //  background:
 //  linear-gradient(
@@ -56,9 +57,15 @@ body{
 
 
 #schedule-dashboard{
-  width:500px;
-  height: 200px;
+  //@include outer-container();
+  width:100%;
+  height: 500px;
   .tables.table-homepage{
+    @include span-columns(4);
+    margin-top: 0;
+    margin-right: 0;
+    padding-top: 0;
+
     tbody{
       color:whitesmoke;
       tr:hover > td, tr:hover > th {
@@ -74,11 +81,27 @@ body{
     th {
       color: #45b6c3;
       background-color: #1e1e1e;
-    }tr:nth-child(even) {
+    }
+    tr:nth-child(even) {
     background-color: #45b6c3;
-         } tr:nth-child(odd) {
+         }
+    tr:nth-child(odd) {
     background-color: #303030;
-                    }
+    }
+  }
+
+  .dash-table-picture{
+
+    @include span-columns(8);
+    background:
+      /* top, transparent red, faked with gradient */
+    linear-gradient(
+                    rgba(53, 149, 161, 0.5),
+                    rgba(53, 149, 161, 0.5)
+    ),
+    asset_url('test_image.jpg') no-repeat fixed center center;
+    background-size: 100%;
+    height: 500px;
   }
 }
 
