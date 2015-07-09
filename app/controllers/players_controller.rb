@@ -20,6 +20,8 @@ class PlayersController < ApplicationController
   # GET /players/new
   def new
     @player = Player.new
+    @player.roles.build
+
   end
 
   # GET /players/1/edit
@@ -74,10 +76,13 @@ class PlayersController < ApplicationController
     def set_positions_and_statuses
       @positions = Position.all
       @class_statuses = ClassStatus.all
+      @depth_chart_positions = [1, 2, 3, 4, 5, 6]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def player_params
-      params.require(:player).permit(:first_name, :last_name, :jersey_number, :phone_number, :email, :weight, :height, :depth_chart_position, :position_ids, :class_status_id, :game_id)
+      params.require(:player).permit(:first_name, :last_name, :jersey_number, :phone_number, :email, :weight, :height, :position_ids,
+                                     :class_status_id, :game_id,
+                                     roles_attributes: [ :depth_chart_position, :position_id ])
     end
 end

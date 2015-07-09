@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :teams
   resources :games do
     member do
       get 'stats'
