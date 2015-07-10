@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'calendars/index'
+
+  get 'calendar/index'
+
   resources :teams
   resources :games do
     member do
