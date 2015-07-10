@@ -1,48 +1,87 @@
 <!--head image-->
 <div class="home-image">
 
-    <h1>Welcome to Gridiron</h1>
+  <h1>Welcome to Gridiron</h1>
 <!--login modal-->
 
-    <div class="modal">
-      <label for="modal-1">
-        <div class="modal-trigger home-button">Login/Sign Up</div>
-      </label>
-      <input class="modal-state" id="modal-1" type="checkbox" />
-      <div class="modal-fade-screen">
-        <div class="modal-inner login-modal">
-          <div class="modal-close" for="modal-1"></div>
-          <div id="login-container">
-              <h2>Log in</h2>
+  <div class="modal">
+    <label for="modal-1">
+      <div class="modal-trigger home-button">Login/Sign Up</div>
+    </label>
+    <input class="modal-state" id="modal-1" type="checkbox" />
+    <div class="modal-fade-screen">
+      <div class="modal-inner login-modal">
+        <div class="modal-close" for="modal-1"></div>
+        <div id="login-container">
+          <h2>Log in</h2>
 
-              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="field">
+                <%= f.label :email %><br />
+                <%= f.email_field  :email, autofocus: true  %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password %><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
                   <div class="field">
-                    <%= f.label :email %><br />
-                    <%= f.email_field  :email, autofocus: true  %>
-                  </div>
-
-                  <div class="field">
-                    <%= f.label :password %><br />
-                    <%= f.password_field :password, autocomplete: "off" %>
-                  </div>
-
-                  <% if devise_mapping.rememberable? -%>
-                      <div class="field">
-                        <%= f.check_box :remember_me %>
-                        <%= f.label :remember_me %>
-                      </div>
-                  <% end %>
-
-                  <div class="actions">
-                    <%= f.submit "Log in" %>
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
                   </div>
               <% end %>
 
-              <%= render "devise/shared/links" %>
+              <div class="actions">
+                <%= f.submit "Log in" %>
+              </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
 
 
-        </div>
         </div>
       </div>
     </div>
+  </div>
+
+
+  <!-- grid items on gatekeeper page-->
+  <ul class="bullets">
+    <li class="bullet">
+      <div class="bullet-icon bullet-icon-1">
+        <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png" alt="">-->
+        <i class="fa fa-globe fa-2x"></i>
+      </div>
+      <div class="bullet-content">
+        <h2>Analyze</h2>
+        <p>Statistics are a vital aspect of the game and tracking statistics is a must in order to keep a competitive edge. Gridiron allows you to store your statistics and view them in meaningful ways.</p>
+      </div>
+    </li>
+    <li class="bullet">
+      <div class="bullet-icon bullet-icon-2">
+        <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3.png" alt="">-->
+        <i class="fa fa-bar-chart fa-2x"></i>
+      </div>
+      <div class="bullet-content">
+        <h2>Visualize</h2>
+        <p>Gridiron provides a platform that's easy for people of all technological skill level to get started. Our user interface is designed to be simple to understand so that your time using Gridiron is fast and efficient.</p>
+      </div>
+    </li>
+    <li class="bullet">
+      <div class="bullet-icon bullet-icon-3">
+        <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">-->
+        <i class="fa fa-cog fa-2x"></i>
+      </div>
+      <div class="bullet-content">
+        <h2>Strategize</h2>
+        <p> Once you step off the practice field log in and put gridiron to work. In addition to statistics tracking and management, Gridiron offers tools for playbook creation, itinerary/schedule preparer, team calendar and more! </p>
+      </div>
+    </li>
+  </ul>
+
+
+
+
 </div>
