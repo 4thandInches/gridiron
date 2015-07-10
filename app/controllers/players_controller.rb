@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats]
-  before_action :set_positions_and_statuses, only: [:new, :edit, :create]
+  before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats, :add_position, :position_added]
+  before_action :set_positions_and_statuses, only: [:new, :edit, :create, :add_position]
   before_action :set_team
 
   # GET /players
@@ -12,6 +12,14 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
+  end
+
+  def add_position
+  end
+
+  def position_added
+    @player.positions << Position.find(params[:position][:position_id])
+    redirect_to players_path
   end
 
   def show_stats
