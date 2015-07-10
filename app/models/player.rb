@@ -46,4 +46,8 @@ class Player < ActiveRecord::Base
     return {player_name: player_name, value: value}
   end
 
+  def get_player_position_roles(position)
+    
+  end
+
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :seasons
   get 'calendars/index'
 
   
