@@ -128,6 +128,6 @@ if Rails.env.development?
   end
 
   Player.all.each do |p|
-    role = Role.create(position_id: rand(1..16), player_id: p.id)
+    Role.create(position_id: rand(1..16), player_id: p.id)
   end
 end

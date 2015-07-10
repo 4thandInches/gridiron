@@ -42,27 +42,99 @@ body{
 //  height: 700px;
 //  padding: 50px 20px 0;
 //}
+
+
+#dash-tables{
+  //margin-right: auto;
+  //margin-left: auto;
+  height: 200px;
+  width: 100%;
+  .tables.apple{
+    margin-right: 0;
+    @include span-columns(4);
+    tbody{
+    color:whitesmoke;
+    tr:hover > td, tr:hover > th {
+      background-color: #6E6E6E;
+    }
+    tr:nth-child(even) {
+      background-color: #434343;
+      &:hover > td {
+        background-color: #6E6E6E;
+      }
+    }
+  }
+    th {
+      color: #45b6c3;
+      background-color: #1e1e1e;
+    }
+    tr:nth-child(even) {
+      background-color: #45b6c3;
+    }
+    tr:nth-child(odd) {
+      background-color: #303030;
+    }
+  }
+
+
+}
 #stat-dashboard{
-  @include outer-container();
+
+  margin-top: 150px;
+  text-align: center;
+  color: whitesmoke;
   .lead-category{
     @include span-columns(3);
   }
   .potato-category{
     @include span-columns(9);
   }
-  width: 500px;
-  height: 500px;
-  background-color: antiquewhite;
+  height: 250px;
+  background-color: #383838;
 }
+
+
+
+
+#cool-boxes-container{
+  color:whitesmoke;
+  position:relative;
+  top: -1.8em;
+  height: 100px;
+
+  article {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 73.125em;
+
+    .awesome-box {
+      &:hover{
+        background-color: orange;
+      }
+      display: inline-block;
+      height: 150px;
+      width: 29%;
+      background-color: #6E6E6E;
+      padding: 50px;
+      margin-right: 30px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
 
 
 #schedule-dashboard{
   //@include outer-container();
+  position: relative;
+  margin-top: 100px;
   width:100%;
   height: 500px;
+
+
   .tables.table-homepage{
     @include span-columns(4);
-    margin-top: 0;
+    margin-top: auto;
     margin-right: 0;
     padding-top: 0;
 
@@ -647,7 +719,7 @@ header.navigation {
   }
 
   .modal-trigger.home-button {
-    @include position(relative, 100px 43%  );
+    @include position(relative, 300px 43%  );
     font-size: 30px;
     margin-top: 1em;
 
@@ -717,6 +789,8 @@ header.navigation {
     background-color: #383838;
     color:whitesmoke;
 
+
+
     .player-stats-field{
       @include span-columns(3);
     }
@@ -726,13 +800,13 @@ header.navigation {
 
 
     @include media($medium-screen) {
-      max-height: 70%;
+      //max-height: 70%;
       padding: $modal-padding;
       width: 60%;
     }
 
     @include media($large-screen) {
-      width: 30em;
+      //width: 30em;
     }
 
     h1 {
@@ -770,6 +844,14 @@ header.navigation {
         padding: 0 2em;
       }
     }
+  }
+  .modal-inner.login-modal{
+    width: 30em;
+    //@include media($medium-screen) {
+    //  max-height: 70%;
+    //  padding: $modal-padding;
+    //  width: 60%;
+    //}
   }
 
   .modal-state:checked + .modal-fade-screen {
@@ -1097,4 +1179,76 @@ $parallax-background-height: $parallax-window-height * 2;
 .js-fade-element-show {
   @include transition (all 0.4s ease-in-out);
   opacity: 1;
+}
+
+
+//icon bullet points----------------------------------------------------------------------------------
+
+
+.bullets {
+  $base-line-height: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $base-font-color: $dark-gray !default;
+  $icon-bullet-size: 3.5em;
+  color: whitesmoke;
+
+  @include display(flex);
+  @include flex-wrap(wrap);
+  margin-bottom: $base-line-height;
+  margin: 1em;
+  overflow: auto;
+  padding: 0;
+
+  .bullet {
+    @include flex-basis(20em);
+    @include flex-grow(1);
+  }
+
+  .bullet-icon {
+    background: $action-color;
+    border-radius: 50%;
+    float: left;
+    height: $icon-bullet-size;
+    padding: $icon-bullet-size / 4;
+    width: $icon-bullet-size;
+  }
+
+  .bullet-icon-1 {
+    background: $action-color;
+  }
+
+  .bullet-icon-2 {
+    background: adjust-hue($action-color, -50%);
+  }
+
+  .bullet-icon-3 {
+    background: adjust-hue($action-color, -140%);
+  }
+
+  .bullet-content {
+    margin-left: $icon-bullet-size * 1.4;
+    margin-bottom: 2em;
+  }
+
+  h2 {
+    border-bottom: 1px solid transparentize($base-font-color, 0.8);
+    display: inline-block;
+    font-size: $icon-bullet-size / 2.5;
+    margin: 0 0 ($icon-bullet-size / 6) 0;
+    padding-top: $icon-bullet-size / 7;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  p {
+    color: whitesmoke;
+    line-height: $base-line-height;
+  }
+
+  img {
+    max-width: 100%;
+  }
 }
