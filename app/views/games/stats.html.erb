@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <% @positions.each do |position| %>
-        <% position.players.each do |player| %>
+        <% position.get_team_players(@team).each do |player| %>
           <tr>
             <td><%= position.name %></td>
             <td><%= player.first_name %></td>

@@ -1,11 +1,12 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats]
   before_action :set_positions_and_statuses, only: [:new, :edit, :create]
+  before_action :set_team
 
   # GET /players
   # GET /players.json
   def index
-    @players = Player.all
+    @players = @team.players
   end
 
   # GET /players/1
@@ -33,9 +34,9 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
     respond_to do |format|
       if @player.save
+        @player.update(team_id: @team.id)
         role = Role.get_role(params, @player)
-        role.depth_chart_position = role.next_available
-        role.save
+        role.update(depth_chart_position: role.next_available)
         format.html { redirect_to @player, notice: 'Player was successfully created.' }
         format.json { render :show, status: :created, location: @player }
       else
@@ -75,10 +76,13 @@ class PlayersController < ApplicationController
       @player = Player.find(params[:id])
     end
 
+    def set_team
+      @team = Team.find(current_user.team_id)
+    end
+
     def set_positions_and_statuses
       @positions = Position.all
       @class_statuses = ClassStatus.all
-      @depth_chart_positions = [1, 2, 3, 4, 5, 6]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

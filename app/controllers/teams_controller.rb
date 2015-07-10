@@ -1,12 +1,6 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
-  # GET /teams
-  # GET /teams.json
-  def index
-    @teams = Team.all
-  end
-
   # GET /teams/1
   # GET /teams/1.json
   def show
@@ -28,6 +22,7 @@ class TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.save
+        current_user.update(team_id: @team.id)
         format.html { redirect_to @team, notice: 'Team was successfully created.' }
         format.json { render :show, status: :created, location: @team }
       else

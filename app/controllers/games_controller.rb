@@ -1,10 +1,11 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy, :make_stats, :stats]
+  before_action :set_team
 
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+    @games = Game.where(team_id: @team.id)
   end
 
   # GET /games/1
@@ -41,6 +42,7 @@ class GamesController < ApplicationController
 
     respond_to do |format|
       if @game.save
+        @game.update(team_id: @team.id)
         format.html { redirect_to @game, notice: 'Game was successfully created.' }
         format.json { render :show, status: :created, location: @game }
       else
@@ -78,6 +80,10 @@ class GamesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_game
       @game = Game.find(params[:id])
+    end
+
+    def set_team
+      @team = Team.find(current_user.team_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

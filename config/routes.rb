@@ -16,7 +16,11 @@ Rails.application.routes.draw do
 
   resources :stat_types
   resources :players
-  resources :positions
+
+  resources :positions do
+    put :sort, on: :collection
+  end
+  
   resources :dashboards
   devise_for :users
 
