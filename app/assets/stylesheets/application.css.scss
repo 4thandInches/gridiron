@@ -789,6 +789,8 @@ header.navigation {
     background-color: #383838;
     color:whitesmoke;
 
+
+
     .player-stats-field{
       @include span-columns(3);
     }
@@ -798,13 +800,13 @@ header.navigation {
 
 
     @include media($medium-screen) {
-      max-height: 70%;
+      //max-height: 70%;
       padding: $modal-padding;
       width: 60%;
     }
 
     @include media($large-screen) {
-      width: 30em;
+      //width: 30em;
     }
 
     h1 {
@@ -841,6 +843,14 @@ header.navigation {
       &:last-child {
         padding: 0 2em;
       }
+    }
+  }
+  .modal-inner.login-modal{
+    width: 30em;
+    @include media($medium-screen) {
+      max-height: 70%;
+      padding: $modal-padding;
+      width: 60%;
     }
   }
 
