@@ -11,7 +11,8 @@
       <div class="card-copy">
         <ul class="sortable">
         <% position.get_team_players(@team).each do |player| %>
-        <li><%= link_to "#{player.first_name}" + " " + "#{player.last_name}", show_stats_player_path(player) %></li>
+          <% player.roles.order(:depth_chart_position) %>
+          <li><%= link_to "#{player.first_name}" + " " + "#{player.last_name}", show_stats_player_path(player) %></li>
         <% end %>
       </ul>
       </div>
