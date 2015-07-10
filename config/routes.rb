@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get 'calendars/index'
 
-  get 'calendar/index'
+  
 
   resources :teams
   resources :games do
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :positions do
     put :sort, on: :collection
   end
-  
+
   resources :dashboards
   devise_for :users
 
