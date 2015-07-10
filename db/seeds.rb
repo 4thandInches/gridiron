@@ -104,13 +104,26 @@ if Rails.env.development?
   Team.create!(name: "Greyhounds", school: "North Surry", head_coach: "Dan McClendon", location: "Mount Airy, NC", division: "North West", conference: "NEC")
   User.create!(email: "test@test.com", password: "password", team_id: 1)
 
+#games
+  Game.create!(opponent: "Nevada", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
+  Game.create!(opponent: "UNLV", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
+  Game.create!(opponent: "Air Force", location: "Colorado Springs, CO", time: 1100, home: false, team_id: 1)
+  Game.create!(opponent: "New Mexico", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
+  Game.create!(opponent: "Utah St", location: "Logan, UT", time: 1100, home: false, team_id: 1)
+  Game.create!(opponent: "SDSU", location: "San Diego, CA", time:1100, home: false, team_id: 1)
+  Game.create!(opponent: "Boise St", location: "Boise, ID", time:1100, home: false, team_id: 1)
+  Game.create!(opponent: "Hawaii", location: "Honolulu, HI", time: 1100, home: false, team_id: 1)
+  Game.create!(opponent: "San Jose St", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
+  Game.create!(opponent: "Colorado", location: "Boulder, CO", time: 1100, home: false, team_id: 1)
+  Game.create!(opponent: "Texas", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
+  Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
 
   class_status_array = [1,2,3,4]
 
   52.times do
     Player.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", jersey_number: count,
                    phone_number: "#{Faker::PhoneNumber.phone_number}", email: "#{Faker::Name.first_name}@gmail.com", height: 1, weight: 1,
-                   class_status_id: class_status_array.sample.to_i, team_id: Team.first.id)
+                   class_status_id: class_status_array.sample.to_i, team_id: 1)
     count += 1
   end
 

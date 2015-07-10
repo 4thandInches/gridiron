@@ -2,7 +2,7 @@ require 'mailgun'
 class UserMailer < ApplicationMailer
 
   def send_test_email
-    mail(to: "zas0923@gmail.com", subject: "Welcome to Gridiron Coach!")
+    mail(to: "dadkisso@gmail.com", subject: "Welcome to Gridiron Coach!")
   end
 
   def welcome_email(user)
