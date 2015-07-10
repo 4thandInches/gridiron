@@ -103,7 +103,7 @@ $(function() {
 });
 
 
-//hide window ambush thing
+//hide window ambush thing---------------------------------------------------------------------------
 $(document).ready(function() {
     var element = document.getElementById("js-fadeInElement");
     $(element).addClass('js-fade-element-hide');
@@ -126,4 +126,21 @@ $(document).ready(function() {
             }
         }
     });
+});
+
+//form text effect-------------------------------------------------------------------------------------------
+
+$(function () {
+
+    $('input').focusin(function() {
+        $(this).siblings('span').addClass('focus-in');
+    });
+
+    $('input').focusout(function() {
+        var characters = $(this).val();
+        if (characters === '') {
+            $(this).siblings('span').removeClass('focus-in');
+        }
+    });
+
 });

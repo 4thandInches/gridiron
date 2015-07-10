@@ -22,33 +22,49 @@
 </div>
 
 
-  <div id="schedule-dashboard">
+<section id="cool-boxes-container">
+  <article>
+    <span class="awesome-box"><section>Hello World</section></span>
+    <span class="awesome-box"><section>Hello World</section> </span>
+    <span class="awesome-box"><section>Hello World</section> </span>
+  </article>
+</section>
 
 
-    <table id="js-fadeInElement" class="tables table-homepage fade-in-element" >
-      <thead>
-        <tr>
-          <th>Opponent</th>
-          <th>Location</th>
-          <th>Date</th>
-        </tr>
-      </thead>
 
 
-      <tbody>
-        <% Game.all.each do |game| %>
-          <tr>
-            <td> <%= game.opponent %> </td>
-            <td> <%= game.location %> </td>
-            <td> <%= game.time %> </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
 
-    <div class="dash-table-picture"> </div>
 
-  </div>
+
+
+
+  <!--<div id="schedule-dashboard">-->
+
+
+    <!--<table id="js-fadeInElement" class="tables table-homepage fade-in-element" >-->
+      <!--<thead>-->
+        <!--<tr>-->
+          <!--<th>Opponent</th>-->
+          <!--<th>Location</th>-->
+          <!--<th>Date</th>-->
+        <!--</tr>-->
+      <!--</thead>-->
+
+
+      <!--<tbody>-->
+        <!--<% Game.all.each do |game| %>-->
+          <!--<tr>-->
+            <!--<td> <%= game.opponent %> </td>-->
+            <!--<td> <%= game.location %> </td>-->
+            <!--<td> <%= game.time %> </td>-->
+          <!--</tr>-->
+        <!--<% end %>-->
+      <!--</tbody>-->
+    <!--</table>-->
+
+    <!--<div class="dash-table-picture"> </div>-->
+
+  <!--</div>-->
 
 
 
