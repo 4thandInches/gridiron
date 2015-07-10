@@ -148,7 +148,7 @@ $(function () {
 
 
 //Calendar
-
+<script>
 $(document).ready(function() {
 
     // page is now ready, initialize the calendar...
@@ -158,3 +158,4 @@ $(document).ready(function() {
     })
 
 });
+</script> 
