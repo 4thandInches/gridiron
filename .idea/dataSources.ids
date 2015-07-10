@@ -19,6 +19,7 @@
       <column name="home" sqlType="BOOLEAN" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="team_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
     </table>
     <table name="memberships" schema="" catalog="" type="TABLE">
@@ -41,7 +42,7 @@
       <column name="class_status_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
-      <column name="depth_chart_position" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
+      <column name="team_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
     </table>
     <table name="positions" schema="" catalog="" type="TABLE">
@@ -57,6 +58,7 @@
       <column name="position_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="depth_chart_position" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
       <index name="index_roles_on_position_id" unique="true" columns="position_id"/>
       <index name="index_roles_on_player_id" unique="true" columns="player_id"/>
@@ -86,6 +88,18 @@
       <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
     </table>
+    <table name="teams" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="school" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="head_coach" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="location" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="division" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="conference" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
+      <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
     <table name="users" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="false" jdbcType="4"/>
       <column name="email" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="false" jdbcType="12" def="Jyc="/>
@@ -100,6 +114,7 @@
       <column name="last_sign_in_ip" sqlType="VARCHAR" precision="2000000000" scale="10" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" precision="2000000000" scale="10" nullable="false" jdbcType="12"/>
+      <column name="team_id" sqlType="INTEGER" precision="2000000000" scale="10" nullable="true" jdbcType="4"/>
       <primary-key columns="id"/>
       <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
       <index name="index_users_on_email" unique="true" columns="email"/>
