@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'calendars/index'
+
+  
+
   resources :teams
   resources :games do
     member do
@@ -11,6 +15,8 @@ Rails.application.routes.draw do
   resources :players do
     member do
         get 'show_stats'
+        get 'add_position'
+        post 'position_added'
     end
   end
 
@@ -20,7 +26,7 @@ Rails.application.routes.draw do
   resources :positions do
     put :sort, on: :collection
   end
-  
+
   resources :dashboards
   devise_for :users
 

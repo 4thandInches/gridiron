@@ -132,7 +132,7 @@
 
 
       <tbody>
-        <% Game.all.each do |game| %>
+        <% @games.each do |game| %>
           <tr>
             <td> <%= game.opponent %> </td>
             <td> <%= game.location %> </td>

@@ -14,6 +14,11 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
+//= require moment
+//= require fullcalendar
+
+
+
 
 
 //navbar--------------------------------------------
@@ -165,5 +170,17 @@ $(function () {
             $(this).siblings('span').removeClass('focus-in');
         }
     });
+
+});
+
+//calendar
+
+$(document).ready(function() {
+
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+        // put your options and callbacks here
+    })
 
 });

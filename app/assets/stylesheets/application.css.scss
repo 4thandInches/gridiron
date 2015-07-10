@@ -12,6 +12,7 @@
  *
  *= require font-awesome
  *= require jquery-ui
+ *= require fullcalendar
  */
 
 @import "bourbon";
@@ -21,6 +22,10 @@
 @import "reset";
 @import url(http://fonts.googleapis.com/css?family=Kreon);
 
+
+#calendar{
+  margin-top: 100px;
+}
 h1 {
   font-size: 50px;
 }
@@ -1251,4 +1256,9 @@ $parallax-background-height: $parallax-window-height * 2;
   img {
     max-width: 100%;
   }
+}
+
+//add-position----------------------------------------------------------
+#add-position {
+  margin-top: 75px;
 }
