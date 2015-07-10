@@ -211,6 +211,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   mailgun
+  momentjs-rails
   neat
   pg
   puma

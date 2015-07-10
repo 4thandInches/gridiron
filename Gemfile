@@ -38,6 +38,10 @@ gem 'rails-observers'
 
 gem 'fullcalendar-rails'
 
+gem 'momentjs-rails'
+
+
+
 # Spring speeds
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

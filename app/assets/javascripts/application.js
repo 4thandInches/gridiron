@@ -14,7 +14,11 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require_tree .
+//= require moment
 //= require fullcalendar
+
+
+
 
 
 //navbar--------------------------------------------
@@ -146,9 +150,8 @@ $(function () {
 
 });
 
+//calendar
 
-//Calendar
-<script>
 $(document).ready(function() {
 
     // page is now ready, initialize the calendar...
@@ -158,4 +161,3 @@ $(document).ready(function() {
     })
 
 });
-</script> 
