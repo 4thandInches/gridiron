@@ -42,6 +42,42 @@ body{
 //  height: 700px;
 //  padding: 50px 20px 0;
 //}
+
+
+#dash-tables{
+  //margin-right: auto;
+  //margin-left: auto;
+  height: 200px;
+  width: 100%;
+  .tables.apple{
+    margin-right: 0;
+    @include span-columns(4);
+    tbody{
+    color:whitesmoke;
+    tr:hover > td, tr:hover > th {
+      background-color: #6E6E6E;
+    }
+    tr:nth-child(even) {
+      background-color: #434343;
+      &:hover > td {
+        background-color: #6E6E6E;
+      }
+    }
+  }
+    th {
+      color: #45b6c3;
+      background-color: #1e1e1e;
+    }
+    tr:nth-child(even) {
+      background-color: #45b6c3;
+    }
+    tr:nth-child(odd) {
+      background-color: #303030;
+    }
+  }
+
+
+}
 #stat-dashboard{
 
   margin-top: 150px;
@@ -55,8 +91,10 @@ body{
   }
   height: 250px;
   background-color: #383838;
-
 }
+
+
+
 
 #cool-boxes-container{
   color:whitesmoke;
@@ -70,6 +108,9 @@ body{
     max-width: 73.125em;
 
     .awesome-box {
+      &:hover{
+        background-color: orange;
+      }
       display: inline-block;
       height: 150px;
       width: 29%;
@@ -80,11 +121,17 @@ body{
     }
   }
 }
+
+
+
 #schedule-dashboard{
   //@include outer-container();
   position: relative;
+  margin-top: 100px;
   width:100%;
   height: 500px;
+
+
   .tables.table-homepage{
     @include span-columns(4);
     margin-top: auto;

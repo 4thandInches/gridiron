@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 
 
-//login modal--------------------------------------------
+//login modal---------------------------------------------------------------------------------------
 $(function() {
     $("#modal-1").on("change", function() {
         if ($(this).is(":checked")) {
@@ -103,7 +103,7 @@ $(function() {
 });
 
 
-//hide window ambush thing---------------------------------------------------------------------------
+//hide window ambush thing aka fade in---------------------------------------------------------------------------
 $(document).ready(function() {
     var element = document.getElementById("js-fadeInElement");
     $(element).addClass('js-fade-element-hide');
