@@ -186,7 +186,7 @@ $(document).ready(function() {
 });
 
 //add field to itinerary maker,
-
+//
 var questionCounter = 1;
 
 function copySection() {
@@ -196,4 +196,30 @@ function copySection() {
     $("#question-list").append(question);
     questionCounter++;
 }
-$(copySection);
+
+
+$(function () {
+
+    $('#addTask').on('click', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+
+
+        var newQuestionForm = $('#new-question-form').html();
+
+        newQuestionForm = newQuestionForm
+            .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
+            .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
+
+        $('div#new-question-form').last().append(newQuestionForm);
+
+        questionCounter++;
+    })
+
+})
+
+
+
+//test
+
+
