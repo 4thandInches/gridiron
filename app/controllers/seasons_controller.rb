@@ -1,5 +1,6 @@
 class SeasonsController < ApplicationController
   before_action :set_season, only: [:show, :edit, :update, :destroy]
+  before_action :set_team, only: [:create]
 
   # GET /seasons
   # GET /seasons.json
@@ -21,6 +22,10 @@ class SeasonsController < ApplicationController
   def edit
   end
 
+  def choose
+
+  end
+
   # POST /seasons
   # POST /seasons.json
   def create
@@ -28,7 +33,8 @@ class SeasonsController < ApplicationController
 
     respond_to do |format|
       if @season.save
-        format.html { redirect_to @season, notice: 'Season was successfully created.' }
+        @season.update(team_id: @team.id)
+        format.html { redirect_to root_path, notice: 'Season was successfully created.' }
         format.json { render :show, status: :created, location: @season }
       else
         format.html { render :new }
@@ -65,6 +71,10 @@ class SeasonsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_season
       @season = Season.find(params[:id])
+    end
+
+    def set_team
+      @team = Team.find(current_user.team_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

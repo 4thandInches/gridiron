@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
 
-  resources :seasons
+  resources :seasons do
+    collection do
+      get 'choose'
+    end
+  end
+
   get 'calendars/index'
 
-  
+
 
   resources :teams
   resources :games do
     member do
-      get 'stats'
-      post 'make_stats'
+      get 'player_stats'
+      post 'player_make_stats'
+      get 'game_stats'
+      post 'make_game_stats'
     end
   end
 

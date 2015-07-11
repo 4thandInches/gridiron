@@ -20,7 +20,8 @@
         <td><%= game.time %></td>
         <td><%= game.home %></td>
         <td><%= link_to 'Show', game %></td>
-        <td><%= link_to 'Add Stats', stats_game_path(game)%></td>
+        <td><%= link_to 'Add Player Stats', player_stats_game_path(game)%></td>
+        <td><%= link_to 'Add Game Stats', game_stats_game_path(game) %>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
