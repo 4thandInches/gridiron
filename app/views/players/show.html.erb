@@ -31,8 +31,10 @@
         </li>
 
         <li>
-          <strong>Position:</strong>
-          <%= @player.primary_position_name %>
+          <strong>Positions:</strong>
+          <% @player.positions.each do |p| %>
+            <%= p.name %>
+          <% end %>
         </li>
 
         <li>

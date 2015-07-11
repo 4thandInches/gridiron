@@ -29,7 +29,11 @@
         <td colspan="2"><%= player.email %></td>
         <td><%= player.weight %></td>
         <td><%= player.height %></td>
-        <td><%= player.positions.first.name %></td>
+        <td>
+        <% player.positions.each do |p| %>
+          <%= p.name %>
+        <% end %>
+        </td>
         <td><%= player.class_status.name %></td>
         <td><%= link_to 'Athlete Info', player %></td>
         <td><%= link_to 'Add Position', add_position_player_path(player) %></td>

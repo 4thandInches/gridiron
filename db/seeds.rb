@@ -12,27 +12,28 @@ count = 0
 # jersey_num = rand(1..999)
 
 
-Position.create(name: "QB")
-Position.create(name: "OG")
-Position.create(name: "OT")
-Position.create(name: "TE")
-Position.create(name: "HB")
-Position.create(name: "FB")
-Position.create(name: "WR")
-Position.create(name: "C")
+Position.create(name: "QB", code: "Quarterback")
+Position.create(name: "HB", code: "Halfback")
+Position.create(name: "FB", code: "Fullback")
+Position.create(name: "WR", code: "Wide Receiver")
+Position.create(name: "TE", code: "Tightend")
+
+Position.create(name: "OG", code: "Offensive Guard")
+Position.create(name: "OT", code: "Offensive Tackle")
+Position.create(name: "C", code: "Center")
 
 #Defense
-Position.create(name: "DT")
-Position.create(name: "DE")
-Position.create(name: "LB")
-Position.create(name: "SS")
-Position.create(name: "FS")
-Position.create(name: "CB")
+Position.create(name: "DT", code: "Defensive Tackle")
+Position.create(name: "DE", code: "Defensive End")
+Position.create(name: "LB", code: "Linebacker")
+Position.create(name: "SS", code: "Strong Safety")
+Position.create(name: "FS", code: "Free Safety")
+Position.create(name: "CB", code: "Cornerback")
 
 
 #Special
-Position.create(name: "K")
-Position.create(name: "P")
+Position.create(name: "K", code: "Kicker")
+Position.create(name: "P", code: "Punter")
 
 #Class Status
 ClassStatus.create(name: "Freshman")
