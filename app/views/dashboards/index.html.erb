@@ -6,88 +6,39 @@
 </div>
 
 
-<div id="dash-tables">
-  <table  class="tables apple fade-in-element" >
-    <thead>
-     <tr>
-        <th>Category</th>
-        <th>Player</th>
-        <th>Statistic</th>
-     </tr>
-    </thead>
-
-
-    <tbody>
-    <% leading_pass = Player.lead_player_for(StatType.find_by_name("Passing Yards")) %>
-    <% leading_rush = Player.lead_player_for(StatType.find_by_name("Rushing Yards")) %>
-    <% leading_rec = Player.lead_player_for(StatType.find_by_name("Receiving Yards")) %>
-    <tr>
-      <td> Lead Passer </td>
-      <td> <%= leading_pass[:player_name] %> </td>
-      <td> <%= leading_pass[:value] %> yards  </td>
-    </tr>
-    <tr>
-      <td> Lead Rusher </td>
-      <td> <%= leading_rush[:player_name] %> </td>
-      <td> <%= leading_rush[:value] %> yards  </td>
-    </tr>
-    <tr>
-      <td> Lead Receiver </td>
-      <td> <%= leading_rec[:player_name] %> </td>
-      <td> <%= leading_rec[:value] %> yards  </td>
-    </tr>
-    </tbody>
-  </table>
-
-  <table  class="tables apple fade-in-element" >
-    <thead>
-    <tr>
-      <th>Category</th>
-      <th>Player</th>
-      <th>Statistic</th>
-    </tr>
-    </thead>
-
-
-    <tbody>
-     <tr>
-       <td> Offensive Yards </td>
-       <td> game </td>
-       <td> num </td>
-     </tr>
-     <tr>
-       <td> Yards Given Up </td>
-       <td> game </td>
-       <td> num </td>
-     </tr>
-    </tbody>
-  </table>
-
-  <table  class="tables apple fade-in-element" >
-    <thead>
-    <tr>
-      <th>Thing 1</th>
-      <th>Thing 2</th>
-      <th>Thing 3</th>
-    </tr>
-    </thead>
-
-
-    <tbody>
-    <tr>
-      <td> stuff </td>
-      <td> stuff </td>
-      <td> stuff  </td>
-    </tr>
-    <tr>
-      <td> stuff </td>
-      <td> stuff </td>
-      <td> stuff  </td>
-    </tr>
-    </tbody>
-  </table>
-
+<div class="flex-boxes">
+  <a href="javascript:void(0)" class="flex-box ">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
+    <h1 class="flex-title">Red</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nostrum, libero! Laborum distinctio necessitatibus voluptates eaque officiis, unde illo, earum voluptatum rerum, reiciendis ipsa ex dolorem a dicta, maxime aliquam.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box flex-box-big">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="">
+    <h1 class="flex-title">Blue</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestiae fugiat tenetur fugit atque dignissimos, fugiat natus vitae.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
+    <h1 class="flex-title">Green</h1>
+    <p>Lorem adipisicing elit. Voluptas consectetur tempora quis nam, officia tenetur blanditiis in illo dolor?</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box flex-box-big">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
+    <h1 class="flex-title">Another Wide Item</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quis ipsum, officia, aperiam tenetur dolor molestiae voluptate perferendis dolorem vel ex, unde fugit blanditiis sapiente.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
+    <h1 class="flex-title">Flex Box Item</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo obcaecati in provident illo.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
+    <h1 class="flex-title">Last Flex Box Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
 </div>
+
 
 
 
