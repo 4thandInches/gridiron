@@ -184,3 +184,16 @@ $(document).ready(function() {
     })
 
 });
+
+//add field to itinerary maker,
+
+var questionCounter = 1;
+
+function copySection() {
+    var question = $("#new-question-form").clone().html();
+    question = question.replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
+        .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
+    $("#question-list").append(question);
+    questionCounter++;
+}
+$(copySection);
