@@ -17,6 +17,10 @@ class Team < ActiveRecord::Base
     calculate_efficiency(57, 58)
   end
 
+  def two_point_eff
+    calculate_efficiency(59, 60)
+  end
+
   private
 
       def calculate_efficiency(id_1, id_2)
