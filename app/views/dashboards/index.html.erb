@@ -115,7 +115,7 @@
           <tr>
             <td> <%= game.opponent %> </td>
             <td> <%= game.location %> </td>
-            <td> <%= game.time %> </td>
+            <td> <%= (game.time).strftime("%l:%M PM") %> </td>
           </tr>
         <% end %>
       </tbody>
