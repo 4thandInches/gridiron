@@ -16,6 +16,7 @@
 //= require_tree .
 //= require moment
 //= require fullcalendar
+//= require jquery.datetimepicker
 
 
 
@@ -94,11 +95,14 @@ function parallax(){
 
 //DATEPICKER
 $(function() {
-  $('#datepicker').datepicker({
-    dateFormat: 'dd-mm-yy'
+  $('#datepicker').datetimepicker({
+     format:'g:i A',
+     formatTime: 'g:i A',
+
+     step:30,
+     ampm: true
   });
 });
-
 
 //hide window ambush thing aka fade in---------------------------------------------------------------------------
 $(document).ready(function() {
@@ -216,6 +220,15 @@ $(function () {
 							},
 							true
 						);
+            jQuery.post(
+                "event/new" // your url
+                , { // re-use event's data
+                    title: title,
+                    // start: start,
+                    // end: end,
+                    // allDay: allDay
+                  }
+            );
 					}
 					calendar.fullCalendar('unselect');
 				},

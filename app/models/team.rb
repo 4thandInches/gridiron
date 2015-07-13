@@ -21,6 +21,10 @@ class Team < ActiveRecord::Base
     calculate_efficiency(59, 60)
   end
 
+  def passing_touchdowns
+    stats.where(stat_type_id: 6).sum(:value).to_i
+  end
+
   private
 
       def calculate_efficiency(id_1, id_2)

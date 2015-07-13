@@ -1,12 +1,12 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats, :add_position, :position_added]
-  before_action :set_positions_and_statuses, only: [:new, :edit, :create, :add_position]
+  before_action :set_positions_and_statuses, only: [:new, :edit, :create, :index]
   before_action :set_team
 
   # GET /players
   # GET /players.json
   def index
-    @players = @team.players
+    @players = @team.players.order(:last_name)
   end
 
   # GET /players/1
@@ -23,7 +23,7 @@ class PlayersController < ApplicationController
   end
 
   def show_stats
-    @stats = @player.stats
+    @games = @team.games
   end
 
   # GET /players/new
