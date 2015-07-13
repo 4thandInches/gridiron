@@ -115,12 +115,12 @@ body{
 //  button{
 //      @include position(relative, 10px 25% null 25% );
 //  }
-//  h1{
-//    @include position(relative, 10px 25% );
-//    color:whitesmoke;
-//    font-size: 5em;
-//    margin-top: 2.5em;
-//  }
+  h1{
+    @include position(relative, 10px 25% );
+    color:whitesmoke;
+    font-size: 5em;
+    margin-top: 2.5em;
+  }
 }
 
 //show page styles--------------------------------------------------------------------------------
@@ -635,7 +635,7 @@ header.navigation {
   .modal-trigger.home-button {
     @include position(relative, 300px 43%  );
     font-size: 30px;
-    margin-top: 1em;
+    margin-top: 5em;
 
     @include button(flat, #45b6c3);
     color:whitesmoke;
@@ -1148,7 +1148,7 @@ $parallax-background-height: $parallax-window-height * 2;
   h2 {
     border-bottom: 1px solid transparentize($base-font-color, 0.8);
     display: inline-block;
-    font-size: $icon-bullet-size / 2.5;
+    font-size: 50px;
     margin: 0 0 ($icon-bullet-size / 6) 0;
     padding-top: $icon-bullet-size / 7;
   }
@@ -1160,6 +1160,7 @@ $parallax-background-height: $parallax-window-height * 2;
   p {
     color: whitesmoke;
     line-height: $base-line-height;
+		font-size: 35px;
   }
 
   img {
