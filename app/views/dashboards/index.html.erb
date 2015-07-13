@@ -9,7 +9,7 @@
 <div class="flex-boxes">
   <div class="flex-box ">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
-    <h1 class="flex-title">Red</h1>
+    <h1 class="flex-title"></h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nostrum, libero! Laborum distinctio necessitatibus voluptates eaque officiis, unde illo, earum voluptatum rerum, reiciendis ipsa ex dolorem a dicta, maxime aliquam.</p>
   </div>
 
@@ -18,7 +18,7 @@
 
 
   <div class="flex-box flex-box-big">
-    <h1 class="flex-title">Blue</h1>
+    <h1 class="flex-title">Offensive Team Stats</h1>
     <section>
       <aside>Red Zone Efficiency</aside>
       <article><%= @team.red_zone_eff %>%</article>
@@ -65,11 +65,44 @@
     <h1 class="flex-title">Yellow</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quis ipsum, officia, aperiam tenetur dolor molestiae voluptate perferendis dolorem vel ex, unde fugit blanditiis sapiente.</p>
   </div>
+
+
+
   <div class="flex-box flex-box-big">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
-    <h1 class="flex-title">Orange</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo obcaecati in provident illo.</p>
+    <h1 class="flex-title">Defensive Team Stats</h1>
+    <section>
+      <aside>Tackles</aside>
+      <article>n%</article>
+
+      <aside>Sacks</aside>
+      <article>n%</article>
+
+      <aside>3rd Down Stops</aside>
+      <article>n%</article>
+
+      <aside>4th Down Stops</aside>
+      <article>n%</article>
+    </section>
+    <br>
+    <br>
+    <section>
+      <aside>Takeaways</aside>
+      <article>n%</article>
+
+      <aside>Forced Fumbles</aside>
+      <article>n%</article>
+
+      <aside>Fumble Recoveries</aside>
+      <article>n%</article>
+
+      <aside>Interceptions</aside>
+      <article>n%</article>
+    </section>
   </div>
+
+
+
   <div class="flex-box">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
     <h1 class="flex-title">Purple</h1>
@@ -78,38 +111,23 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-  <div id="schedule-dashboard">
-
-
-    <table id="js-fadeInElement" class="tables table-homepage fade-in-element " >
-      <thead>
-        <tr>
-          <th>Opponent</th>
-          <th>Location</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-
-
-      <tbody>
-        <% @games.each do |game| %>
-          <tr>
-            <td> <%= game.opponent %> </td>
-            <td> <%= game.location %> </td>
-            <td> <%# (game.time).strftime("%D") %> </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-
-
-  </div>
+<div id="schedule-dashboard">
+  <table id="js-fadeInElement" class="tables table-homepage fade-in-element " >
+    <thead>
+      <tr>
+        <th>Opponent</th>
+        <th>Location</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td> <%= game.opponent %> </td>
+        <td> <%= game.location %> </td>
+        <td> <%# (game.time).strftime("%D") %> </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
