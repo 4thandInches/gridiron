@@ -37,96 +37,6 @@ body{
 //dashboard//////////////////////////////////////////////////////
 
 
-
-
-#dash-tables{
-  //margin-right: auto;
-  //margin-left: auto;
-  height: 200px;
-  width: 100%;
-  .tables.apple{
-    margin-right: 0;
-    display: inline-block;
-    height: 150px;
-    width: 29%;
-    //background-color: #6E6E6E;
-    padding: 50px;
-    margin-right: 30px;
-    margin-bottom: 40px;
-    //width:  30%;
-    //display: inline-block;
-    tbody{
-    color:whitesmoke;
-    tr:hover > td, tr:hover > th {
-      background-color: #6E6E6E;
-    }
-    tr:nth-child(even) {
-      background-color: #434343;
-      &:hover > td {
-        background-color: #6E6E6E;
-      }
-    }
-  }
-    th {
-      color: #45b6c3;
-      background-color: #1e1e1e;
-    }
-    tr:nth-child(even) {
-      background-color: #45b6c3;
-    }
-    tr:nth-child(odd) {
-      background-color: #303030;
-    }
-  }
-
-
-}
-
-#stat-dashboard{
-
-  margin-top: 250px;
-  text-align: center;
-  color: whitesmoke;
-  height: 250px;
-  background-color: #383838;
-  section {
-    //@include outer-container;
-    aside { @include span-columns(2); }
-    article { @include span-columns(1); }
-  }
-}
-
-
-
-
-#cool-boxes-container{
-  color:whitesmoke;
-  position:relative;
-  top: -1.8em;
-  height: 100px;
-
-  article {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 73.125em;
-
-    .awesome-box {
-      &:hover{
-        background-color: orange;
-      }
-      display: inline-block;
-      height: 150px;
-      width: 29%;
-      background-color: #6E6E6E;
-      padding: 50px;
-      margin-right: 30px;
-      margin-bottom: 40px;
-    }
-  }
-}
-
-
-
 #schedule-dashboard{
   //@include outer-container();
   position: relative;
@@ -184,26 +94,27 @@ body{
 
 //homepage image\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .home-image{
-  background:
-  linear-gradient(
-                  rgba(53, 149, 161, 0.5),
-                  rgba(53, 149, 161, 0.5)
-  ),
-
-
-  asset_url('aged_football.jpg') no-repeat fixed center center;
-  background-size: cover;
-  background-position: 50%;
-  //height: 1000px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  button{
-      @include position(relative, 10px 25% null 25% );
-  }
+  background-color: grey;
+//  background:
+//  linear-gradient(
+//                  rgba(53, 149, 161, 0.5),
+//                  rgba(53, 149, 161, 0.5)
+//  ),
+//
+//
+//  asset_url('aged_football.jpg') no-repeat fixed center center;
+//  background-size: cover;
+//  background-position: 50%;
+//  //height: 1000px;
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//
+//  button{
+//      @include position(relative, 10px 25% null 25% );
+//  }
   h1{
     @include position(relative, 10px 25% );
     color:whitesmoke;
@@ -724,7 +635,7 @@ header.navigation {
   .modal-trigger.home-button {
     @include position(relative, 300px 43%  );
     font-size: 30px;
-    margin-top: 1em;
+    margin-top: 5em;
 
     @include button(flat, #45b6c3);
     color:whitesmoke;
@@ -1237,7 +1148,7 @@ $parallax-background-height: $parallax-window-height * 2;
   h2 {
     border-bottom: 1px solid transparentize($base-font-color, 0.8);
     display: inline-block;
-    font-size: $icon-bullet-size / 2.5;
+    font-size: 50px;
     margin: 0 0 ($icon-bullet-size / 6) 0;
     padding-top: $icon-bullet-size / 7;
   }
@@ -1249,6 +1160,7 @@ $parallax-background-height: $parallax-window-height * 2;
   p {
     color: whitesmoke;
     line-height: $base-line-height;
+		font-size: 35px;
   }
 
   img {
@@ -1292,6 +1204,20 @@ $parallax-background-height: $parallax-window-height * 2;
   text-align: center;
 
   .flex-box {
+
+    section {
+      margin-top: 20px;
+      //@include outer-container;
+      aside { @include span-columns(2); }
+      article { @include span-columns(1); }
+    }
+		section.small{
+			margin-top: 20px;
+			//@include outer-container;
+			aside { @include span-columns(6); }
+			article { @include span-columns(6); }
+		}
+
     @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);

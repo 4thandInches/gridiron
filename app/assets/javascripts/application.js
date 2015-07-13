@@ -173,7 +173,6 @@ $(function () {
 
 });
 //calendar
-
 		$(document).ready(function()
 		{
 
@@ -232,3 +231,39 @@ $(function () {
 			});
 
 		});
+
+
+
+//ADD FIELD
+//add field to itinerary maker,
+//
+var questionCounter = 1;
+
+function copySection() {
+  var question = $("#new-question-form").clone().html();
+  question = question.replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
+    .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
+  $("#question-list").append(question);
+  questionCounter++;
+}
+
+
+$(function () {
+
+  $('#addTask').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+
+
+    var newQuestionForm = $('#new-question-form').html();
+
+    newQuestionForm = newQuestionForm
+      .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
+      .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
+
+    $('div#new-question-form').last().append(newQuestionForm);
+
+    questionCounter++;
+  })
+
+})

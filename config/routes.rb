@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :situations
+  resources :itineraries
   resources :seasons do
     collection do
       get 'choose'
