@@ -221,12 +221,12 @@ $(function () {
 							true
 						);
             jQuery.post(
-                "event/new" // your url
+                "event/create" // your url
                 , { // re-use event's data
                     title: title,
-                    // start: start,
-                    // end: end,
-                    // allDay: allDay
+                    start: start,
+                    end: end,
+                    allDay: allDay
                   }
             );
 					}
