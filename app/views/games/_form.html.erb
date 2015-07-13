@@ -21,8 +21,12 @@
         <%= f.text_field :location %>
       </div>
       <div class="field">
-        <%= f.label :time %><br>
+        <%= f.label :date %><br>
         <%= f.text_field :time, id: "datepicker" %>
+      </div>
+      <div class="field">
+        <%= f.label :game_time %><br>
+        <%= f.time_select :time %>
       </div>
       <div class="field">
         <%= f.label :home %><br>
