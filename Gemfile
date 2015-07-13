@@ -40,6 +40,8 @@ gem 'fullcalendar-rails'
 
 gem 'momentjs-rails'
 
+gem 'jquery-datetimepicker-rails', git: 'git://github.com/servtag/jquery-datetimepicker-rails.git'
+
 
 
 # Spring speeds
