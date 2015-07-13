@@ -13,13 +13,21 @@
     </p>
 
     <p>
-      <strong>Time:</strong>
-      <%= @game.time %>
+      <strong>Date:</strong>
+      <%= (@game.time).strftime("%D") %>
     </p>
 
     <p>
-      <strong>Home:</strong>
-      <%= @game.home %>
+      <strong>Time:</strong>
+      <%= (@game.time).strftime("%l:%M PM") %>
+    </p>
+
+    <p>
+      <% if @game.home %>
+      <%= "Home Game" %>
+      <% else %>
+      <%= "Away Game" %>
+      <% end %>
     </p>
 
     <%= link_to 'Edit', edit_game_path(@game) %> |
