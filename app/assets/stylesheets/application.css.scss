@@ -1293,6 +1293,14 @@ $parallax-background-height: $parallax-window-height * 2;
   text-align: center;
 
   .flex-box {
+
+    section {
+      margin-top: 20px;
+      //@include outer-container;
+      aside { @include span-columns(2); }
+      article { @include span-columns(1); }
+    }
+
     @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
     @include align-self(stretch);
