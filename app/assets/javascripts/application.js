@@ -100,14 +100,6 @@ $(function() {
 });
 
 
-//SORTABLE
-$(function() {
-  $( ".sortable" ).sortable({
-    axis: "y"
-  });
-});
-
-
 //hide window ambush thing aka fade in---------------------------------------------------------------------------
 $(document).ready(function() {
     var element = document.getElementById("js-fadeInElement");
@@ -132,6 +124,37 @@ $(document).ready(function() {
         }
     });
 });
+
+//SORTABLE
+
+function changePosition(){
+  $('.sortable').sortable().bind('sortupdate', function(e, ui) {
+    updated_positions = []
+    setPosition();
+
+    $('.ui-sortable-handle, .ui-state-default').each(function(i){
+        updated_positions.push({ id: $(this).data("id"), position: i + 1 });
+    });
+
+
+    $.ajax({
+        type: "PUT",
+        url: '/positions/sort',
+        data: { order: updated_positions }
+    });
+
+
+  });
+}
+
+function setPosition(){
+  $('.ui-sortable-handle, .ui-state-default').each(function(i){
+    $(this).attr('page_position', i + 1);
+  });
+}
+
+$(changePosition);
+$(setPosition);
 
 //form text effect-------------------------------------------------------------------------------------------
 

@@ -6,80 +6,39 @@
 </div>
 
 
-<div id="dash-tables">
-  <table  class="tables apple fade-in-element" >
-    <thead>
-     <tr>
-        <th>Thing 1</th>
-        <th>Thing 2</th>
-        <th>Thing 3</th>
-     </tr>
-    </thead>
-
-
-    <tbody>
-      <tr>
-        <td> stuff </td>
-        <td> stuff </td>
-        <td> stuff  </td>
-      </tr>
-      <tr>
-        <td> stuff </td>
-        <td> stuff </td>
-        <td> stuff  </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table  class="tables apple fade-in-element" >
-    <thead>
-    <tr>
-      <th>Thing 1</th>
-      <th>Thing 2</th>
-      <th>Thing 3</th>
-    </tr>
-    </thead>
-
-
-    <tbody>
-    <tr>
-      <td> stuff </td>
-      <td> stuff </td>
-      <td> stuff  </td>
-    </tr>
-    <tr>
-      <td> stuff </td>
-      <td> stuff </td>
-      <td> stuff  </td>
-    </tr>
-    </tbody>
-  </table>
-
-  <table  class="tables apple fade-in-element" >
-    <thead>
-    <tr>
-      <th>Thing 1</th>
-      <th>Thing 2</th>
-      <th>Thing 3</th>
-    </tr>
-    </thead>
-
-
-    <tbody>
-    <tr>
-      <td> stuff </td>
-      <td> stuff </td>
-      <td> stuff  </td>
-    </tr>
-    <tr>
-      <td> stuff </td>
-      <td> stuff </td>
-      <td> stuff  </td>
-    </tr>
-    </tbody>
-  </table>
-
+<div class="flex-boxes">
+  <a href="javascript:void(0)" class="flex-box ">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
+    <h1 class="flex-title">Red</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nostrum, libero! Laborum distinctio necessitatibus voluptates eaque officiis, unde illo, earum voluptatum rerum, reiciendis ipsa ex dolorem a dicta, maxime aliquam.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box flex-box-big">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="">
+    <h1 class="flex-title">Blue</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestiae fugiat tenetur fugit atque dignissimos, fugiat natus vitae.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
+    <h1 class="flex-title">Green</h1>
+    <p>Lorem adipisicing elit. Voluptas consectetur tempora quis nam, officia tenetur blanditiis in illo dolor?</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box flex-box-big">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
+    <h1 class="flex-title">Another Wide Item</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quis ipsum, officia, aperiam tenetur dolor molestiae voluptate perferendis dolorem vel ex, unde fugit blanditiis sapiente.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
+    <h1 class="flex-title">Flex Box Item</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo obcaecati in provident illo.</p>
+  </a>
+  <a href="javascript:void(0)" class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
+    <h1 class="flex-title">Last Flex Box Item</h1>
+    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+  </a>
 </div>
+
 
 
 
@@ -88,18 +47,38 @@
 
 
 <div id="stat-dashboard">
+    <h3> Team Statistics</h3>
+      <section>
+        <aside>Red Zone Efficiency</aside>
+        <article>68%</article>
 
-  <h3 class="lead-category"> Leading Passer</h3>
-  <% leading_pass = Player.lead_player_for(StatType.find_by_name("Passing Yards")) %>
-  <h4> <%= leading_pass[:player_name] %> </h4>
-  <h4> <%= leading_pass[:value] %> </h4>
+        <aside>Red Zone Efficiency</aside>
+        <article>68%</article>
 
-  <h3 class="lead-category"> Leading Rusher</h3>
-  <% leading_pass = Player.lead_player_for(StatType.find_by_name("Rushing Yards")) %>
-  <h4> <%= leading_pass[:player_name] %> </h4>
-  <h4> <%= leading_pass[:value] %> </h4>
+        <aside>Red Zone Efficiency</aside>
+        <article>68%</article>
 
-</div>
+        <aside>Red Zone Efficiency</aside>
+        <article>68%</article>
+      </section>
+
+    <section>
+      <aside>Red Zone Efficiency</aside>
+      <article>68%</article>
+
+      <aside>Red Zone Efficiency</aside>
+      <article>68%</article>
+
+      <aside>Red Zone Efficiency</aside>
+      <article>68%</article>
+
+      <aside>Red Zone Efficiency</aside>
+      <article>68%</article>
+    </section>
+
+
+
+    </div>
 
 
 <section id="cool-boxes-container">
@@ -132,7 +111,7 @@
 
 
       <tbody>
-        <% Game.all.each do |game| %>
+        <% @games.each do |game| %>
           <tr>
             <td> <%= game.opponent %> </td>
             <td> <%= game.location %> </td>
@@ -142,6 +121,5 @@
       </tbody>
     </table>
 
-    <div class="dash-table-picture"> </div>
 
   </div>

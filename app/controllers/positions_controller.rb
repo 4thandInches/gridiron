@@ -13,6 +13,13 @@ class PositionsController < ApplicationController
   def show
   end
 
+  def sort
+    params[:order].each do |key,value|
+      Role.find(value[:id]).update(depth_chart_position: value[:position])
+    end
+    render :nothing => true
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_position
