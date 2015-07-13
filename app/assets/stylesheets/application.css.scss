@@ -184,32 +184,33 @@ body{
 
 //homepage image\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .home-image{
-  background:
-  linear-gradient(
-                  rgba(53, 149, 161, 0.5),
-                  rgba(53, 149, 161, 0.5)
-  ),
-
-
-  asset_url('aged_football.jpg') no-repeat fixed center center;
-  background-size: cover;
-  background-position: 50%;
-  //height: 1000px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  button{
-      @include position(relative, 10px 25% null 25% );
-  }
-  h1{
-    @include position(relative, 10px 25% );
-    color:whitesmoke;
-    font-size: 5em;
-    margin-top: 2.5em;
-  }
+  background-color: grey;
+//  background:
+//  linear-gradient(
+//                  rgba(53, 149, 161, 0.5),
+//                  rgba(53, 149, 161, 0.5)
+//  ),
+//
+//
+//  asset_url('aged_football.jpg') no-repeat fixed center center;
+//  background-size: cover;
+//  background-position: 50%;
+//  //height: 1000px;
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//
+//  button{
+//      @include position(relative, 10px 25% null 25% );
+//  }
+//  h1{
+//    @include position(relative, 10px 25% );
+//    color:whitesmoke;
+//    font-size: 5em;
+//    margin-top: 2.5em;
+//  }
 }
 
 //show page styles--------------------------------------------------------------------------------
