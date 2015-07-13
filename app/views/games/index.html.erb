@@ -16,8 +16,14 @@
     <% @games.each do |game| %>
       <tr>
         <td><%= game.opponent %></td>
-        <td><%= game.location %></td>
-        <td><%= game.time %></td>
+        <td>
+          <% if game.home %>
+          <%= game.location %>
+          <% else %>
+          <%= "@ #{game.location}" %>
+          <% end %>
+        </td>
+        <td><%= (game.time).strftime("%B ") %></td>
         <td><%= game.home %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Add Stats', stats_game_path(game)%></td>

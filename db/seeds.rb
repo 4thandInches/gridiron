@@ -105,18 +105,18 @@ if Rails.env.development?
   User.create!(email: "test@test.com", password: "password", team_id: 1)
 
 #games
-  Game.create!(opponent: "Nevada", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "UNLV", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Air Force", location: "Colorado Springs, CO", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "New Mexico", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Utah St", location: "Logan, UT", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "SDSU", location: "San Diego, CA", time:1100, home: false, team_id: 1)
-  Game.create!(opponent: "Boise St", location: "Boise, ID", time:1100, home: false, team_id: 1)
-  Game.create!(opponent: "Hawaii", location: "Honolulu, HI", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "San Jose St", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Colorado", location: "Boulder, CO", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "Texas", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
+  Game.create!(opponent: "Nevada", location: "Laramie, WY", time: DateTime.new(2015,9,5,19), home: true, team_id: 1)
+  Game.create!(opponent: "UNLV", location: "Laramie, WY", time: DateTime.new(2015,9,12,19), home: true, team_id: 1)
+  Game.create!(opponent: "Air Force", location: "Colorado Springs, CO", time: DateTime.new(2015,9,19,19), home: false, team_id: 1)
+  Game.create!(opponent: "New Mexico", location: "Laramie, WY", time: DateTime.new(2015,9,26,19), home: true, team_id: 1)
+  Game.create!(opponent: "Utah St", location: "Logan, UT", time: DateTime.new(2015,10,3,15), home: false, team_id: 1)
+  Game.create!(opponent: "SDSU", location: "San Diego, CA", time: DateTime.new(2015,10,10,19), home: false, team_id: 1)
+  Game.create!(opponent: "Boise St", location: "Boise, ID", time: DateTime.new(2015,10,17,15), home: false, team_id: 1)
+  Game.create!(opponent: "Hawaii", location: "Honolulu, HI", time: DateTime.new(2015,10,24,19), home: false, team_id: 1)
+  Game.create!(opponent: "San Jose St", location: "Laramie, WY", time: DateTime.new(2015,10,30,12), home: true, team_id: 1)
+  Game.create!(opponent: "Colorado", location: "Boulder, CO", time: DateTime.new(2015,11,7,19), home: false, team_id: 1)
+  Game.create!(opponent: "Texas", location: "Laramie, WY", time: DateTime.new(2015,11,14,12), home: true, team_id: 1)
+  Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: DateTime.new(2015,11,28,15), home: true, team_id: 1)
 
   class_status_array = [1,2,3,4]
 
