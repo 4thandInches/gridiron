@@ -16,7 +16,7 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= (game.time).strftime("%D") %></td>
+        <td><%# (game.time).strftime("%D") %></td>
         <td><%= game.opponent %></td>
         <td>
           <% if game.home %>
@@ -25,7 +25,7 @@
           <%= "@ #{game.location}" %>
           <% end %>
         </td>
-        <td><%= (game.time).strftime("%l:%M PM") %></td>
+        <td><%# (game.time).strftime("%l:%M PM") %></td>
         <td>
           <% if game.home %>
           <%= "Home" %>
