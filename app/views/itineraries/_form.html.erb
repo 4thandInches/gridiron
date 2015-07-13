@@ -21,6 +21,7 @@
 
 
       <%= f.fields_for(:situations) do |ff| %>
+    <div class="grape">
        <div id="new-question-form">
          <div class="field">
            <%= ff.label :time %><br>
@@ -32,6 +33,7 @@
            <%= ff.text_field :task %>
          </div>
        </div>
+    </div>
     <%end%>
 
 
