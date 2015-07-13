@@ -181,7 +181,7 @@
       <tr>
         <td> <%= game.opponent %> </td>
         <td> <%= game.location %> </td>
-        <td> <%# (game.time).strftime("%D") %> </td>
+        <td> <%= (game.time).strftime("%D") %> </td>
       </tr>
     <% end %>
     </tbody>
