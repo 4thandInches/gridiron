@@ -39,28 +39,21 @@
   </a>
 </div>
 
-
-
-
-
-
-
-
 <div id="stat-dashboard">
     <h3> Team Statistics</h3>
-      <section>
-        <aside>Red Zone Efficiency</aside>
-        <article>68%</article>
+    <section>
+      <aside>Red Zone Efficiency</aside>
+      <article><%= @team.red_zone_eff %>%</article>
 
-        <aside>Red Zone Efficiency</aside>
-        <article>68%</article>
+      <aside>Third Down Efficiency</aside>
+      <article><%= @team.third_down_eff %>%</article>
 
-        <aside>Red Zone Efficiency</aside>
-        <article>68%</article>
+      <aside>Fourth Down Efficiency</aside>
+      <article><%= @team.fourth_down_eff %>%</article>
 
-        <aside>Red Zone Efficiency</aside>
-        <article>68%</article>
-      </section>
+      <aside>Red Zone Efficiency</aside>
+      <article><%= @team.two_point_eff %>%</article>
+    </section>
 
     <section>
       <aside>Red Zone Efficiency</aside>
@@ -84,8 +77,8 @@
 <section id="cool-boxes-container">
   <article>
     <span class="awesome-box"><section>Hello World</section></span>
-    <span class="awesome-box"><section>Hello World</section> </span>
-    <span class="awesome-box"><section>Hello World</section> </span>
+    <span class="awesome-box"><section>Hello Mars</section> </span>
+    <span class="awesome-box"><section>Hello Venus</section> </span>
   </article>
 </section>
 
@@ -115,7 +108,7 @@
           <tr>
             <td> <%= game.opponent %> </td>
             <td> <%= game.location %> </td>
-            <td> <%= game.time %> </td>
+            <td> <%= (game.time).strftime("%D") %> </td>
           </tr>
         <% end %>
       </tbody>

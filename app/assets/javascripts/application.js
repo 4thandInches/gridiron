@@ -172,54 +172,98 @@ $(function () {
     });
 
 });
-
 //calendar
+		$(document).ready(function()
+		{
 
-$(document).ready(function() {
+			var calendar = $('#calendar').fullCalendar(
+			{
+				header:
+				{
+					left: 'prev,next today',
+					center: 'title',
+					right: 'month,agendaWeek,agendaDay'
+				},
 
-    // page is now ready, initialize the calendar...
+				defaultView: 'month',
 
-    $('#calendar').fullCalendar({
-        // put your options and callbacks here
-    })
+				selectable: true,
+				selectHelper: true,
+				/*
+					when user select timeslot this option code will execute.
+					It has three arguments. Start,end and allDay.
+					Start means starting time of event.
+					End means ending time of event.
+					allDay means if events is for entire day or not.
+				*/
+				select: function(start, end, allDay)
+				{
+					/*
+						after selection user will be promted for enter title for event.
+					*/
+					var title = prompt('Event Title:');
+					/*
+						if title is entered calendar will add title and event into fullCalendar.
+					*/
+					if (title)
+					{
+						calendar.fullCalendar('renderEvent',
+							{
+								title: title,
+								start: start,
+								end: end,
+								allDay: allDay
+							},
+							true
+						);
+					}
+					calendar.fullCalendar('unselect');
+				},
 
-});
+					//editable: true allow user to edit events.
 
+				editable: true,
+
+
+        //adds games from schedule
+				events: '/games.json'
+
+			});
+
+		});
+
+
+
+//ADD FIELD
 //add field to itinerary maker,
 //
 var questionCounter = 1;
 
 function copySection() {
-    var question = $("#new-question-form").clone().html();
-    question = question.replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
-        .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
-    $("#question-list").append(question);
-    questionCounter++;
+  var question = $("#new-question-form").clone().html();
+  question = question.replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
+    .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
+  $("#question-list").append(question);
+  questionCounter++;
 }
 
 
 $(function () {
 
-    $('#addTask').on('click', function (e) {
-        e.stopPropagation();
-        e.preventDefault();
+  $('#addTask').on('click', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
 
 
-        var newQuestionForm = $('#new-question-form').html();
+    var newQuestionForm = $('#new-question-form').html();
 
-        newQuestionForm = newQuestionForm
-            .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
-            .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
+    newQuestionForm = newQuestionForm
+      .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
+      .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
 
-        $('div#new-question-form').last().append(newQuestionForm);
+    $('div#new-question-form').last().append(newQuestionForm);
 
-        questionCounter++;
-    })
+    questionCounter++;
+  })
 
 })
-
-
-
-//test
-
-

@@ -12,27 +12,28 @@ count = 0
 # jersey_num = rand(1..999)
 
 
-Position.create(name: "QB")
-Position.create(name: "OG")
-Position.create(name: "OT")
-Position.create(name: "TE")
-Position.create(name: "HB")
-Position.create(name: "FB")
-Position.create(name: "WR")
-Position.create(name: "C")
+Position.create(name: "QB", code: "Quarterback")
+Position.create(name: "HB", code: "Halfback")
+Position.create(name: "FB", code: "Fullback")
+Position.create(name: "WR", code: "Wide Receiver")
+Position.create(name: "TE", code: "Tightend")
+
+Position.create(name: "OG", code: "Offensive Guard")
+Position.create(name: "OT", code: "Offensive Tackle")
+Position.create(name: "C", code: "Center")
 
 #Defense
-Position.create(name: "DT")
-Position.create(name: "DE")
-Position.create(name: "LB")
-Position.create(name: "SS")
-Position.create(name: "FS")
-Position.create(name: "CB")
+Position.create(name: "DT", code: "Defensive Tackle")
+Position.create(name: "DE", code: "Defensive End")
+Position.create(name: "LB", code: "Linebacker")
+Position.create(name: "SS", code: "Strong Safety")
+Position.create(name: "FS", code: "Free Safety")
+Position.create(name: "CB", code: "Cornerback")
 
 
 #Special
-Position.create(name: "K")
-Position.create(name: "P")
+Position.create(name: "K", code: "Kicker")
+Position.create(name: "P", code: "Punter")
 
 #Class Status
 ClassStatus.create(name: "Freshman")
@@ -100,23 +101,35 @@ StatType.create(name: "Punts inside RedZone")
 StatType.create(name: "Longest Punt")
 StatType.create(name: "Total Punts")
 
+#Team Stats
+StatType.create(name: "Red Zone Trips")
+StatType.create(name: "Red Zone Conversions")
+StatType.create(name: "3rd Down Attempt")
+StatType.create(name: "3rd Conversions")
+StatType.create(name: "4th Down Attempt")
+StatType.create(name: "4th Conversions")
+StatType.create(name: "2 Point Attempt")
+StatType.create(name: "2 Point Conversions")
+StatType.create(name: "Offensive Snaps")
+StatType.create(name: "Defensive Snaps")
+
 if Rails.env.development?
   Team.create!(name: "Greyhounds", school: "North Surry", head_coach: "Dan McClendon", location: "Mount Airy, NC", division: "North West", conference: "NEC")
   User.create!(email: "test@test.com", password: "password", team_id: 1)
 
 #games
-  Game.create!(opponent: "Nevada", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "UNLV", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Air Force", location: "Colorado Springs, CO", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "New Mexico", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Utah St", location: "Logan, UT", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "SDSU", location: "San Diego, CA", time:1100, home: false, team_id: 1)
-  Game.create!(opponent: "Boise St", location: "Boise, ID", time:1100, home: false, team_id: 1)
-  Game.create!(opponent: "Hawaii", location: "Honolulu, HI", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "San Jose St", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Colorado", location: "Boulder, CO", time: 1100, home: false, team_id: 1)
-  Game.create!(opponent: "Texas", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
-  Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: 1100, home: true, team_id: 1)
+  Game.create!(opponent: "Nevada", location: "Laramie, WY", time: DateTime.new(2015,9,5,19), home: true, team_id: 1)
+  Game.create!(opponent: "UNLV", location: "Laramie, WY", time: DateTime.new(2015,9,12,19), home: true, team_id: 1)
+  Game.create!(opponent: "Air Force", location: "Colorado Springs, CO", time: DateTime.new(2015,9,19,19), home: false, team_id: 1)
+  Game.create!(opponent: "New Mexico", location: "Laramie, WY", time: DateTime.new(2015,9,26,19), home: true, team_id: 1)
+  Game.create!(opponent: "Utah St", location: "Logan, UT", time: DateTime.new(2015,10,3,15), home: false, team_id: 1)
+  Game.create!(opponent: "SDSU", location: "San Diego, CA", time: DateTime.new(2015,10,10,19), home: false, team_id: 1)
+  Game.create!(opponent: "Boise St", location: "Boise, ID", time: DateTime.new(2015,10,17,15), home: false, team_id: 1)
+  Game.create!(opponent: "Hawaii", location: "Honolulu, HI", time: DateTime.new(2015,10,24,19), home: false, team_id: 1)
+  Game.create!(opponent: "San Jose St", location: "Laramie, WY", time: DateTime.new(2015,10,30,12), home: true, team_id: 1)
+  Game.create!(opponent: "Colorado", location: "Boulder, CO", time: DateTime.new(2015,11,7,19), home: false, team_id: 1)
+  Game.create!(opponent: "Texas", location: "Laramie, WY", time: DateTime.new(2015,11,14,12), home: true, team_id: 1)
+  Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: DateTime.new(2015,11,28,15), home: true, team_id: 1)
 
   class_status_array = [1,2,3,4]
 

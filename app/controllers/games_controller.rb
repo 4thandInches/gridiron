@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :edit, :update, :destroy, :make_stats, :stats]
+  before_action :set_game, only: [:show, :edit, :update, :destroy, :player_make_stats, :player_stats, :game_stats, :make_game_stats]
   before_action :set_team
 
   # GET /games
@@ -18,17 +18,28 @@ class GamesController < ApplicationController
     @game = Game.new
   end
 
-  def stats
+  def player_stats
     @positions = Position.all
   end
 
-  def make_stats
+  def game_stats
+    @stat_types = StatType.last(10)
+  end
+
+  def player_make_stats
     params[:stat].each do |k, v|
       v.each do |key, value|
         stat = Stat.create!(player_id: k, game_id: @game.id, stat_type_id: key, value: value) unless value == ""
       end
     end
-    redirect_to stats_game_path(@game)
+    redirect_to player_stats_game_path(@game)
+  end
+
+  def make_game_stats
+    params[:stat].each do |k, v|
+      Stat.create!(game_id: @game.id, stat_type_id: k, value: v) unless v == ""
+    end
+    redirect_to games_path
   end
 
   # GET /games/1/edit
