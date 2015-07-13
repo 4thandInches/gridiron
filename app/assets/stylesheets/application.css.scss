@@ -1353,3 +1353,28 @@ $parallax-background-height: $parallax-window-height * 2;
 #game-stats{
   margin-top: 75px;
 }
+
+//create-team
+
+#new-team {
+  margin-top: 75px;
+  h1 {
+    text-align: center;
+  }
+  input[type="text"] {
+    margin: auto;
+    width: 25%;
+  }
+
+  label {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .actions {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+//add-position
