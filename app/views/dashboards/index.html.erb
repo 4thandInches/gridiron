@@ -77,8 +77,8 @@
 <section id="cool-boxes-container">
   <article>
     <span class="awesome-box"><section>Hello World</section></span>
-    <span class="awesome-box"><section>Hello World</section> </span>
-    <span class="awesome-box"><section>Hello World</section> </span>
+    <span class="awesome-box"><section>Hello Mars</section> </span>
+    <span class="awesome-box"><section>Hello Venus</section> </span>
   </article>
 </section>
 
@@ -108,7 +108,7 @@
           <tr>
             <td> <%= game.opponent %> </td>
             <td> <%= game.location %> </td>
-            <td> <%= game.time %> </td>
+            <td> <%= (game.time).strftime("%D") %> </td>
           </tr>
         <% end %>
       </tbody>
