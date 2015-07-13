@@ -52,8 +52,8 @@
           <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/dashboards/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.48387095">
-                  <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+                <state vertical-scroll-proportion="0.516129">
+                  <caret line="164" column="53" selection-start-line="164" selection-start-column="53" selection-end-line="164" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
@@ -66,7 +66,7 @@
           <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.69857436">
+                <state vertical-scroll-proportion="5.574338">
                   <caret line="1217" column="39" selection-start-line="1217" selection-start-column="39" selection-end-line="1217" selection-end-column="39" />
                   <folding />
                 </state>
@@ -1031,7 +1031,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69857436">
+        <state vertical-scroll-proportion="5.574338">
           <caret line="1217" column="39" selection-start-line="1217" selection-start-column="39" selection-end-line="1217" selection-end-column="39" />
           <folding />
         </state>
@@ -1039,8 +1039,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboards/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48387095">
-          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.516129">
+          <caret line="164" column="53" selection-start-line="164" selection-start-column="53" selection-end-line="164" selection-end-column="53" />
           <folding />
         </state>
       </provider>
