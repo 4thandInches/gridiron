@@ -23,7 +23,7 @@ class PlayersController < ApplicationController
   end
 
   def show_stats
-    @stats = @player.stats
+    @games = @team.games
   end
 
   # GET /players/new
