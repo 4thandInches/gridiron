@@ -22,11 +22,11 @@
       <% if user_signed_in? && current_user.team_id %>
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><%= link_to "Home", root_path %> </li>
-        <li class="nav-link"><%= link_to "Manage Players", players_path %> </li>
-        <!-- <li class="nav-link"><%= link_to "Show Player Stats", players_path %></li> -->
-        <li class="nav-link"><%= link_to "Show Depth Chart", positions_path %></li>
-        <li class="nav-link"><%= link_to "Show Schedule", games_path %></li>
-        <li class="nav-link"><%= link_to "Show Calendar", calendars_index_path %></li>
+        <li class="nav-link"><%= link_to "Roster", players_path %> </li>
+        <!-- <li class="nav-link"><%= link_to "Player Stats", players_path %></li> -->
+        <li class="nav-link"><%= link_to "Depth Chart", positions_path %></li>
+        <li class="nav-link"><%= link_to "Schedule/Add Stats", games_path %></li>
+        <li class="nav-link"><%= link_to "Calendar", calendars_index_path %></li>
 
         <li class="nav-link"><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
         <% end %>

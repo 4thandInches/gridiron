@@ -1211,6 +1211,12 @@ $parallax-background-height: $parallax-window-height * 2;
       aside { @include span-columns(2); }
       article { @include span-columns(1); }
     }
+		section.small{
+			margin-top: 20px;
+			//@include outer-container;
+			aside { @include span-columns(6); }
+			article { @include span-columns(6); }
+		}
 
     @include transition (all 0.2s ease-in-out);
     @include flex(2 2 15em);
