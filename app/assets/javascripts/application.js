@@ -262,19 +262,19 @@ $(function () {
 
 
 $(function () {
-
+  var questionCounter = $('.situation-fields').length;
+  var newFields = $('.situation-fields').last().html();
   $('#addTask').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
-    var questionCounter = 1;
-    var newQuestionForm = $('#new-question-form').html();
 
-    newQuestionForm = newQuestionForm
+
+    newFields = newFields
       .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
       .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
 
-    $('.grape').last().append(newQuestionForm);
+    $('.wrapper').last().append(newFields);
 
     questionCounter++;
   })
