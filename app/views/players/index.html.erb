@@ -44,7 +44,7 @@
               <input class="modal-state" id='modal-<%= player.id %>' type="checkbox" />
               <div class="modal-fade-screen">
                 <div class="modal-inner">
-                  <div class="modal-close" for='modal-<%=player.id%>'></div>
+                  <div class="modal-close" for='modal-<%= player.id %>'></div>
                   <div id="add-position">
                     <%= render partial: "add_position", locals: {id: player.id, positions: @positions} %>
                   </div>

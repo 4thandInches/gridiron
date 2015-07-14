@@ -37,6 +37,9 @@ class Player < ActiveRecord::Base
     class_status.blank? ? "N/A" : class_status.name
   end
 
+  def total_rush_yards
+    stats.where(stat_type_id: 10).sum(:value)
+  end
 
   def self.lead_player_for(stat_type)
     best_stat = stat_type.stats.order(:value).last

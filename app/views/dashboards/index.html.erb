@@ -5,25 +5,24 @@
   <div id="js-parallax-background" class="parallax-background"></div>
 </div>
 
-
 <div class="flex-boxes">
 
 
   <div class="flex-box ">
     <h1 class="flex-title">Offensive Leaders</h1>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>200yd Passing</article>
+      <aside><%= @team.get_passer %></aside>
+      <article><%= @team.most_passing_yards %>yd Passing</article>
     </section>
     <br>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>200yd Rushing</article>
+      <aside><%= @team.get_rusher %></aside>
+      <article><%= @team.most_rushing_yards %> Rushing</article>
     </section>
     <br>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>200yd Rec.</article>
+      <aside><%= @team.get_receiver %> </aside>
+      <article><%= @team.most_receiving_yards %> yd Rec.</article>
     </section>
     <br>
     <section class="small">
@@ -104,23 +103,23 @@
   <div class="flex-box ">
     <h1 class="flex-title">Deffensive Leaders</h1>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>10 Solo Tackles</article>
+      <aside><%= @team.get_tackler %></aside>
+      <article><%= @team.most_tackles %> Solo Tackles</article>
     </section>
     <br>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>5 Asst. Tackle</article>
+      <aside><%= @team.get_asst_tackler %></aside>
+      <article><%= @team.most_asst_tackles %> Asst. Tackle</article>
     </section>
     <br>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>5 Sacks </article>
+      <aside><%= @team.get_sacker %></aside>
+      <article><%= @team.most_sacks %> Sacks </article>
     </section>
     <br>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>20 Deflections</article>
+      <aside><%= @team.get_interceptor %></aside>
+      <article><%= @team.most_interceptions %> Interceptions</article>
     </section>
   </div>
 
