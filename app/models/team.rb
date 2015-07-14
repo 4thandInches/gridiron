@@ -3,7 +3,6 @@ class Team < ActiveRecord::Base
   has_many :players
   has_many :games
   has_many :stats, through: :games
-  has_many :stats, through: :players
 
 
   def red_zone_eff
@@ -54,6 +53,32 @@ class Team < ActiveRecord::Base
     calculate_total(27)
   end
 
+  def total_fumble_recoveries
+    calculate_total(30)
+  end
+
+  def total_forced_fumbles
+    calculate_total(29)
+  end
+
+  def total_interceptions
+    calculate_total(32)
+  end
+
+  def total_third_down_stops
+    calculate_total(63)
+  end
+
+  def total_fourth_down_stops
+    calculate_total(64)
+  end
+
+  def total_takeaways
+    total_fumble_recoveries + total_interceptions
+  end
+
+  # player highs
+
   def most_passing_yards
     get_most("Passing Yards")
   end
@@ -64,6 +89,10 @@ class Team < ActiveRecord::Base
 
   def most_receiving_yards
     get_most("Receiving Yards")
+  end
+
+  def most_catches
+    get_most("Receptions")
   end
 
   def most_tackles
@@ -88,8 +117,12 @@ class Team < ActiveRecord::Base
     get_player("Passing Yards")
   end
 
-  def get_receiver
+  def get_receiver_yards
     get_player("Receiving Yards")
+  end
+
+  def get_receiver_catches
+    get_player("Receptions")
   end
 
   def get_rusher
@@ -118,7 +151,6 @@ class Team < ActiveRecord::Base
         successes = stats.where(stat_type_id: id_1).sum(:value)
         attempts = stats.where(stat_type_id: id_2).sum(:value)
         decimal = sprintf "%.2f", attempts / successes
-        decimal[2..-1]
       end
 
       def calculate_total(id)

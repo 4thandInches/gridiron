@@ -21,13 +21,13 @@
     </section>
     <br>
     <section class="small">
-      <aside><%= @team.get_receiver %> </aside>
+      <aside><%= @team.get_receiver_yards %> </aside>
       <article><%= @team.most_receiving_yards %> yd Rec.</article>
     </section>
     <br>
     <section class="small">
-      <aside>A Guys Name</aside>
-      <article>25 Catches</article>
+      <aside><%= @team.get_receiver_catches %></aside>
+      <article><%= @team.most_catches %> Catches</article>
     </section>
   </div>
 
@@ -135,25 +135,25 @@
       <article><%= @team.total_sacks %></article>
 
       <aside>3rd Down Stops</aside>
-      <article>n%</article>
+      <article><%= @team.total_fourth_down_stops %></article>
 
       <aside>4th Down Stops</aside>
-      <article>n%</article>
+      <article><%= @team.total_third_down_stops %></article>
     </section>
     <br>
     <br>
     <section>
       <aside>Takeaways</aside>
-      <article>n%</article>
+      <article><%= @team.total_takeaways %></article>
 
       <aside>Forced Fumbles</aside>
-      <article>n%</article>
+      <article><%= @team.total_forced_fumbles %></article>
 
       <aside>Fumble Recoveries</aside>
-      <article>n%</article>
+      <article><%= @team.total_fumble_recoveries %></article>
 
       <aside>Interceptions</aside>
-      <article>n%</article>
+      <article><%= @team.total_interceptions %></article>
     </section>
   </div>
 

@@ -112,6 +112,8 @@ StatType.create(name: "2 Point Attempt")
 StatType.create(name: "2 Point Conversions")
 StatType.create(name: "Offensive Snaps")
 StatType.create(name: "Defensive Snaps")
+StatType.create(name: "3rd Down Stops")
+StatType.create(name: "4th Down Stops")
 
 if Rails.env.development?
   Team.create!(name: "Greyhounds", school: "North Surry", head_coach: "Dan McClendon", location: "Mount Airy, NC", division: "North West", conference: "NEC")
