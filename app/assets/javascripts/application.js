@@ -95,7 +95,7 @@ function parallax(){
 
 //DATEPICKER
 $(function() {
-  $('#datepicker').datetimepicker({
+  $('.datepicker').datetimepicker({
      format:'g:i A',
      formatTime: 'g:i A',
 
@@ -179,7 +179,6 @@ $(function () {
 //calendar////////////////////////////////////////////////////////////
 		$(document).ready(function()
 		{
-
 			var calendar = $('#calendar').fullCalendar(
 			{
 				header:
@@ -200,6 +199,7 @@ $(function () {
 					End means ending time of event.
 					allDay means if events is for entire day or not.
 				*/
+
 				select: function(start, end, allDay)
 				{
 					/*
@@ -211,35 +211,57 @@ $(function () {
 					*/
 					if (title)
 					{
+
 						calendar.fullCalendar('renderEvent',
 							{
 								title: title,
 								start: start,
 								end: end,
-								allDay: allDay
+								allDay: true
 							},
 							true
 						);
-            jQuery.post(
-                "event/new" // your url
-                , { // re-use event's data
-                    title: title,
-                    // start: start,
-                    // end: end,
-                    // allDay: allDay
-                  }
-            );
+
+            $.ajax({
+              type: 'POST',
+              url: '/events',
+              // dataType: 'json',
+              data: {
+                title: title,
+                start: start.toDate(),
+  							end: end.toDate(),
+                allDay: true
+              }
+            });
 					}
 					calendar.fullCalendar('unselect');
 				},
 
 					//editable: true allow user to edit events.
 
-				editable: true,
+				// editable: true,
 
 
-        //adds games from schedule
-				events: '/games.json'
+        //adds games from schedule and any events that were created on the calendar
+        eventSources: [
+
+        // your event source
+        {
+            url: '/games.json',
+            color: '#FE7A04',
+            textColor: 'white'
+
+        },
+
+        {
+            url: '/events.json',
+        }
+        // any other sources...
+
+        ],
+
+        editable: true
+        
 
 			});
 

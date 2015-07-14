@@ -1,0 +1,32 @@
+
+<div id="event-show">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @event.title %>
+</p>
+
+<% if @event.allDay == true %>
+  <p>
+    <strong>This event is scheduled for all day on <%= @event.start.strftime("%D") %></strong>
+  </p>
+
+<% else %>
+
+  <p>
+    <strong>Start:</strong>
+    <%= @event.start.strftime("%D %l:%M PM") %>
+  </p>
+
+  <p>
+    <strong>End:</strong>
+    <%= @event.end.strftime("%D %l:%M PM") %>
+  </p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', calendars_index_path %> |
+<%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
