@@ -53,13 +53,12 @@
             </div>
           </td>
           <td><%= link_to "Show Stats", show_stats_player_path(player) %></td>
-          <td><%= link_to 'Edit', edit_player_path(player) %></td>
-          <td><%= link_to 'Delete', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '<i class="fa fa-pencil-square-o fa-2x"></i>'.html_safe, edit_player_path(player) %> <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, player, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
-  <%= link_to 'New Player', new_player_path %>
+  <button class="form-button"><%= link_to 'New Player' '<i class="fa fa-plus-square"></i>'.html_safe, new_player_path %> </button>
 
 </div>
