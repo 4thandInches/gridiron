@@ -9,7 +9,7 @@
 
 </head>
 <body>
-
+<% if user_signed_in? && current_user.team_id %>
 <!--navbar begin-->
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
@@ -19,7 +19,7 @@
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
 
     <nav role="navigation">
-      <% if user_signed_in? && current_user.team_id %>
+
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link"><%= link_to "Home", root_path %> </li>
         <li class="nav-link"><%= link_to "Roster", players_path %> </li>
@@ -28,17 +28,18 @@
         <li class="nav-link"><%= link_to "Stat Center", games_path %></li>
         <li class="nav-link"><%= link_to "Calendar", calendars_index_path %></li>
         <li class="nav-link"><%= link_to "Manage Itineraries", itineraries_path %></li>
-
-
         <li class="nav-link"><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
-        <% end %>
-
 
         <li class="nav-link">
           <% if user_signed_in? %>
             Signed in as <%= current_user.email %>
           <% end %>
         </li>
+
+<% end %>
+
+
+
 
       </ul>
     </nav>
