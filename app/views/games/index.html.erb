@@ -39,7 +39,44 @@
         </td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Add Player Stats', player_stats_game_path(game)%></td>
-        <td><%= link_to 'Add Game Stats', game_stats_game_path(game) %>
+
+
+
+
+
+
+
+
+
+        <td>
+
+          <div class="modal">
+            <label for="modal-<%=game.id%>">
+              <div class="modal-trigger">Click for Modal</div>
+            </label>
+            <input class="modal-state" id="modal-<%=game.id%>" type="checkbox" />
+            <div class="modal-fade-screen">
+              <div class="modal-inner">
+                <div class="modal-close" for="modal-<%=game.id%>"></div>
+                <%= render partial: 'games/game_stats', locals: { id: game.id, stat_types: @stat_types} %>
+              </div>
+            </div>
+          </div>
+
+
+
+        </td>
+
+
+
+
+
+
+
+
+
+
+
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -50,4 +87,8 @@
 <br>
 
 <%= link_to 'New Game', new_game_path %>
-<p id="notice"><%= notice %></p>
+
+
+
+
+

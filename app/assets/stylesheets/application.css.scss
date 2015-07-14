@@ -774,6 +774,8 @@ header.navigation {
     }
     #player-stat-submit{
       @include  span-columns(12);
+			position: relative;
+			left:275px;
     }
 
 
