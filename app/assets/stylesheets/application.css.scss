@@ -700,6 +700,10 @@ header.navigation {
     //
     @include button(flat, #45b6c3);
     color: #1e1e1e;
+		&:hover:after,
+		&:hover:before {
+			background: darken(orange, 10%);
+		}
     //padding: 0.8em 1em;
   }
 
