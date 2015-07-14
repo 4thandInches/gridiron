@@ -39,20 +39,11 @@
         </td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Add Player Stats', player_stats_game_path(game)%></td>
-
-
-
-
-
-
-
-
-
         <td>
 
           <div class="modal">
             <label for="modal-<%=game.id%>">
-              <div class="modal-trigger">Click for Modal</div>
+              <div class="modal-trigger">Add Team Stats</div>
             </label>
             <input class="modal-state" id="modal-<%=game.id%>" type="checkbox" />
             <div class="modal-fade-screen">
@@ -63,20 +54,7 @@
             </div>
           </div>
 
-
-
         </td>
-
-
-
-
-
-
-
-
-
-
-
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
