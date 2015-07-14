@@ -27,7 +27,7 @@
         <li class="nav-link"><%= link_to "Depth Chart", positions_path %></li>
         <li class="nav-link"><%= link_to "Schedule/Add Stats", games_path %></li>
         <li class="nav-link"><%= link_to "Calendar", calendars_index_path %></li>
-        <li class="nav-link"><%= link_to "Itinerary Maker", itineraries_path %></li>
+        <li class="nav-link"><%= link_to "Manage Itineraries", itineraries_path %></li>
 
 
         <li class="nav-link"><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
@@ -40,7 +40,6 @@
           <% end %>
         </li>
 
-        <!--<li class="nav-link more"><a href="javascript:void(0)">Placeholder</a></li>-->
       </ul>
     </nav>
   </div>
@@ -49,12 +48,7 @@
 
 
 
-<!--navbar-->
-    <!--<div>-->
-      <!--<p class="notice"><%#notice %></p>-->
-      <!--<p class="alert"><%# alert %></p>-->
 
-    <!--</div>-->
     <%= yield %>
 
 
