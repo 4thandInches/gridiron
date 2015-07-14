@@ -53,9 +53,14 @@ class Team < ActiveRecord::Base
     calculate_total(27)
   end
 
-  def most_passing_yards
-
-  end
+  # def most_passing_yards
+  #   quarterbacks = players.joins(:position).where(id: 1
+  # end
+  #
+  # def get_team_players(team)
+  #   team_roles = roles.order(:depth_chart_position).joins(:player).where("players.team_id = #{team.id}")
+  #   team_roles.map &:player
+  # end
 
   def most_rushing_yards
 
