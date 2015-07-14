@@ -35,7 +35,6 @@
 	//height: 1000px;
 	position: relative;
 
-
 }
 
 #calendar{
@@ -188,8 +187,21 @@ body{
 		text-align: center;
 	}
 }
+//icons and forms styles
 
-.fa.fa-times{
+.form-button{
+	position: relative;
+	//left: 200px;
+	margin-left: 10px;
+	a{
+		color:whitesmoke;
+	}
+	i{
+		margin-left: 5px;
+	}
+}
+
+.fa-times{
 	color:red;
 }
 
@@ -894,6 +906,7 @@ header.navigation {
   }
 
   thead:first-of-type {
+		//position: fixed;
     tr:first-child > th:first-child {
       border-top-left-radius: $base-border-radius;
     }
@@ -914,7 +927,9 @@ header.navigation {
   }
 
   thead {
-    th {
+		tr{
+		}
+    th {;
       background-color: $table-header-background;
       border-bottom: 0px;
       border-left: 1px solid $table-border-color;
@@ -935,7 +950,9 @@ header.navigation {
       border-left: 1px solid $table-border-color;
       border-top: 1px solid $table-border-color;
       padding: $table-padding;
-
+			.delete{
+				color:red;
+			}
       &:first-child {
         border-left: none;
       }
