@@ -25,7 +25,7 @@ class Player < ActiveRecord::Base
         StatType.where(id: 35..42)
       end
     else
-      StatType.all
+      StatType.where(id: 1..42)
     end
   end
 
@@ -44,10 +44,6 @@ class Player < ActiveRecord::Base
     player_name = (best_stat ? best_stat.player.full_name : "N/A")
     value = (best_stat ? best_stat.value.to_i : 0)
     return {player_name: player_name, value: value}
-  end
-
-  def get_player_position_roles(position)
-    
   end
 
 end

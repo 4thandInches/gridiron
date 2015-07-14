@@ -40,25 +40,25 @@
     <h1 class="flex-title">Offensive Team Stats</h1>
     <section>
       <aside>Passing Yards</aside>
-      <article>n%</article>
+      <article><%= @team.passing_yards %></article>
 
       <aside>Passing Touchdowns</aside>
       <article><%= @team.passing_touchdowns %></article>
 
       <aside>Rushing Yards</aside>
-      <article>n%</article>
+      <article><%= @team.rushing_yards %></article>
 
       <aside>Rushing Touchdowns</aside>
-      <article>n%</article>
+      <article><%= @team.rushing_touchdowns %></article>
     </section>
     <br>
     <br>
     <section>
       <aside>3rd Down Efficiency</aside>
-      <article>n%</article>
+      <article><%= @team.third_down_eff %>%</article>
 
       <aside>4th Down Efficiency</aside>
-      <article>n%</article>
+      <article><%= @team.fourth_down_eff %>%</article>
 
       <aside>Two Point Efficiency </aside>
       <article><%= @team.two_point_eff %>%</article>
@@ -130,10 +130,10 @@
     <h1 class="flex-title">Defensive Team Stats</h1>
     <section>
       <aside>Tackles</aside>
-      <article>n%</article>
+      <article><%= @team.total_tackles %></article>
 
       <aside>Sacks</aside>
-      <article>n%</article>
+      <article><%= @team.total_sacks %></article>
 
       <aside>3rd Down Stops</aside>
       <article>n%</article>

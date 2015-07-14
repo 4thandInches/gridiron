@@ -1303,4 +1303,29 @@ $parallax-background-height: $parallax-window-height * 2;
   }
 }
 
-//add-position
+//show-player-stats
+
+.show-player-stats{
+  @include position(relative, 10px );
+  @include padding(20px 20px 20px 20px);
+  @include span-columns(10);
+  background-color: #383838;
+  color: whitesmoke;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+  margin-top: 60px;
+
+  h3{
+    font-size: 50px;
+    color: #45b6c3;
+  }
+
+  .show-list{
+    font-size: 20px;
+  }
+
+  .side-image-container{
+    //@include background(url()
+  }
+}

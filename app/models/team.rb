@@ -21,8 +21,48 @@ class Team < ActiveRecord::Base
     calculate_efficiency(59, 60)
   end
 
+  def field_goal_eff
+
+  end
+
+  def punts_blocked
+
+  end
+
   def passing_touchdowns
-    stats.where(stat_type_id: 6).sum(:value).to_i
+    calculate_total(6)
+  end
+
+  def passing_yards
+    calculate_total(1)
+  end
+
+  def rushing_yards
+    calculate_total(10)
+  end
+
+  def rushing_touchdowns
+    calculate_total(15)
+  end
+
+  def total_tackles
+    calculate_total(24)
+  end
+
+  def total_sacks
+    calculate_total(27)
+  end
+
+  def most_passing_yards
+
+  end
+
+  def most_rushing_yards
+
+  end
+
+  def most_receiving_yards
+
   end
 
   private
@@ -32,6 +72,10 @@ class Team < ActiveRecord::Base
         attempts = stats.where(stat_type_id: id_2).sum(:value)
         decimal = sprintf "%.2f", attempts / successes
         decimal[2..-1]
+      end
+
+      def calculate_total(id)
+        stats.where(stat_type_id: id).sum(:value).to_i
       end
 
 
