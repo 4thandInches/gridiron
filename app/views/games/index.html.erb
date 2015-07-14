@@ -6,7 +6,7 @@
       <th>Location</th>
       <th>Time</th>
       <th>Home/Away</th>
-      <th colspan="4"></th>
+      <th colspan="4"> Options</th>
     </tr>
   </thead>
 
@@ -52,8 +52,7 @@
           </div>
 
         </td>
-        <td><%= link_to 'Edit', edit_game_path(game) %></td>
-        <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %> | <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
       </tr>
     <% end %>
   </tbody>
