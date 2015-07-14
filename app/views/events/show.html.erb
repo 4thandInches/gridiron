@@ -1,24 +1,31 @@
+
+<div id="event-show">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Event:</strong>
   <%= @event.title %>
 </p>
 
-<p>
-  <strong>Start:</strong>
-  <%= @event.start %>
-</p>
+<% if @event.allDay == true %>
+  <p>
+    <strong>This event is scheduled for all day on <%= @event.start.strftime("%D") %></strong>
+  </p>
 
-<p>
-  <strong>End:</strong>
-  <%= @event.end %>
-</p>
+<% else %>
 
-<p>
-  <strong>Allday:</strong>
-  <%= @event.allDay %>
-</p>
+  <p>
+    <strong>Start:</strong>
+    <%= @event.start.strftime("%D %l:%M PM") %>
+  </p>
+
+  <p>
+    <strong>End:</strong>
+    <%= @event.end.strftime("%D %l:%M PM") %>
+  </p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Back', calendars_index_path %>
+</div>

@@ -222,15 +222,6 @@ $(function () {
 							true
 						);
 
-            // jQuery.post(
-            // "/events" // your url
-            // , { // re-use event's data
-            //     title: title,
-            //     start: start,
-            //     end: end,
-            //     allDay: allDay
-            // });
-
             $.ajax({
               type: 'POST',
               url: '/events',
@@ -251,19 +242,20 @@ $(function () {
 				editable: true,
 
 
-        //adds games from schedule
-				// events: '/games.json'
+        //adds games from schedule and any events that were created on the calendar
         eventSources: [
 
         // your event source
         {
-            url: '/games.json', // use the `url` property
-            color: 'yellow',    // an option!
-            textColor: 'black'  // an option!
+            url: '/games.json',
+            color: '#297179',
+            textColor: 'white'
         },
 
         {
-          url: '/events.json'
+          url: '/events.json',
+          color: '#FFA758',
+          textColor: 'white'
         }
         // any other sources...
 
