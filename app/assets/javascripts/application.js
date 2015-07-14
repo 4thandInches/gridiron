@@ -217,7 +217,7 @@ $(function () {
 								title: title,
 								start: start,
 								end: end,
-								allDay: allDay
+								allDay: true
 							},
 							true
 						);
@@ -239,7 +239,7 @@ $(function () {
 
 					//editable: true allow user to edit events.
 
-				editable: true,
+				// editable: true,
 
 
         //adds games from schedule and any events that were created on the calendar
@@ -250,6 +250,7 @@ $(function () {
             url: '/games.json',
             color: '#FE7A04',
             textColor: 'white'
+
         },
 
         {
@@ -257,9 +258,10 @@ $(function () {
         }
         // any other sources...
 
-    ]
+        ],
 
-
+        editable: true
+        
 
 			});
 
