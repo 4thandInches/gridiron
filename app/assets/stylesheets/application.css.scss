@@ -23,19 +23,60 @@
 @import "reset";
 @import "golden_ratio";
 @import url(http://fonts.googleapis.com/css?family=Kreon);
-
+//landing page////////////////////////////////////////////
 #gatekeeper{
-	background: #383838;
+	position: absolute;
+	min-height: 100%;
+	width: 100%;
+}
+
+
+#gatekeeper-ribbon{
+	position: absolute;
+	background-color: #383838;
+	margin-top: 500px;
+	min-height: 50%;
+
+}
+
+#logo{
+	color: orange;
+}
+
+.home-image{
+	background-color: grey;
+	background:
+	linear-gradient(
+			rgba(53, 149, 161, 0.5),
+			rgba(53, 149, 161, 0.5)
+	),
+
+
+	asset_url('aged_football.jpg') no-repeat fixed center center;
+	background-size: cover;
+	background-position: 50%;
+	//height: 1000px;
+	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-size: cover;
-	background-position: 50%;
-	//height: 1000px;
-	position: relative;
+	min-height: 50%;
 
+	button{
+		@include position(relative, 10px 25% null 25% );
+	}
+	h1{
+		//@include position(relative, 10px 250 null null );
+		color:whitesmoke;
+		font-size: 5em;
+		//margin-top: .7em;
+		//margin-left: 25%;
+		//margin: .7em auto;
+		text-align: center;
+	}
 }
+
 
 
 #event-show{
@@ -111,42 +152,6 @@ body{
 }
 
 
-
-//homepage image\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-.home-image{
-  background-color: grey;
-  background:
-  linear-gradient(
-                  rgba(53, 149, 161, 0.5),
-                  rgba(53, 149, 161, 0.5)
-  ),
-
-
-  asset_url('aged_football.jpg') no-repeat fixed center center;
-  background-size: cover;
-  background-position: 50%;
-  //height: 1000px;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-	height: 400px;
-
-  button{
-      @include position(relative, 10px 25% null 25% );
-  }
-  h1{
-    //@include position(relative, 10px 250 null null );
-    color:whitesmoke;
-    font-size: 5em;
-		//margin-top: .7em;
-		//margin-left: 25%;
-		margin: .7em auto;
-		text-align: center;
-  }
-}
-
 //show page styles--------------------------------------------------------------------------------
 .show-container{
   @include position(relative, 10px 25% );
@@ -193,7 +198,7 @@ body{
 		text-align: center;
 	}
 }
-//icons and forms styles
+//icons and forms styles//////////////////////////////
 
 .form-button{
 	position: relative;
@@ -209,6 +214,16 @@ body{
 
 .fa-times{
 	color:red;
+}
+.fa-cog{
+	color:orange;
+}
+.fa-globe{
+	color: #4CB231;
+}
+
+.fa-bar-chart{
+	color: #45b6c3;
 }
 
 
@@ -1200,7 +1215,7 @@ $parallax-background-height: $parallax-window-height * 2;
   @include display(flex);
   @include flex-wrap(wrap);
   margin-bottom: $base-line-height;
-  margin: 1em;
+  margin: 0 auto;
   overflow: auto;
   padding: 0;
 
@@ -1250,12 +1265,15 @@ $parallax-background-height: $parallax-window-height * 2;
   p {
     color: whitesmoke;
     line-height: $base-line-height;
-		font-size: 15px;
+		font-size: 25px;
   }
 
   img {
     max-width: 100%;
   }
+	i{
+		margin-top: 10px;
+	}
 }
 
 //add-position----------------------------------------------------------
