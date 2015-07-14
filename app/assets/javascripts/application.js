@@ -179,7 +179,6 @@ $(function () {
 //calendar
 		$(document).ready(function()
 		{
-
 			var calendar = $('#calendar').fullCalendar(
 			{
 				header:
@@ -200,12 +199,16 @@ $(function () {
 					End means ending time of event.
 					allDay means if events is for entire day or not.
 				*/
+
 				select: function(start, end, allDay)
 				{
 					/*
 						after selection user will be promted for enter title for event.
 					*/
 					var title = prompt('Event Title:');
+          $(".fc-day").on("click", function() {
+            console.log($(this));
+          });
 					/*
 						if title is entered calendar will add title and event into fullCalendar.
 					*/
@@ -221,13 +224,32 @@ $(function () {
 							true
 						);
             jQuery.post(
-                "event/create" // your url
-                , { // re-use event's data
-                    title: title,
-                    start: start,
-                    end: end,
-                    allDay: allDay
-                  }
+            "/events" // your url
+            , { // re-use event's data
+                title: title,
+                start: start,
+                end: end,
+                allDay: allDay
+            }
+            // $.ajax({
+            //   type: 'POST',
+            //   url: '/events',
+            //   dataType: 'json',
+            //   data: {
+            //     title: title,
+            //     start: start,
+						// 		end: end,
+						// 		allDay: allDay
+            //   }
+
+            // }
+                // "/events" // your url
+                // , { // re-use event's data
+                //     title: title,
+                //     // start: start,
+                //     // end: end,
+                //     // allDay: allDay
+                //   }
             );
 					}
 					calendar.fullCalendar('unselect');
