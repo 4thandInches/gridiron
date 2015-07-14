@@ -16,7 +16,7 @@
         <td><%= (game.time).strftime("%D") %></td>
         <td>
           <% if game.home %>
-          <%= game.opponent %>
+          <%= "vs. #{game.opponent}" %>
           <% else %>
           <%= "@ #{game.opponent}" %>
           <% end %>
@@ -61,8 +61,3 @@
 <br>
 
 <button class="form-button"><%= link_to 'New Game' '<i class="fa fa-plus-square"></i>'.html_safe, new_game_path %> </button>
-
-
-
-
-
