@@ -34,3 +34,20 @@
     <%= link_to 'Back', calendars_index_path %>
 
 </div>
+
+<div class="show-player-stats">
+  <table>
+    <thead>
+      <tr>
+        <% @stats.each do |s| %>
+          <th><%= s.stat_type.name %></th>
+        <% end %>
+      </tr>
+    </thead>
+      <tr>
+        <% @stats.each do |s| %>
+          <td><%= s.value %></td>
+        <% end %>
+      </tr>
+  </table>
+</div>

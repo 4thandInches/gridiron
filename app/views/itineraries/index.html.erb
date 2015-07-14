@@ -1,27 +1,39 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Itineraries</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @itineraries.each do |itinerary| %>
-      <tr>
-        <td><%= itinerary.name %></td>
-        <td><%= link_to 'Show', itinerary %></td>
-        <td><%= link_to 'Edit', edit_itinerary_path(itinerary) %></td>
-        <td><%= link_to 'Destroy', itinerary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+<!--<table class="tables">-->
+  <!--<thead>-->
+    <!--<tr>-->
+      <!--<th>Itenerary Name</th>-->
+      <!--<th colspan="3">Options</th>-->
+    <!--</tr>-->
+  <!--</thead>-->
+
+  <!--<tbody>-->
+    <!--<%# @itineraries.each do |itinerary| %>-->
+      <!--<tr>-->
+        <!--<td><%# itinerary.name %></td>-->
+        <!--<td><%# link_to 'Show', itinerary %></td>-->
+        <!--<td><%# link_to 'Edit', edit_itinerary_path(itinerary) %></td>-->
+        <!--<td><%# link_to 'Destroy', itinerary, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      <!--</tr>-->
+    <!--<%# end %>-->
+  <!--</tbody>-->
+<!--</table>-->
+<%= link_to 'New Itinerary', new_itinerary_path %>
 
 <br>
 
-<%= link_to 'New Itinerary', new_itinerary_path %>
+
+<div class="itinerary-container">
+  <% @itineraries.each do |itinerary|  %>
+    <div class="itinerary-wrapper">
+      <h1> <%= itinerary.name %></h1>
+
+      <p><%= link_to 'Edit Itinerary', edit_itinerary_path(itinerary) %>
+      <%= link_to '<i class="fa fa-times"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %>
+      <%= link_to 'New Itinerary', new_itinerary_path %></p>
+    </div>
+  <% end %>
+</div>

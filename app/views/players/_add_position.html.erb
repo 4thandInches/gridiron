@@ -1,0 +1,7 @@
+<%= form_tag("players/#{id}/position_added", :action => "position_added") do %>
+  <div class="field">
+    <%= label_tag :position %>
+    <%= collection_select :position, :position_id, positions.to_a.collect, :id, :name %>
+  </div>
+  <%= submit_tag "Press Me" %>
+<% end %>

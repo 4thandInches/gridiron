@@ -26,10 +26,10 @@
             <td>
 
               <div class="modal">
-                <label for='modal-<%= "#{player.id}" %>'>
+                <label for='modal-<%= "#{player.id}#{position.id}" %>'>
                   <div class="modal-trigger"><i class="fa fa-book"></i> Add Stats</div>
                 </label>
-                <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
+                <input class="modal-state" id='modal-<%= "#{player.id}#{position.id}" %>' type="checkbox" />
                 <div class="modal-fade-screen">
 
 
@@ -38,7 +38,7 @@
 
                 <!--<div class="player-stats-container">-->
                   <div class="modal-inner">
-                    <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
+                    <div class="modal-close" for='modal-<%= "#{player.id}#{position.id}" %>'></div>
                     <h1><i  class="fa fa-bullseye"></i>VS. <%= @game.opponent %></h1>
                     <ul class="modal-ul">
                       <li><%= position.name %></li>
@@ -48,7 +48,7 @@
                       <div class="player-stats-field">
                         <div class="field">
                           <%= label_tag s.name %>
-                          <%= text_field_tag "stat[#{player.id}][#{s.id}]" %>
+                          <%= text_field_tag "stat[#{player.id}][#{position.id}][#{s.id}]" %>
                         </div>
                       </div>
                     <% end %>

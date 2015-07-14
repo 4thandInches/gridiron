@@ -176,7 +176,7 @@ $(function () {
     });
 
 });
-//calendar
+//calendar////////////////////////////////////////////////////////////
 		$(document).ready(function()
 		{
 			var calendar = $('#calendar').fullCalendar(
@@ -268,21 +268,7 @@ $(function () {
 		});
 
 
-
-//ADD FIELD
-//add field to itinerary maker,
-//
-
-
-//function copySection() {
-//  var question = $("#new-question-form").clone().html();
-//  question = question.replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
-//    .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
-//  $("#question-list").append(question);
-//  questionCounter++;
-//}
-
-
+//add fields to schedule maker///////////////////////////////////////////////////
 $(function () {
   var questionCounter = $('.situation-fields').length;
   var newFields = $('.situation-fields').last().html();
@@ -302,3 +288,7 @@ $(function () {
   })
 
 })
+
+$(document).ready(function(){
+  ('button').mouseenter
+});

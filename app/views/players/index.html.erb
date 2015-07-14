@@ -38,34 +38,27 @@
           <td><%= link_to 'Athlete Info', player %></td>
           <td>
             <div class="modal">
-              <label for='modal-<%= "#{player.id}" %>'>
+              <label for='modal-<%= player.id %>'>
                 <div class="modal-trigger" id="add-posiiton-button">Add Position</div>
               </label>
-              <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
+              <input class="modal-state" id='modal-<%= player.id %>' type="checkbox" />
               <div class="modal-fade-screen">
                 <div class="modal-inner">
-                  <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
+                  <div class="modal-close" for='modal-<%=player.id%>'></div>
                   <div id="add-position">
-                    <%= form_tag("players/#{player.id}/position_added", :action => "position_added") do %>
-                      <div class="field">
-                        <%= label_tag :position %>
-                        <%= collection_select :position, :position_id, @positions.to_a.collect, :id, :name %>
-                      </div>
-                      <%= submit_tag "Press Me" %>
-                    <% end %>
+                    <%= render partial: "add_position", locals: {id: player.id, positions: @positions} %>
                   </div>
                 </div>
               </div>
             </div>
           </td>
           <td><%= link_to "Show Stats", show_stats_player_path(player) %></td>
-          <td><%= link_to 'Edit', edit_player_path(player) %></td>
-          <td><%= link_to 'Delete', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '<i class="fa fa-pencil-square-o fa-2x"></i>'.html_safe, edit_player_path(player) %> <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, player, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 
-  <%= link_to 'New Player', new_player_path %>
+  <button class="form-button"><%= link_to 'New Player' '<i class="fa fa-plus-square"></i>'.html_safe, new_player_path %> </button>
 
 </div>

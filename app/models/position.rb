@@ -7,8 +7,4 @@ class Position < ActiveRecord::Base
     team_roles.map &:player
   end
 
-  def sort_by_depth(positions)
-
-  end
-
 end
