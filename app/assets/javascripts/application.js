@@ -248,14 +248,12 @@ $(function () {
         // your event source
         {
             url: '/games.json',
-            color: '#297179',
+            color: '#FE7A04',
             textColor: 'white'
         },
 
         {
-          url: '/events.json',
-          color: '#FFA758',
-          textColor: 'white'
+            url: '/events.json',
         }
         // any other sources...
 
