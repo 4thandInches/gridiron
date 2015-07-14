@@ -1,11 +1,11 @@
 <div id="game-stats">
-  <%= form_tag(make_game_stats_game_path) do %>
+<h1><%= id %></h1>
+  <%= form_tag("/games/#{id}/make_game_stats") do %>
 
-    <% @stat_types.each do |s| %>
-
+    <% stat_types.each do |s| %>
       <div class="field">
         <%= label_tag s.name %>
-        <%= text_field_tag "stat[#{s.id}]" %>
+        <%= text_field_tag "stat[#{s.id}]"%>
       </div>
 
     <% end %>
