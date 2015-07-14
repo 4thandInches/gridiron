@@ -12,6 +12,7 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    @stats = @game.stats.where(player_id: nil)
   end
 
   # GET /games/new
@@ -30,7 +31,9 @@ class GamesController < ApplicationController
   def player_make_stats
     params[:stat].each do |k, v|
       v.each do |key, value|
-        stat = Stat.create!(player_id: k, game_id: @game.id, stat_type_id: key, value: value) unless value == ""
+        value.each do |ke, va|
+          stat = Stat.create!(player_id: k, game_id: @game.id, stat_type_id: ke, value: va) unless va == ""
+        end
       end
     end
     redirect_to player_stats_game_path(@game)

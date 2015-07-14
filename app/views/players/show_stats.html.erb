@@ -1,11 +1,22 @@
-<div class="show-container">
+<div class="show-player-stats">
   <h3><%= @player.first_name %> <%= @player.last_name %> </h3>
 </div>
 <% @games.each do |g| %>
-  <div class="show-container">
-    <h3><%= g.opponent %></h3>
-    <% g.stats.where(player_id: @player.id).each do |s| %>
-       <p><%= s.stat_type.name %> <%= s.value %></p>
-     <% end %>
-   </div>
+  <div class="show-player-stats">
+    <table class="tables">
+      <h3><%= g.opponent %></h3>
+      <thead>
+        <tr>
+      <% g.stats.where(player_id: @player.id).each do |s| %>
+          <th><%= s.stat_type.name %></td>
+      <% end %>
+        </tr>
+      </thead>
+        <tr>
+      <% g.stats.where(player_id: @player.id).each do |s| %>
+         <td><%= s.value %></td>
+      <% end %>
+        </tr>
+    </table>
+  </div>
 <% end %>

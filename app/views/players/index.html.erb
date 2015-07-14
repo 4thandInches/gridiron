@@ -38,21 +38,15 @@
           <td><%= link_to 'Athlete Info', player %></td>
           <td>
             <div class="modal">
-              <label for='modal-<%= "#{player.id}" %>'>
+              <label for='modal-<%= player.id %>'>
                 <div class="modal-trigger" id="add-posiiton-button">Add Position</div>
               </label>
-              <input class="modal-state" id='modal-<%= "#{player.id}" %>' type="checkbox" />
+              <input class="modal-state" id='modal-<%= player.id %>' type="checkbox" />
               <div class="modal-fade-screen">
                 <div class="modal-inner">
-                  <div class="modal-close" for='modal-<%= "#{player.id}" %>'></div>
+                  <div class="modal-close" for='modal-<%=player.id%>'></div>
                   <div id="add-position">
-                    <%= form_tag("players/#{player.id}/position_added", :action => "position_added") do %>
-                      <div class="field">
-                        <%= label_tag :position %>
-                        <%= collection_select :position, :position_id, @positions.to_a.collect, :id, :name %>
-                      </div>
-                      <%= submit_tag "Press Me" %>
-                    <% end %>
+                    <%= render partial: "add_position", locals: {id: player.id, positions: @positions} %>
                   </div>
                 </div>
               </div>
