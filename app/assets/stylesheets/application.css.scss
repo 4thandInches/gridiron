@@ -13,6 +13,7 @@
  *= require font-awesome
  *= require jquery-ui
  *= require fullcalendar
+ *= require jquery.datetimepicker
  */
 
 @import "bourbon";
@@ -20,9 +21,22 @@
 @import "neat";
 @import "base/base";
 @import "reset";
+@import "golden_ratio";
 @import url(http://fonts.googleapis.com/css?family=Kreon);
 
+#gatekeeper{
+	background: #383838;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: 50%;
+	//height: 1000px;
+	position: relative;
 
+
+}
 #calendar{
   margin-top: 100px;
 }
@@ -95,31 +109,35 @@ body{
 //homepage image\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 .home-image{
   background-color: grey;
-//  background:
-//  linear-gradient(
-//                  rgba(53, 149, 161, 0.5),
-//                  rgba(53, 149, 161, 0.5)
-//  ),
-//
-//
-//  asset_url('aged_football.jpg') no-repeat fixed center center;
-//  background-size: cover;
-//  background-position: 50%;
-//  //height: 1000px;
-//  position: fixed;
-//  top: 0;
-//  left: 0;
-//  right: 0;
-//  bottom: 0;
-//
-//  button{
-//      @include position(relative, 10px 25% null 25% );
-//  }
+  background:
+  linear-gradient(
+                  rgba(53, 149, 161, 0.5),
+                  rgba(53, 149, 161, 0.5)
+  ),
+
+
+  asset_url('aged_football.jpg') no-repeat fixed center center;
+  background-size: cover;
+  background-position: 50%;
+  //height: 1000px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	height: 500px;
+
+  button{
+      @include position(relative, 10px 25% null 25% );
+  }
   h1{
-    @include position(relative, 10px 25% );
+    //@include position(relative, 10px 250 null null );
     color:whitesmoke;
     font-size: 5em;
-    margin-top: 2.5em;
+		//margin-top: .7em;
+		//margin-left: 25%;
+		margin: .7em auto;
+		text-align: center;
   }
 }
 
@@ -201,8 +219,16 @@ body{
 
 //edit page styles////////////////////////////////////////////////////////////////////////
 .edit-container{
+	.field{
+		@include outer-container();
+		@include span-columns(3);
+		//@include shift(2)
+	}
+	.actions{
+		@include span-columns(12)
+	}
   @include position(relative, 10px 25% );
-  @include padding(20px 200px 20px 200px);
+  @include padding(20px 100px 20px 100px);
   @include span-columns(6);
 
   background-color: #383838;
@@ -633,9 +659,12 @@ header.navigation {
   }
 
   .modal-trigger.home-button {
-    @include position(relative, 300px 43%  );
+    //@include position(relative, 150px null null 45% );
     font-size: 30px;
-    margin-top: 5em;
+		margin-top: 5em;
+		margin-left: 45%;
+
+
 
     @include button(flat, #45b6c3);
     color:whitesmoke;
@@ -1160,7 +1189,7 @@ $parallax-background-height: $parallax-window-height * 2;
   p {
     color: whitesmoke;
     line-height: $base-line-height;
-		font-size: 35px;
+		font-size: 15px;
   }
 
   img {

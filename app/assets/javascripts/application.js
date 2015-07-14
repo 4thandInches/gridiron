@@ -16,6 +16,7 @@
 //= require_tree .
 //= require moment
 //= require fullcalendar
+//= require jquery.datetimepicker
 
 
 
@@ -94,11 +95,14 @@ function parallax(){
 
 //DATEPICKER
 $(function() {
-  $('#datepicker').datepicker({
-    dateFormat: 'dd-mm-yy'
+  $('#datepicker').datetimepicker({
+     format:'g:i A',
+     formatTime: 'g:i A',
+
+     step:30,
+     ampm: true
   });
 });
-
 
 //hide window ambush thing aka fade in---------------------------------------------------------------------------
 $(document).ready(function() {
@@ -172,7 +176,7 @@ $(function () {
     });
 
 });
-//calendar
+//calendar////////////////////////////////////////////////////////////
 		$(document).ready(function()
 		{
 
@@ -216,6 +220,15 @@ $(function () {
 							},
 							true
 						);
+            jQuery.post(
+                "event/new" // your url
+                , { // re-use event's data
+                    title: title,
+                    // start: start,
+                    // end: end,
+                    // allDay: allDay
+                  }
+            );
 					}
 					calendar.fullCalendar('unselect');
 				},
@@ -233,35 +246,21 @@ $(function () {
 		});
 
 
-
-//ADD FIELD
-//add field to itinerary maker,
-//
-
-
-//function copySection() {
-//  var question = $("#new-question-form").clone().html();
-//  question = question.replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
-//    .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
-//  $("#question-list").append(question);
-//  questionCounter++;
-//}
-
-
+//add fields to schedule maker///////////////////////////////////////////////////
 $(function () {
-
+  var questionCounter = $('.situation-fields').length;
+  var newFields = $('.situation-fields').last().html();
   $('#addTask').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
-    var questionCounter = 1;
-    var newQuestionForm = $('#new-question-form').html();
 
-    newQuestionForm = newQuestionForm
+
+    newFields = newFields
       .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
       .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
 
-    $('.grape').last().append(newQuestionForm);
+    $('.wrapper').last().append(newFields);
 
     questionCounter++;
   })
