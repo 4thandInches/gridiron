@@ -206,14 +206,12 @@ $(function () {
 						after selection user will be promted for enter title for event.
 					*/
 					var title = prompt('Event Title:');
-          $(".fc-day").on("click", function() {
-            console.log($(this));
-          });
 					/*
 						if title is entered calendar will add title and event into fullCalendar.
 					*/
 					if (title)
 					{
+
 						calendar.fullCalendar('renderEvent',
 							{
 								title: title,
@@ -223,34 +221,27 @@ $(function () {
 							},
 							true
 						);
-            jQuery.post(
-            "/events" // your url
-            , { // re-use event's data
-                title: title,
-                start: start,
-                end: end,
-                allDay: allDay
-            }
-            // $.ajax({
-            //   type: 'POST',
-            //   url: '/events',
-            //   dataType: 'json',
-            //   data: {
+
+            // jQuery.post(
+            // "/events" // your url
+            // , { // re-use event's data
             //     title: title,
             //     start: start,
-						// 		end: end,
-						// 		allDay: allDay
-            //   }
+            //     end: end,
+            //     allDay: allDay
+            // });
 
-            // }
-                // "/events" // your url
-                // , { // re-use event's data
-                //     title: title,
-                //     // start: start,
-                //     // end: end,
-                //     // allDay: allDay
-                //   }
-            );
+            $.ajax({
+              type: 'POST',
+              url: '/events',
+              // dataType: 'json',
+              data: {
+                title: title,
+                start: start.toDate(),
+  							end: end.toDate(),
+                allDay: true
+              }
+            });
 					}
 					calendar.fullCalendar('unselect');
 				},
@@ -261,7 +252,24 @@ $(function () {
 
 
         //adds games from schedule
-				events: '/games.json'
+				// events: '/games.json'
+        eventSources: [
+
+        // your event source
+        {
+            url: '/games.json', // use the `url` property
+            color: 'yellow',    // an option!
+            textColor: 'black'  // an option!
+        },
+
+        {
+          url: '/events.json'
+        }
+        // any other sources...
+
+    ]
+
+
 
 			});
 
