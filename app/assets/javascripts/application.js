@@ -307,11 +307,17 @@ $(document).ready(function() {
       html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-      // html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
+
+
 
       for(var i=0;i<weather.forecast.length;i++) {
-        html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
+        html += '<p>'+weather.forecast[i].day+': hi: '+weather.forecast[i].high+' lo: '+weather.forecast[i].low+'</p>';
       }
+
+
+      html += '<p>wind: '+weather.wind.speed+' '+weather.wind.direction+'</p>';
+      html += '<p>humidity: '+weather.humidity+'%</p>';
+      html += '<p>'+weather.title+'</p>';
 
       $("#weather").html(html);
     },
