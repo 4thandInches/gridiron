@@ -162,7 +162,7 @@
   <div class="flex-box">
     <h1 class="flex-title">Next Event</h1>
     <!-- need to figure out how to write code to get the next upcoming game -->
-    <% if @game != nil %>
+    <% unless @games.empty? %>
       <p>
         <% if @games.first.home %>
         <%= "vs. #{@games.first.opponent}" %>
