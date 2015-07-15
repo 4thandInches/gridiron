@@ -164,7 +164,8 @@
     <!-- need to figure out how to write code to get the next upcoming game -->
     <p>
       <% if !@games.empty? %>
-        <% if @games.first.home  %>
+      <p>
+        <% if @games.first.home %>
         <%= "vs. #{@games.first.opponent}" %>
         <% else %>
         <%= "@ #{@games.first.opponent}" %>
