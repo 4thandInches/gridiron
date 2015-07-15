@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   end
 
   resources :dashboards
-  devise_for :users
+  devise_for :users, :controllers => { :invitations => 'users/invitations' }
 
   root 'dashboards#index'
 
