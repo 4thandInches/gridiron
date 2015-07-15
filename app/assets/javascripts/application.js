@@ -297,16 +297,21 @@ $(document).ready(function(){
 });
 
 //dashboard weather/////////////////////////////////////////////////////////////
+// Docs at http://simpleweatherjs.com
 $(document).ready(function() {
   $.simpleWeather({
-    location: 'Austin, TX',
-    woeid: '',
+    woeid: '2357536', //2357536
+    location: 'Durham, NC',
     unit: 'f',
     success: function(weather) {
-      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li></ul>';
+      // html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
+
+      for(var i=0;i<weather.forecast.length;i++) {
+        html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
+      }
 
       $("#weather").html(html);
     },
