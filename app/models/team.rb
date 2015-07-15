@@ -6,27 +6,27 @@ class Team < ActiveRecord::Base
 
 
   def red_zone_eff
-    calculate_efficiency(53, 54)
+    calculate_efficiency("Red Zone Conversions", "Red Zone Trips")
   end
 
   def third_down_eff
-    calculate_efficiency(55, 56)
+    calculate_efficiency("3rd Conversions", "3rd Down Attempt")
   end
 
   def fourth_down_eff
-    calculate_efficiency(57, 58)
+    calculate_efficiency("4th Conversions", "4th Down Attempt")
   end
 
   def two_point_eff
-    calculate_efficiency(59, 60)
+    calculate_efficiency("2 Point Conversions", "2 Point Attempt")
   end
 
   def field_goal_eff
-    calculate_efficiency(36, 35)
+    calculate_efficiency("Field Goals Made", "Field Goals Attempted")
   end
 
   def total_turnovers
-    calculate_total(9) + calculate_total(16)
+    calculate_total("INT Thrown") + calculate_total("Fumbles")
   end
 
   def punts_blocked
@@ -34,47 +34,47 @@ class Team < ActiveRecord::Base
   end
 
   def passing_touchdowns
-    calculate_total(6)
+    calculate_total("Passing TD's")
   end
 
   def passing_yards
-    calculate_total(1)
+    calculate_total("Passing Yards")
   end
 
   def rushing_yards
-    calculate_total(10)
+    calculate_total("Rushing Yards")
   end
 
   def rushing_touchdowns
-    calculate_total(15)
+    calculate_total("Rushing TD's")
   end
 
   def total_tackles
-    calculate_total(24)
+    calculate_total("Tackles")
   end
 
   def total_sacks
-    calculate_total(27)
+    calculate_total("Sacks")
   end
 
   def total_fumble_recoveries
-    calculate_total(30)
+    calculate_total("Fumble Recoveries")
   end
 
   def total_forced_fumbles
-    calculate_total(29)
+    calculate_total("Forced Fumbles")
   end
 
   def total_interceptions
-    calculate_total(32)
+    calculate_total("Interceptions")
   end
 
   def total_third_down_stops
-    calculate_total(63)
+    calculate_total("3rd Down Stops")
   end
 
   def total_fourth_down_stops
-    calculate_total(64)
+    calculate_total("4th Down Stops")
   end
 
   def total_takeaways
@@ -151,15 +151,18 @@ class Team < ActiveRecord::Base
 
   private
 
-      def calculate_efficiency(id_1, id_2)
-        successes = stats.where(stat_type_id: id_1).sum(:value)
-        attempts = stats.where(stat_type_id: id_2).sum(:value)
+      def calculate_efficiency(stat_type_1, stat_type_2)
+        first_stat_type = StatType.find_by_name(stat_type_1)
+        second_stat_type = StatType.find_by_name(stat_type_2)
+        attempts = first_stat_type.stats.joins(:game).where("games.team_id = #{id}").sum(:value)
+        successes = second_stat_type.stats.joins(:game).where("games.team_id = #{id}").sum(:value)
         decimal = sprintf "%.2f", attempts / successes
         decimal [2..-1]
       end
 
-      def calculate_total(id)
-        stats.where(stat_type_id: id).sum(:value).to_i
+      def calculate_total(stat_type)
+        stat_type = StatType.find_by_name(stat_type)
+        stat_type.stats.joins(:game).where("games.team_id = #{id}").sum(:value).to_i
       end
 
       def get_player(stat_name)

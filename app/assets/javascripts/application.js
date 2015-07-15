@@ -95,13 +95,7 @@ function parallax(){
 
 //DATEPICKER
 $(function() {
-  $('.datepicker').datetimepicker({
-     format:'g:i A',
-     formatTime: 'g:i A',
-
-     step:30,
-     ampm: true
-  });
+  $('.datepicker').datetimepicker()
 });
 
 //hide window ambush thing aka fade in---------------------------------------------------------------------------
@@ -261,7 +255,7 @@ $(function () {
         ],
 
         editable: true
-        
+
 
 			});
 

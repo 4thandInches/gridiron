@@ -87,7 +87,7 @@
     <br>
     <section class="small">
       <aside>FG Efficiency</aside>
-      <article> <%= @team.field_goal_eff %>% </article>
+      <article><%= @team.field_goal_eff %>% </article>
     </section>
     <br>
     <section class="small">
@@ -163,14 +163,16 @@
     <h1 class="flex-title">Next Event</h1>
     <!-- need to figure out how to write code to get the next upcoming game -->
     <p>
-      <% if @games.first.home %>
-      <%= "vs. #{@games.first.opponent}" %>
-      <% else %>
-      <%= "@ #{@games.first.opponent}" %>
+      <% if !@games.empty? %>
+        <% if @games.first.home  %>
+        <%= "vs. #{@games.first.opponent}" %>
+        <% else %>
+        <%= "@ #{@games.first.opponent}" %>
+        <% end %>
+      </p>
+      <p><%= @games.first.location %></p>
+      <p><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
       <% end %>
-    </p>
-    <p><%= @games.first.location %></p>
-    <p><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
   </div>
 </div>
 
