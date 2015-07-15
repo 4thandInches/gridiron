@@ -271,18 +271,20 @@ $(function () {
 //add fields to schedule maker///////////////////////////////////////////////////
 $(function () {
   var questionCounter = $('.situation-fields').length;
-  var newFields = $('.situation-fields').last().html();
+  var newHtml = $('.situation-fields').last().html();
   $('#addTask').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
 
 
-    newFields = newFields
+    newHtml = newHtml
       .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
       .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
 
-    $('.wrapper').last().append(newFields);
+    var newFields = $('.situation-fields').last().clone();
+    newFields.html(newHtml);
+    $('.wrapper').append(newFields);
 
     questionCounter++;
   })
