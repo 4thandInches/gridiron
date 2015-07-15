@@ -101,6 +101,11 @@ StatType.create(name: "Punts inside RedZone")
 StatType.create(name: "Longest Punt")
 StatType.create(name: "Total Punts")
 
+#Return Yards
+
+StatType.create(name: "Punt Return Yards")
+StatType.create(name: "Kick Return Yards")
+
 #Team Stats
 StatType.create(name: "Red Zone Trips")
 StatType.create(name: "Red Zone Conversions")
@@ -114,6 +119,7 @@ StatType.create(name: "Offensive Snaps")
 StatType.create(name: "Defensive Snaps")
 StatType.create(name: "3rd Down Stops")
 StatType.create(name: "4th Down Stops")
+StatType.create(name: "Kicks Blocked")
 
 if Rails.env.development?
   Team.create!(name: "Greyhounds", school: "North Surry", head_coach: "Dan McClendon", location: "Mount Airy, NC", division: "North West", conference: "NEC")

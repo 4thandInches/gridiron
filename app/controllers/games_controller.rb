@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   # GET /games.json
   def index
     @games = Game.where(team_id: @team.id)
-    @stat_types = StatType.last(12)
+    @stat_types = StatType.last(13)
   end
 
   # GET /games/1
@@ -25,7 +25,7 @@ class GamesController < ApplicationController
   end
 
   def game_stats
-    @stat_types = StatType.last(10)
+    @stat_types = StatType.last(13)
   end
 
   def player_make_stats
