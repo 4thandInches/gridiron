@@ -59,11 +59,11 @@
       <aside>4th Down Efficiency</aside>
       <article><%= @team.fourth_down_eff %>%</article>
 
-      <aside>Two Point Efficiency </aside>
-      <article><%= @team.two_point_eff %>%</article>
-
       <aside>Red Zone Efficiency</aside>
       <article><%= @team.red_zone_eff %>%</article>
+
+      <aside>Turnovers</aside>
+      <article><%= @team.total_turnovers %></article>
     </section>
   </div>
 
@@ -76,8 +76,8 @@
   <div class="flex-box">
     <h1 class="flex-title">Special Teams Stats</h1>
     <section class="small">
-      <aside> Kick Return Avg.</aside>
-      <article> 20yd </article>
+      <aside>Two Point Efficiency </aside>
+      <article><%= @team.two_point_eff %>%</article>
     </section>
     <br>
     <section class="small">
@@ -87,7 +87,7 @@
     <br>
     <section class="small">
       <aside>FG Efficiency</aside>
-      <article> 80% </article>
+      <article> <%= @team.field_goal_eff %>% </article>
     </section>
     <br>
     <section class="small">

@@ -22,7 +22,11 @@ class Team < ActiveRecord::Base
   end
 
   def field_goal_eff
+    calculate_efficiency(36, 35)
+  end
 
+  def total_turnovers
+    calculate_total(9) + calculate_total(16)
   end
 
   def punts_blocked
@@ -151,6 +155,7 @@ class Team < ActiveRecord::Base
         successes = stats.where(stat_type_id: id_1).sum(:value)
         attempts = stats.where(stat_type_id: id_2).sum(:value)
         decimal = sprintf "%.2f", attempts / successes
+        decimal [2..-1]
       end
 
       def calculate_total(id)
@@ -166,7 +171,7 @@ class Team < ActiveRecord::Base
       def get_most(stat_name)
         stat_type = StatType.find_by_name(stat_name)
         stat = stat_type.stats.joins(:player).where("players.team_id = #{id}").group(:player_id).order("sum(value)").last
-        stat.blank? ? "N/A" : stat.value
+        stat.blank? ? "N/A" : stat.value.to_i
       end
 
 end
