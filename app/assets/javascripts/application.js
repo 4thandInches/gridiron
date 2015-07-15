@@ -254,8 +254,8 @@ $(function () {
 
         ],
 
-        editable: true
         // editable: true
+
 
 
 			});
