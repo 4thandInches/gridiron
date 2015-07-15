@@ -29,20 +29,12 @@ class GamesController < ApplicationController
   end
 
   def player_make_stats
-    params[:stat].each do |k, v|
-      v.each do |key, value|
-        value.each do |ke, va|
-          stat = Stat.create!(player_id: k, game_id: @game.id, stat_type_id: ke, value: va) unless va == ""
-        end
-      end
-    end
+    @team.player_make_stats(params[:stat], @game)
     redirect_to player_stats_game_path(@game)
   end
 
   def make_game_stats
-    params[:stat].each do |k, v|
-      Stat.create!(game_id: @game.id, stat_type_id: k, value: v) unless v == ""
-    end
+    @team.make_game_stats(params[:stat], @game)
     redirect_to games_path
   end
 

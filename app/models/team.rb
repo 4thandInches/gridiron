@@ -5,6 +5,25 @@ class Team < ActiveRecord::Base
   has_many :stats, through: :games
 
 
+  def player_make_stats(params, game)
+    unless params.nil?
+      params.each do |k, v|
+        v.each do |key, value|
+          value.each do |ke, va|
+            stat = Stat.create!(player_id: k, game_id: game.id, stat_type_id: ke, value: va) unless va == ""
+          end
+        end
+      end
+    end
+  end
+
+  def make_game_stats(params, game)
+    params.each do |k, v|
+      Stat.create!(game_id: game.id, stat_type_id: k, value: v) unless v == ""
+    end
+  end
+
+
   def red_zone_eff
     calculate_efficiency("Red Zone Conversions", "Red Zone Trips")
   end
@@ -85,7 +104,6 @@ class Team < ActiveRecord::Base
   def total_kick_return_yards
     calculate_total("Kick Return Yards")
   end
-
 
   # player highs
 
