@@ -82,6 +82,14 @@ class Team < ActiveRecord::Base
     calculate_total("Kicks Blocked")
   end
 
+  def total_kick_return_yards
+    calculate_total("Kick Return Yards")
+  end
+
+  def total_punt_return_yards
+    calculate_total("Punt Return Yards")
+  end
+
   # player highs
 
   def most_passing_yards
