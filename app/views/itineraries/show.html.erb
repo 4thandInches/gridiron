@@ -1,10 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class="show-container">
-<p>
-  <strong>Name:</strong>
-  <%= @itinerary.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @itinerary.name %>
+  </p>
 
-<%= link_to 'Edit', edit_itinerary_path(@itinerary) %> |
-<%= link_to 'Back', itineraries_path %>
+<% @itinerary.situations.each do |s| %>
+    <div id="show-itinerary-list"> <%= s.time  %> <%= s.task %> </div>
+<%end  %>
+  <%= link_to 'Edit', edit_itinerary_path(@itinerary) %> |
+  <%= link_to 'Back', itineraries_path %>
 </div>

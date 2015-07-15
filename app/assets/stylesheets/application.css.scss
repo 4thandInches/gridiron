@@ -96,7 +96,14 @@ body{
   background-color: #eee;
 }
 //dashboard//////////////////////////////////////////////////////
-
+button{
+	a{
+		color: whitesmoke;
+	}
+	a:hover{
+		color: whitesmoke;
+	}
+}
 
 #schedule-dashboard{
   //@include outer-container();
@@ -403,12 +410,12 @@ body{
   margin-top: 50px;
 
 }
-.edit-container.erarΩy-edition{
-	.field.name{
-		@include span-columns(12)
-	}
-	@include span-columns(12)
-}
+//.edit-container.erarΩy-edition{
+//	.field.name{
+//		@include span-columns(12)
+//	}
+//	@include span-columns(12)
+//}
 
 #login-container{
   ////position and sizing of login
