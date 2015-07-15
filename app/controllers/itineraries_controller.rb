@@ -10,6 +10,7 @@ class ItinerariesController < ApplicationController
   # GET /itineraries/1
   # GET /itineraries/1.json
   def show
+    @tasks = Situation.all
   end
 
   # GET /itineraries/new

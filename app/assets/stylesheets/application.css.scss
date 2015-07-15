@@ -23,6 +23,19 @@
 @import "reset";
 @import "golden_ratio";
 @import url(http://fonts.googleapis.com/css?family=Kreon);
+
+
+button{
+	a{
+		color: whitesmoke;
+	}
+	a:hover{
+		color: whitesmoke;
+	}
+
+}
+
+
 //landing page////////////////////////////////////////////
 #gatekeeper{
 	position: absolute;
@@ -95,6 +108,7 @@ body{
   font-family: 'Kreon', serif;
   background-color: #eee;
 }
+
 //dashboard (weather)//////////////////////////////////////////////////////
 @font-face {
     font-family: 'weather';
@@ -207,26 +221,22 @@ i {
   padding: 20px;
   display: inline-block;
   border-radius: 5px;
+
+	#weather .currently {
+	  margin: 0 20px;
+	}
+
+
+
+button{
+	a{
+		color: whitesmoke;
+	}
+	a:hover{
+		color: whitesmoke;
+	}
+
 }
-
-#weather .currently {
-  margin: 0 20px;
-}
-
-
-
-
-
-
-
-// #weather{
-// position: relative;
-// margin-top: 100px;
-// width:50%;
-// height: 500px;
-// margin-right: 50px;
-// }
-
 
 
 //dashboard//////////////////////////////////////////////////////
@@ -536,12 +546,12 @@ i {
   margin-top: 50px;
 
 }
-.edit-container.erarΩy-edition{
-	.field.name{
-		@include span-columns(12)
-	}
-	@include span-columns(12)
-}
+//.edit-container.erarΩy-edition{
+//	.field.name{
+//		@include span-columns(12)
+//	}
+//	@include span-columns(12)
+//}
 
 #login-container{
   ////position and sizing of login
