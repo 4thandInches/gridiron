@@ -42,6 +42,8 @@ gem 'momentjs-rails'
 
 gem 'jquery-datetimepicker-rails', git: 'git://github.com/servtag/jquery-datetimepicker-rails.git'
 
+gem 'devise_invitable'
+
 
 
 # Spring speeds
