@@ -185,7 +185,8 @@ $(function () {
 				{
 					left: 'prev,next today',
 					center: 'title',
-					right: 'month,agendaWeek,agendaDay'
+					// right: 'month,agendaWeek,agendaDay'
+          right: ''
 				},
 
 				defaultView: 'month',
@@ -239,7 +240,6 @@ $(function () {
 
 					//editable: true allow user to edit events.
 
-				// editable: true,
 
 
         //adds games from schedule and any events that were created on the calendar
@@ -261,7 +261,7 @@ $(function () {
         ],
 
         editable: true
-        
+
 
 			});
 
