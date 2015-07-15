@@ -29,9 +29,6 @@ class Team < ActiveRecord::Base
     calculate_total("INT Thrown") + calculate_total("Fumbles")
   end
 
-  def punts_blocked
-
-  end
 
   def passing_touchdowns
     calculate_total("Passing TD's")
@@ -79,6 +76,10 @@ class Team < ActiveRecord::Base
 
   def total_takeaways
     total_fumble_recoveries + total_interceptions
+  end
+
+  def total_blocked_kicks
+    calculate_total("Kicks Blocked")
   end
 
   # player highs
@@ -157,7 +158,8 @@ class Team < ActiveRecord::Base
         attempts = first_stat_type.stats.joins(:game).where("games.team_id = #{id}").sum(:value)
         successes = second_stat_type.stats.joins(:game).where("games.team_id = #{id}").sum(:value)
         decimal = sprintf "%.2f", attempts / successes
-        decimal [2..-1]
+        return "N/A" if decimal[2..-1] == "N"
+        decimal[2..-1]
       end
 
       def calculate_total(stat_type)
