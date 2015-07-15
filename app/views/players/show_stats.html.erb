@@ -1,8 +1,7 @@
 <div class="show-player-stats">
-  <h3><%= @player.first_name %> <%= @player.last_name %> </h3>
-</div>
+<h3><%= @player.first_name %> <%= @player.last_name %> </h3>
 <% @games.each do |g| %>
-  <div class="show-player-stats">
+
     <table class="tables">
       <h3><%= g.opponent %></h3>
       <thead>
@@ -18,5 +17,7 @@
       <% end %>
         </tr>
     </table>
-  </div>
+
 <% end %>
+
+</div>

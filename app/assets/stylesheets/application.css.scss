@@ -365,17 +365,20 @@ button{
 
 }
 
-.show-player-stats-container{
-  @include position(relative, 10px 25% );
-  @include padding(20px 200px 20px 200px);
-  @include span-columns(6);
-
-  font-size: 20px;
-
-  background-color: #383838;
-  color: whitesmoke;-webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
-  box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+.show-player-stats{
+	h3{
+		color:#297179;
+		margin-bottom:0;
+	}
+	.tables{
+		margin-top:0;
+		tbody {
+			
+			tr:hover > td, tr:hover > th {
+				background-color: orange;
+			}
+		}
+	}
 }
 
 //page headers styles
@@ -1539,31 +1542,4 @@ $parallax-background-height: $parallax-window-height * 2;
 }
 
 //show-player-stats
-.show-player-stats{
-  @include position(relative );
-  @include padding(20px 20px 20px 20px);
-  @include span-columns(12);
-  background-color: #383838;
-  color: whitesmoke;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
-  box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
-  margin-top: 60px;
 
-	.tables {
-		color: black;
-	}
-
-  h3{
-    font-size: 50px;
-    color: #45b6c3;
-  }
-
-  .show-list{
-    font-size: 20px;
-  }
-
-  .side-image-container{
-    //@include background(url()
-  }
-}
