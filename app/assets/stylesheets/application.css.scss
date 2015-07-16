@@ -50,6 +50,27 @@ button{
 }
 
 
+.show-player-stats{
+
+	h3{
+		color:#297179;
+		background-color: #383838;
+		margin-bottom:0;
+		margin-top:0;
+		text-align: center;
+	}
+	.tables{
+		margin-top:0;
+		tbody {
+
+			tr:hover > td, tr:hover > th {
+				background-color: orange;
+			}
+		}
+	}
+}
+
+
 #event-show{
   margin-top: 100px;
 }
@@ -458,21 +479,7 @@ i {
 
 }
 
-.show-player-stats{
-	h3{
-		color:#297179;
-		margin-bottom:0;
-	}
-	.tables{
-		margin-top:0;
-		tbody {
 
-			tr:hover > td, tr:hover > th {
-				background-color: orange;
-			}
-		}
-	}
-}
 
 #player-name {
 	background-color: #383838;
