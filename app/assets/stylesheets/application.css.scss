@@ -25,6 +25,7 @@
 @import "landing_page";
 @import "show_containers";
 @import "edit_containers";
+@import "game_stats-modal";
 @import url(http://fonts.googleapis.com/css?family=Kreon);
 
 
@@ -37,6 +38,10 @@ button{
 	}
 }
 
+.logo-color{
+	color: orange;
+}
+
 .site-headers{
 	color: whitesmoke;
 	h1{
@@ -45,6 +50,7 @@ button{
 	}
 	h4{
 		margin:0;
+
 	}
 	margin-top: 60px;
 	background:
@@ -63,7 +69,7 @@ button{
 .show-player-stats{
 
 	h3{
-		color:#297179;
+		color:#3595a1;
 		background-color: #383838;
 		margin-bottom:0;
 		margin-top:0;
@@ -71,12 +77,7 @@ button{
 	}
 	.tables{
 		margin-top:0;
-		tbody {
 
-			tr:hover > td, tr:hover > th {
-				background-color: orange;
-			}
-		}
 	}
 }
 
@@ -1603,24 +1604,7 @@ $parallax-background-height: $parallax-window-height * 2;
 
 //game-stats
 
-#game-stats{
-  //margin-top: 75px;
-	.field{
-		display: inline-block;
-		width: 200px;
-		margin: 0 auto;
-		position: relative;
-		left: 20px;
-		text-align: center;
-	}
-	.team-stat-submit{
-		position: relative;
-		//left: 40px;
-		margin: 0 auto;
-		text-align: center;
 
-	}
-}
 
 //create-team///////////////////////
 
