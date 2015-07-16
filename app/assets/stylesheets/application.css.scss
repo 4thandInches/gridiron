@@ -1714,10 +1714,6 @@ $parallax-background-height: $parallax-window-height * 2;
   }
 }
 
-#role-modal p{
-	color: white;
-}
-
 #add-position {
 	text-align: center;
 	p {
@@ -1727,4 +1723,8 @@ $parallax-background-height: $parallax-window-height * 2;
 		width: 50px;
 		margin: auto;
 	}
+}
+
+.fa-pencil-square-o {
+	color: #383838;
 }
