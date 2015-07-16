@@ -135,21 +135,46 @@ body{
 // }
 
 #weather {
+	//position: relative;
+	//left:500px;
+	//padding-left:500px ;
+	//left:50px;
   width: 500px;
 	height: 500px;
   margin: 0px auto;
   text-align: center;
   text-transform: uppercase;
-	background-color: #5fcf80;
+	background:
+	linear-gradient(
+			rgba(53, 149, 161, 0.5),
+			rgba(53, 149, 161, 0.5)
+	),
+
+
+	asset_url('steamboat.jpg') no-repeat fixed center center;
+	background-size: cover;
+	//background-position: 50%;
+	//height: 1000px;
+	//position: absolute;
+	top: 0;
+	left: 0px;
+	right: 0;
+	bottom: 0;
+	min-height: 50%;
 }
 
 i {
-  color: #fff;
+  //color: #fff;
   font-family: weather;
   font-size: 150px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.0;
+}
+
+p{
+	color: whitesmoke;
+	background: #297179;
 }
 
 .icon-0:before { content: ":"; }
@@ -207,7 +232,7 @@ i {
   font-size: 100px;
   font-weight: 300;
   text-align: center;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 #weather ul {
@@ -229,21 +254,14 @@ i {
 
 
 
-button{
-	a{
-		color: whitesmoke;
-	}
-	a:hover{
-		color: whitesmoke;
-	}
 
-}
 
 
 //dashboard//////////////////////////////////////////////////////
 #schedule-dashboard{
   //@include outer-container();
   position: relative;
+	display: inline-block;
   margin-top: 100px;
   width:100%;
   height: 500px;
@@ -253,7 +271,7 @@ button{
   .tables.table-homepage{
     @include span-columns(4);
     margin-top: auto;
-    margin-right: 0;
+    margin-right: 30px;
     padding-top: 0;
 
     tbody{
@@ -1574,6 +1592,10 @@ $parallax-background-height: $parallax-window-height * 2;
 
   .flex-box {
 
+		p{
+			background-color: whitesmoke;
+		}
+
     section {
       margin-top: 20px;
       //@include outer-container;
@@ -1664,32 +1686,31 @@ $parallax-background-height: $parallax-window-height * 2;
 	}
 }
 
-//create-team
+//create-team///////////////////////
 
 #new-team {
-  margin-top: 75px;
-  h1 {
-    text-align: center;
-  }
-  input[type="text"] {
-    margin: auto;
-    width: 25%;
-  }
+	margin-top: 75px;
+	h1 {
+		text-align: center;
+	}
+	input[type="text"] {
+		margin: auto;
+		width: 25%;
+	}
 
-  label {
-    text-align: center;
-    margin-top: 15px;
-  }
+	label {
+		text-align: center;
+		margin-top: 15px;
+	}
 
-  .actions {
-    text-align: center;
-    margin-top: 10px;
-  }
+	.actions {
+		text-align: center;
+		margin-top: 10px;
+	}
 
+	//show-player-stats///////////////////////////////////
 
-//show-player-stats
-
-
+<<<<<<< HEAD
   .side-image-container{
     //@include background(url()
   }
@@ -1699,9 +1720,24 @@ $parallax-background-height: $parallax-window-height * 2;
 	text-align: center;
 	p {
 		margin-top: 20px;
+=======
+	.side-image-container {
+		//@include background(url()
 	}
-	#select-div {
-		width: 50px;
-		margin: auto;
+
+	#role-modal p {
+		color: white;
+>>>>>>> 14f71d887cc6797ef1dfac809593fc86bd5ef0f0
+	}
+
+	#add-position {
+		text-align: center;
+		p {
+			margin-top: 20px;
+		}
+		#select-div {
+			width: 50px;
+			margin: auto;
+		}
 	}
 }

@@ -162,17 +162,17 @@
   <div class="flex-box">
     <h1 class="flex-title">Next Event</h1>
     <!-- need to figure out how to write code to get the next upcoming game -->
-    <p>
+    <p class="flex-paragraph">
       <% if !@games.empty? %>
-      <p>
+      <p class="flex-paragraph">
         <% if @games.first.home %>
         <%= "vs. #{@games.first.opponent}" %>
         <% else %>
         <%= "@ #{@games.first.opponent}" %>
         <% end %>
       </p>
-      <p><%= @games.first.location %></p>
-      <p><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
+      <p class="flex-paragraph"><%= @games.first.location %></p>
+      <p class="flex-paragraph"><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
       <% end %>
   </div>
 </div>
