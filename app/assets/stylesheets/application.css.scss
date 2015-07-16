@@ -1585,19 +1585,18 @@ $parallax-background-height: $parallax-window-height * 2;
   #297179,
   #297179;
 
+
   @include clearfix;
   @include display(flex);
   @include justify-content(center);
   @include align-items(stretch);
   @include flex-wrap(wrap);
   clear: both;
-  text-align: center;
+  text-align: left;
 
   .flex-box {
 
-		p{
-			background-color: whitesmoke;
-		}
+
 
     section {
       margin-top: 20px;
@@ -1648,6 +1647,7 @@ $parallax-background-height: $parallax-window-height * 2;
       font-size: 1.2em;
       font-weight: 800;
       margin-bottom: 0.5em;
+			text-align: center;
     }
 
     p {
@@ -1659,7 +1659,13 @@ $parallax-background-height: $parallax-window-height * 2;
 
   .flex-box-big {
     @include flex(1 1 40em);
+
   }
+
+	.flex-paragraph{
+		text-align: center;
+	}
+
 }
 
 //choose-season
