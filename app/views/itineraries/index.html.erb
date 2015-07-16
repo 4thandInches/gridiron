@@ -1,8 +1,4 @@
 
-
-
-
-
 <div class="page-header">
   <h1>Itineraries</h1>
 </div>
@@ -13,15 +9,15 @@
     <div class="diamond-wrapper">
 
       <div class="diamond-left">
-        <p><%= itinerary.name %></p>
+        <p><%= link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>
       </div>
 
       <div class="diamond-bottom">
-       <p><%= link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>
+       <p><%= link_to itinerary.name, itinerary  %></p>
       </div>
 
       <div class="diamond-right">
-       <p> <%= link_to '<i class="fa fa-times fa-4x"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>
+       <p> <%= link_to '<i class="fa fa-bomb fa-4x"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>
       </div>
 
     </div>

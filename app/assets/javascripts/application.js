@@ -17,7 +17,7 @@
 //= require moment
 //= require fullcalendar
 //= require jquery.datetimepicker
-
+//= require_tree ../../../vendor/assets/javascripts/.
 
 
 
@@ -95,7 +95,13 @@ function parallax(){
 
 //DATEPICKER
 $(function() {
-  $('.datepicker').datetimepicker()
+  $('.datepicker').datetimepicker({
+     format:'g:i A',
+     formatTime: 'g:i A',
+
+     step:30,
+     ampm: true
+  });
 });
 
 //hide window ambush thing aka fade in---------------------------------------------------------------------------
@@ -264,8 +270,8 @@ $(function () {
 
         ],
 
-        editable: true
         // editable: true
+
 
 
 			});
@@ -276,18 +282,20 @@ $(function () {
 //add fields to schedule maker///////////////////////////////////////////////////
 $(function () {
   var questionCounter = $('.situation-fields').length;
-  var newFields = $('.situation-fields').last().html();
+  var newHtml = $('.situation-fields').last().html();
   $('#addTask').on('click', function (e) {
     e.stopPropagation();
     e.preventDefault();
 
 
 
-    newFields = newFields
+    newHtml = newHtml
       .replace(/\[[0-9]+\]/g, '[' + questionCounter + ']')
       .replace(/_[0-9]+_/g, '_' + questionCounter + '_');
 
-    $('.wrapper').last().append(newFields);
+    var newFields = $('.situation-fields').last().clone();
+    newFields.html(newHtml);
+    $('.wrapper').append(newFields);
 
     questionCounter++;
   })
@@ -296,4 +304,35 @@ $(function () {
 
 $(document).ready(function(){
   ('button').mouseenter
+});
+
+//dashboard weather/////////////////////////////////////////////////////////////
+// Docs at http://simpleweatherjs.com
+$(document).ready(function() {
+  $.simpleWeather({
+    woeid: '2357536', //2357536
+    location: 'Durham, NC',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+
+
+
+      for(var i=0;i<weather.forecast.length;i++) {
+        html += '<p>'+weather.forecast[i].day+': hi: '+weather.forecast[i].high+' lo: '+weather.forecast[i].low+'</p>';
+      }
+
+
+      html += '<p>wind: '+weather.wind.speed+' '+weather.wind.direction+'</p>';
+      html += '<p>humidity: '+weather.humidity+'%</p>';
+      html += '<p>'+weather.title+'</p>';
+
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
 });

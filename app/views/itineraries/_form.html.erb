@@ -12,7 +12,7 @@
       </div>
     <% end %>
 
-    <div class="field name">
+    <div class="Itinerary-field-name">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </div>
@@ -21,21 +21,21 @@
 
 
 
-    <%= f.fields_for(:situations) do |ff| %>
-      <div class="wrapper">
+    <div class="wrapper">
+      <%= f.fields_for(:situations) do |ff| %>
          <div class="situation-fields">
-           <div class="field">
+           <div class="itinerary-field">
              <%= ff.label :time %><br>
              <%= ff.text_field :time %>
            </div>
 
-           <div class="field">
+           <div class="itinerary-field">
              <%= ff.label :task %><br>
              <%= ff.text_field :task %>
            </div>
          </div>
-      </div>
-    <%end%>
+      <%end%>
+    </div>
 
 
 
@@ -45,6 +45,7 @@
     <div class="actions">
       <%= f.submit %>
       <button id="addTask">Add</button>
+       <button> <%= link_to 'Back', itineraries_path %> </button>
     </div>
 
 

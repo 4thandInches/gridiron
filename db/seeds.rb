@@ -140,6 +140,9 @@ if Rails.env.development?
   Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: DateTime.new(2015,11,28,15), home: true, team_id: 1)
 
   class_status_array = [1,2,3,4]
+  15.times do
+	  Itinerary.create!(name: "#{Faker::Date.forward(23)}")
+  end
 
   52.times do
     Player.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", jersey_number: count,

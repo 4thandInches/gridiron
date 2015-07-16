@@ -23,6 +23,19 @@
 @import "reset";
 @import "golden_ratio";
 @import url(http://fonts.googleapis.com/css?family=Kreon);
+
+
+button{
+	a{
+		color: whitesmoke;
+	}
+	a:hover{
+		color: whitesmoke;
+	}
+
+}
+
+
 //landing page////////////////////////////////////////////
 #gatekeeper{
 	position: absolute;
@@ -95,15 +108,146 @@ body{
   font-family: 'Kreon', serif;
   background-color: #eee;
 }
+
+//dashboard (weather)//////////////////////////////////////////////////////
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// html {
+//   width: 100%;
+//   height: 100%;
+//   background: #1192d3 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/austin-2.jpg) no-repeat bottom right;
+//   background-size: cover;
+// 	z-index: 999;
+// }
+
+// body {
+//   padding: 45px 0;
+//   font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+// }
+
+#weather {
+  width: 500px;
+	height: 500px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+	background-color: #5fcf80;
+}
+
+i {
+  color: #fff;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+#weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+	#weather .currently {
+	  margin: 0 20px;
+	}
+
+
+
+button{
+	a{
+		color: whitesmoke;
+	}
+	a:hover{
+		color: whitesmoke;
+	}
+
+}
+
+
 //dashboard//////////////////////////////////////////////////////
-
-
 #schedule-dashboard{
   //@include outer-container();
   position: relative;
   margin-top: 100px;
   width:100%;
   height: 500px;
+
 
 
   .tables.table-homepage{
@@ -181,6 +325,7 @@ body{
 //itinerary styles======================================================
 .itinerary-container{
 	position: relative;
+	left: 50px;
 	display: inline-block;
 	height: 100%;
 	width: auto;
@@ -189,7 +334,7 @@ body{
 
 .diamond-wrapper{
 	//margin-top: 200px;
-	width:300px;
+	width:400px;
 	height: auto;
 	display: inline-block;
 	padding-left:50px;
@@ -207,56 +352,69 @@ body{
 		height: 100px;
 		width: 100px;
 		padding: 0px;
-		background-color: grey;
+		background-color: #45b6c3;
+		//border:2px solid #45b6c3;
 		top: 0px;
 		-webkit-transform: rotate(45deg) skew(0deg);
 		transform: rotate(45deg) skew(0deg);
 		p{
-			position: relative;
-			top: 15px;
-			left: 30px;
 			//text-align: center;
+			position: relative;
+			overflow: scroll;
+			width: 70px;
+			height:20px;
+			top: 40px;
+			left: 15px;
+			text-align: center;
 			-webkit-transform: rotate(-45deg) skew(0deg);
 			transform: rotate(-45deg) skew(0deg);
+		}
+		a{
+			color:whitesmoke;
 		}
 	}
 
 	.diamond-left:hover{
-		background-color: yellow;
+		background-color: orange;
 	}
 
 	.diamond-bottom{
 		position: relative;
 		left:80px;
 		top:-20px;
-		height: 100px;
-		width: 100px;
+		height: 200px;
+		width: 200px;
 		padding: 0px;
 
-		background-color: grey;
+		background-color: #3595a1;
 
 		-webkit-transform: rotate(45deg) skew(0deg);
 		transform: rotate(45deg) skew(0deg);
 		p{
+			font-size: 30px;
 			position: relative;
-			top: 30px;
+			top: 60px;
+			left: 20px;
 			//text-align: center;
 			-webkit-transform: rotate(-45deg) skew(0deg);
 			transform: rotate(-45deg) skew(0deg);
 		}
 		a{
-			color:gold;
+			color:whitesmoke;
 		}
+	}
+	.diamond-bottom:hover{
+		background-color: orange;
 	}
 
 	.diamond-right{
 		position: relative;
-		left:160px;
-		top:-200px;
+		left:260px;
+		top:-300px;
 		height: 100px;
 		width: 100px;
 		padding: 0px;
-		background-color: grey;
+		background-color: #297179;
 
 		-webkit-transform: rotate(45deg) skew(0deg);
 		transform: rotate(45deg) skew(0deg);
@@ -268,10 +426,20 @@ body{
 			transform: rotate(-45deg) skew(0deg);
 		}
 	}
+	.diamond-right:hover{
+		background-color: orange;
+	}
 
 
 
 }
+
+.situation-fields{
+	.itinerary-field{
+	@include span-columns(6)
+	}
+}
+
 //icons and forms styles//////////////////////////////
 
 .form-button{
@@ -287,7 +455,7 @@ body{
 }
 
 .fa-times{
-	color: darkred;
+	color: red;
 }
 .fa-cog{
 	color:orange;
@@ -359,6 +527,7 @@ body{
 //page headers styles
 
 .page-header{
+	text-align: center;
 	margin-top: 50px;
 	width: 100%;
 	height: 200px;
@@ -387,12 +556,12 @@ body{
   margin-top: 50px;
 
 }
-.edit-container.erarΩy-edition{
-	.field.name{
-		@include span-columns(12)
-	}
-	@include span-columns(12)
-}
+//.edit-container.erarΩy-edition{
+//	.field.name{
+//		@include span-columns(12)
+//	}
+//	@include span-columns(12)
+//}
 
 #login-container{
   ////position and sizing of login
