@@ -1,0 +1,28 @@
+.edit-container{
+	position: relative;
+	@include margin(0 auto);
+	@include size(auto 350px);
+	color: whitesmoke;
+	background-color: #383838;
+
+	//@include span-columns(6);
+	.field{
+		@include position(relative, null null null 150px);
+		@include outer-container();
+		@include span-columns(3);
+		//@include shift(1)
+	}
+	.actions{
+		text-align: center;
+		//@include position(relative null null null 150px);
+		@include span-columns(12);
+		//@include margin(0 auto);
+		
+	}
+
+	//@include position(relative, 10px 25% );
+	//@include padding(20px 100px 20px 100px);
+	//@include span-columns(6);
+
+
+}

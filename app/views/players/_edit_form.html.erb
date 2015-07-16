@@ -1,3 +1,7 @@
+<div class="site-headers">
+  <h1>Roster</h1>
+  <h4>Create and Edit Player Information </h4>
+</div>
 <div class="edit-container">
     <%= form_for(@player) do |f| %>
       <% if @player.errors.any? %>
@@ -44,10 +48,11 @@
         <%= f.label :class_status_id %><br>
         <%= f.collection_select :class_status_id, @class_statuses.to_a.collect, :id, :name %>
       </div>
+
+
       <div class="actions">
         <%= f.submit %>
       </div>
-
 
     <% end %>
 </div>
