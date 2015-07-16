@@ -26,8 +26,12 @@
 @import "show_containers";
 @import "edit_containers";
 @import "game_stats-modal";
-@import url(http://fonts.googleapis.com/css?family=Kreon);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #eee;
+}
 
 button{
 	a{
@@ -95,10 +99,7 @@ button{
 //
 //}
 
-body{
-  font-family: 'Kreon', serif;
-  background-color: #eee;
-}
+
 
 //dashboard (weather)//////////////////////////////////////////////////////
 @font-face {

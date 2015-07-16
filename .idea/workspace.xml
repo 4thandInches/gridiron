@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="087062a6-9be4-4164-b379-516cffa7f8d4" name="Default" comment="add style to login and root path">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_game_stats-modal.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/games/_game_stats.html.erb" afterPath="$PROJECT_DIR$/app/views/games/_game_stats.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/games/index.html.erb" afterPath="$PROJECT_DIR$/app/views/games/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/players/index.html.erb" afterPath="$PROJECT_DIR$/app/views/players/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/positions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/positions/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/itineraries/index.html.erb" afterPath="$PROJECT_DIR$/app/views/itineraries/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gridiron.iws" />
@@ -58,8 +54,8 @@
           <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/itineraries/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.06392045">
-                  <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+                <state vertical-scroll-proportion="0.10653409">
+                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -73,9 +69,9 @@
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+                  <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
                   <folding>
-                    <marker date="1437008217000" expanded="true" signature="8912:8914" placeholder="{...}" />
+                    <marker date="1437085308000" expanded="true" signature="8950:8952" placeholder="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -84,8 +80,8 @@
           <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.022156574">
-                  <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+                <state vertical-scroll-proportion="0.42097488">
+                  <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -219,7 +215,6 @@
         <option value="dbtable:/38471353/f5e19583-4879-4ea4-a41f-3e91f1541e43/..stats" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/itineraries/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/itineraries_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/itineraries/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/itineraries/show.html.erb" />
@@ -237,9 +232,10 @@
         <option value="$PROJECT_DIR$/app/views/players/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/positions/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/games/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/_game_stats-modal.scss" />
         <option value="$PROJECT_DIR$/app/views/games/_game_stats.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/itineraries/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       </list>
     </option>
   </component>
@@ -942,9 +938,9 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
+          <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
           <folding>
-            <marker date="1437008217000" expanded="true" signature="8912:8914" placeholder="{...}" />
+            <marker date="1437085308000" expanded="true" signature="8950:8952" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1106,18 +1102,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/itineraries/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.022156574">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.10653409">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/itineraries/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06392045">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.42097488">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding />
         </state>
       </provider>
