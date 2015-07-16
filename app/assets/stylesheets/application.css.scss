@@ -1592,6 +1592,10 @@ $parallax-background-height: $parallax-window-height * 2;
 
   .flex-box {
 
+		p{
+			background-color: whitesmoke;
+		}
+
     section {
       margin-top: 20px;
       //@include outer-container;
