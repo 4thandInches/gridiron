@@ -510,7 +510,7 @@ button{
 	.tables{
 		margin-top:0;
 		tbody {
-			
+
 			tr:hover > td, tr:hover > th {
 				background-color: orange;
 			}
@@ -1685,7 +1685,7 @@ $parallax-background-height: $parallax-window-height * 2;
     text-align: center;
     margin-top: 10px;
   }
-}
+
 
 //show-player-stats
 
@@ -1709,4 +1709,3 @@ $parallax-background-height: $parallax-window-height * 2;
 		margin: auto;
 	}
 }
-
