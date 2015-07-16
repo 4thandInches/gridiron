@@ -1685,45 +1685,43 @@ $parallax-background-height: $parallax-window-height * 2;
 //create-team///////////////////////
 
 #new-team {
-  margin-top: 75px;
-  h1 {
-    text-align: center;
-  }
-  input[type="text"] {
-    margin: auto;
-    width: 25%;
-  }
-
-  label {
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .actions {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-
-//show-player-stats///////////////////////////////////
-
-
-  .side-image-container{
-    //@include background(url()
-  }
-
-
-#role-modal p{
-	color: white;
-}
-
-#add-position {
-	text-align: center;
-	p {
-		margin-top: 20px;
+	margin-top: 75px;
+	h1 {
+		text-align: center;
 	}
-	#select-div {
-		width: 50px;
+	input[type="text"] {
 		margin: auto;
+		width: 25%;
+	}
+
+	label {
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	.actions {
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	//show-player-stats///////////////////////////////////
+
+	.side-image-container {
+		//@include background(url()
+	}
+
+	#role-modal p {
+		color: white;
+	}
+
+	#add-position {
+		text-align: center;
+		p {
+			margin-top: 20px;
+		}
+		#select-div {
+			width: 50px;
+			margin: auto;
+		}
 	}
 }
