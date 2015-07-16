@@ -1,7 +1,10 @@
-<p id="notice"><%= notice %></p>
+
 
 <div id="player-index">
-
+  <div class="site-headers">
+    <h1>Roster</h1>
+    <h4>Create and Edit Player Information </h4>
+  </div>
   <table class="tables">
     <thead>
       <tr>
@@ -37,20 +40,7 @@
           <td><%= player.class_status.name %></td>
           <td><%= link_to 'Athlete Info', player %></td>
           <td><%= link_to 'Edit/Add Positions', add_position_player_path(player) %>
-            <!-- <div class="modal"> -->
-              <!-- <label for='modal-<%= player.id %>'>
-                <div class="modal-trigger" id="add-position-button">Add/Edit Positions</div>
-              </label>
-              <input class="modal-state" id='modal-<%= player.id %>' type="checkbox" /> -->
-              <!-- <div class="modal-fade-screen">
-                <div class="modal-inner">
-                  <div class="modal-close" for='modal-<%= player.id %>'></div>
-                  <div id="add-position"> -->
-                  <!--  <%= render partial: "add_position", locals: {id: player.id, positions: @positions} %>
-                  </div>
-                </div>
-              </div>
-            </div> -->
+
           </td>
           <td><%= link_to "Show Stats", show_stats_player_path(player) %></td>
           <td><%= link_to '<i class="fa fa-pencil-square-o fa-2x"></i>'.html_safe, edit_player_path(player) %> <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, player, method: :delete, data: { confirm: 'Are you sure?' } %> </td>

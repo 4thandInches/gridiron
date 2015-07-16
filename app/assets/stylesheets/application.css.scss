@@ -36,9 +36,16 @@ button{
 
 }
 
-
-
-
+.site-headers{
+	h1{
+		margin: 0;
+	}
+	h4{
+		margin:0;
+	}
+	margin-top: 60px;
+	background-color: #297179;
+}
 
 
 #event-show{
@@ -51,6 +58,7 @@ button{
 }
 h1 {
   font-size: 50px;
+
 }
 
 body{
@@ -1144,7 +1152,7 @@ header.navigation {
   border-spacing: 0;
   //border: $table-border;
   width: 100%;
-  margin-top: 60px;
+  //margin-top: 60px;
 
   tbody {
     background-color: $table-background;
