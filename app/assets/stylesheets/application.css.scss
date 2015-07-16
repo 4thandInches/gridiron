@@ -35,19 +35,29 @@ button{
 	a:hover{
 		color: whitesmoke;
 	}
-
 }
 
 .site-headers{
+	color: whitesmoke;
 	h1{
+		font-size: 60px;
 		margin: 0;
 	}
 	h4{
 		margin:0;
 	}
 	margin-top: 60px;
-	background-color: #297179;
+	background:
+		/* top, transparent red, faked with gradient */
+	linear-gradient(
+			rgba(53, 149, 161, 0.8),
+			rgba(53, 149, 161, 0.8)
+	),
+	asset_url('field.jpg') no-repeat fixed center center;
+	background-size: 100%;
+	background-position: top;
 }
+
 
 
 .show-player-stats{
@@ -79,10 +89,10 @@ button{
 #calendar{
   margin-top: 100px;
 }
-h1 {
-  font-size: 50px;
-
-}
+//h1 {
+//  font-size: 50px;
+//
+//}
 
 body{
   font-family: 'Kreon', serif;
@@ -919,7 +929,7 @@ header.navigation {
     //margin-top: 0;
     //
     @include button(flat, #45b6c3);
-    color: #1e1e1e;
+    color: whitesmoke;
 		&:hover:after,
 		&:hover:before {
 			background: darken(orange, 10%);
