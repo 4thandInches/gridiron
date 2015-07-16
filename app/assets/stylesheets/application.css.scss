@@ -1629,9 +1629,11 @@ $parallax-background-height: $parallax-window-height * 2;
 
 	//show-player-stats///////////////////////////////////
 
-	.side-image-container {
-		//@include background(url()
-	}
+  .side-image-container{
+    //@include background(url()
+}
+
+
 
 	#role-modal p {
 		color: white;
