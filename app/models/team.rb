@@ -178,8 +178,8 @@ class Team < ActiveRecord::Base
       def calculate_efficiency(stat_type_1, stat_type_2)
         first_stat_type = StatType.find_by_name(stat_type_1)
         second_stat_type = StatType.find_by_name(stat_type_2)
-        attempts = first_stat_type.stats.joins(:game).where("games.team_id = #{id}").group(:game_id).sum(:value)
-        successes = second_stat_type.stats.joins(:game).where("games.team_id = #{id}").group(:game_id).sum(:value)
+        attempts = first_stat_type.stats.joins(:game).where("games.team_id = #{id}").sum(:value)
+        successes = second_stat_type.stats.joins(:game).where("games.team_id = #{id}").sum(:value)
         decimal = sprintf "%.2f", attempts / successes
         return "N/A" if decimal[2..-1] == "N"
         decimal[2..-1]
@@ -192,13 +192,13 @@ class Team < ActiveRecord::Base
 
       def get_player(stat_name)
         stat_type = StatType.find_by_name(stat_name)
-        stat = stat_type.stats.joins(:player).where("players.team_id = #{id}").group(:player_id).order("sum(value)").last
+        stat = stat_type.stats.group(:id).joins(:player).where("players.team_id = #{id}").group(:player_id).order("sum(value)").last
         stat.blank? ? "N/A" : stat.player.full_name
       end
 
       def get_most(stat_name)
         stat_type = StatType.find_by_name(stat_name)
-        stat = stat_type.stats.joins(:player).where("players.team_id = #{id}").group(:player_id).order("sum(value)").last
+        stat = stat_type.stats.group(:id).order(:id).joins(:player).where("players.team_id = #{id}").group(:player_id).order("sum(value)").last
         stat.blank? ? "N/A" : stat.value.to_i
       end
 
