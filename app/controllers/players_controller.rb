@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats, :add_position, :position_added]
-  before_action :set_positions_and_statuses, only: [:new, :edit, :create, :index]
+  before_action :set_positions_and_statuses, only: [:new, :edit, :create, :index, :add_position]
   before_action :set_team
 
   # GET /players

@@ -12,7 +12,7 @@
     <h1 class="flex-title">Offensive Leaders</h1>
     <section class="small">
       <aside><%= @team.get_passer %></aside>
-      <article><%= @team.most_passing_yards %>yd Passing</article>
+      <article><%= @team.most_passing_yards %> yd Passing</article>
     </section>
     <br>
     <section class="small">
@@ -135,10 +135,10 @@
       <article><%= @team.total_sacks %></article>
 
       <aside>3rd Down Stops</aside>
-      <article><%= @team.total_fourth_down_stops %></article>
+      <article><%= @team.total_third_down_stops %></article>
 
       <aside>4th Down Stops</aside>
-      <article><%= @team.total_third_down_stops %></article>
+      <article><%= @team.total_fourth_down_stops %></article>
     </section>
     <br>
     <br>
@@ -199,4 +199,5 @@
     <% end %>
     </tbody>
   </table>
+  <div id="weather"></div>
 </div>

@@ -1,7 +1,22 @@
 <%= form_tag("players/#{id}/position_added", :action => "position_added") do %>
+
+
   <div class="field">
+    <h2>Add Position</h2>
     <%= label_tag :position %>
     <%= collection_select :position, :position_id, positions.to_a.collect, :id, :name %>
   </div>
+
+  <div id="role-modal">
+    <h2>Edit Positions</h2>
+    <% player = Player.find(id) %>
+
+    <% player.roles.each do |r| %>
+
+      <p><%= r.position.code %> <%= link_to "Remove Position", r, data: {confirm: 'are you sure?'}, method: :delete %></p>
+
+    <%  end %>
+  </div>
+
   <%= submit_tag "Press Me" %>
 <% end %>

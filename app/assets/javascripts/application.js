@@ -17,7 +17,7 @@
 //= require moment
 //= require fullcalendar
 //= require jquery.datetimepicker
-
+//= require_tree ../../../vendor/assets/javascripts/.
 
 
 
@@ -160,6 +160,16 @@ function setPosition(){
 $(changePosition);
 $(setPosition);
 
+//delete in modal
+
+// $(function() {
+//   $('.modal-inner').on("click", '[data-method]', function(e) {
+//     $.ajax({
+//       method: "DELETE",
+//       url: ""
+//     });
+//   });
+// });
 //form text effect-------------------------------------------------------------------------------------------
 
 $(function () {
@@ -294,4 +304,35 @@ $(function () {
 
 $(document).ready(function(){
   ('button').mouseenter
+});
+
+//dashboard weather/////////////////////////////////////////////////////////////
+// Docs at http://simpleweatherjs.com
+$(document).ready(function() {
+  $.simpleWeather({
+    woeid: '2357536', //2357536
+    location: 'Durham, NC',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+
+
+
+      for(var i=0;i<weather.forecast.length;i++) {
+        html += '<p>'+weather.forecast[i].day+': hi: '+weather.forecast[i].high+' lo: '+weather.forecast[i].low+'</p>';
+      }
+
+
+      html += '<p>wind: '+weather.wind.speed+' '+weather.wind.direction+'</p>';
+      html += '<p>humidity: '+weather.humidity+'%</p>';
+      html += '<p>'+weather.title+'</p>';
+
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
 });

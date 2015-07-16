@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  resources :roles, only: [:destroy]
+
   resources :events
   resources :situations
   resources :itineraries
