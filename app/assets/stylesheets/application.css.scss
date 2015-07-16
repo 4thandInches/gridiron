@@ -153,11 +153,11 @@ body{
 
 	asset_url('steamboat.jpg') no-repeat fixed center center;
 	background-size: cover;
-	background-position: 50%;
+	//background-position: 50%;
 	//height: 1000px;
-	position: absolute;
+	//position: absolute;
 	top: 0;
-	left: 0;
+	left: 0px;
 	right: 0;
 	bottom: 0;
 	min-height: 50%;
@@ -170,6 +170,11 @@ i {
   font-weight: normal;
   font-style: normal;
   line-height: 1.0;
+}
+
+p{
+	color: whitesmoke;
+	background: #297179;
 }
 
 .icon-0:before { content: ":"; }
