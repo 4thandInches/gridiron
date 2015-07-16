@@ -1,0 +1,39 @@
+.show-container{
+	//@include position(relative, 10px 25% );
+	//@include padding(20px 20px 20px 20px);
+	//@include span-columns(6);
+
+	position: relative;
+	@include size(500px auto);
+	@include margin(100px auto);
+	@include padding(0 10px 10px 10px);
+	background-color: #383838;
+	color: whitesmoke;
+
+
+	h3{
+		font-size: 50px;
+		color: #45b6c3;
+		margin:0;
+		text-align: center;
+	}
+
+	.show-list{
+		font-size: 20px;
+	}
+
+	.side-image-container{
+		//@include background(url()
+	}
+
+	.nav-bottom{
+		text-align: center;
+		a{
+			color:whitesmoke;
+		}
+		a:hover{
+			color:orange;
+		}
+
+	}
+}
