@@ -154,6 +154,16 @@ function setPosition(){
 $(changePosition);
 $(setPosition);
 
+//delete in modal
+
+// $(function() {
+//   $('.modal-inner').on("click", '[data-method]', function(e) {
+//     $.ajax({
+//       method: "DELETE",
+//       url: ""
+//     });
+//   });
+// });
 //form text effect-------------------------------------------------------------------------------------------
 
 $(function () {

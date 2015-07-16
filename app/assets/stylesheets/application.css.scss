@@ -347,6 +347,15 @@ body{
   box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
 }
 
+#player-name {
+	background-color: #383838;
+	color: #45b6c3;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+	box-shadow: 10px 10px 5px 0px rgba(30,30,30,1);
+	margin: 10px auto auto;
+	text-align: center;
+}
 //page headers styles
 
 .page-header{
@@ -1534,4 +1543,19 @@ $parallax-background-height: $parallax-window-height * 2;
   .side-image-container{
     //@include background(url()
   }
+}
+
+#role-modal p{
+	color: white;
+}
+
+#add-position {
+	text-align: center;
+	p {
+		margin-top: 20px;
+	}
+	#select-div {
+		width: 50px;
+		margin: auto;
+	}
 }

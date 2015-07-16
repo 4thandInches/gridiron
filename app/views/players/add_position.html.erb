@@ -1,9 +1,15 @@
 <div id="add-position">
+  <h3>Delete Position</h3>
   <%= form_tag(position_added_player_path) do %>
+  <% @player.roles.each do |r| %>
+    <p>
+      <%= r.position.code %>: <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, r, method: :delete, data: {confirm: 'are you sure?'} %>
+    </p>
+  <% end %>
+  <h3>Add Position</h3>
     <div class="field">
-      <%= label_tag :position %>
-      <%= collection_select :position, :position_id, @positions.to_a.collect, :id, :name %>
+      <div id="select-div"><%= collection_select :position, :position_id, @positions.to_a.collect, :id, :name %></div>
     </div>
-    <%= submit_tag "Press Me"%>
+    <%= submit_tag "Add Position"%>
   <% end %>
 </div>
