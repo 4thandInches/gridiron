@@ -5,47 +5,42 @@
 </div>
 
 
-<!--<div class="itinerary-container">-->
-  <!--<%# @itineraries.each do |itinerary|  %>-->
-    <!--<div class="diamond-wrapper">-->
+<div class="itinerary-container">
+  <% @itineraries.each do |itinerary|  %>
 
-      <!--<div class="diamond-left">-->
         <!--<p><%# link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>-->
-      <!--</div>-->
 
-      <!--<div class="diamond-bottom">-->
        <!--<p><%# link_to itinerary.name, itinerary  %></p>-->
-      <!--</div>-->
 
-      <!--<div class="diamond-right">-->
-       <!--<p> <%# link_to '<i class="fa fa-bomb fa-4x"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>-->
-      <!--</div>-->
+       <!--<p> <%#link_to '<i class="fa fa-bomb fa-4x"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>-->
 
-    <!--</div>-->
-  <!--<%# end %>-->
-<!--</div>-->
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><%= link_to itinerary.name, itinerary  %></h5>
+        </div>
+
+        <div class="i-box-base">
+          <% itinerary.situations.each do |s| %>
+            <section>
+              <aside><%= s.time %></aside>
+              <article>s.task</article>
+            </section>
+          <% end %>
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+  <% end %>
+</div>
 
 <!--<%# link_to 'New Itinerary', new_itinerary_path %>-->
 
-<div class="itinerary-container">
-  <div class="i-box-show">
-    <p>Name of Thing Here</p>
-  </div>
 
-  <div class="i-box-base">
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-
-  </div>
-  <div class="i-box-show">
-    <p>things</p>
-  </div>
-</div>
