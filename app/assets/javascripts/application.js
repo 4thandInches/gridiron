@@ -96,13 +96,15 @@ function parallax(){
 //DATEPICKER
 $(function() {
   $('.datepicker').datetimepicker({
-     format:'g:i A',
+    dateFormat: 'MM/DD/YY h:m',
+    //  format:'g:i A',
      formatTime: 'g:i A',
 
      step:30,
      ampm: true
-  });
-});
+   });
+ });
+
 
 //hide window ambush thing aka fade in---------------------------------------------------------------------------
 $(document).ready(function() {

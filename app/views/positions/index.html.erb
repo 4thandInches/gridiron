@@ -1,4 +1,8 @@
 <div class="depth-chart">
+  <div class="site-headers">
+    <h1>Depth Chart</h1>
+    <h4>Manage Your Team Depth Chart Postitions</h4>
+  </div>
   <div class="cards">
     <% @positions.each do |position| %>
     <div class="card">
@@ -12,7 +16,7 @@
         <ul class="sortable">
         <% position.get_team_players(@team).each do |player| %>
           <% player.roles.where(position_id: position.id).each do |r| %>
-            <li class="ui-state-default", data-id="<%= r.id %>"><%= link_to "#{r.get_player_name}", show_stats_player_path(r.get_player) %></li>
+            <li class="ui-state-default", data-id="<%= r.id %>"><i class="fa fa-sort"></i> <%= link_to "#{r.get_player_name}", show_stats_player_path(r.get_player) %></li>
           <% end %>
         <% end %>
       </ul>

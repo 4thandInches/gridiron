@@ -49,6 +49,12 @@
         <%= f.collection_select :class_status_id, @class_statuses.to_a.collect, :id, :name %>
       </div>
 
+      <div class="field">
+        <%= f.label :upload_profile_picture %><br>
+        <%= f.file_field 'uploaded_file' %>
+      </div>
+
+
 
       <div class="actions">
         <%= f.submit %>

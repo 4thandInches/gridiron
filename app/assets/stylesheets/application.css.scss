@@ -25,8 +25,14 @@
 @import "landing_page";
 @import "show_containers";
 @import "edit_containers";
-@import url(http://fonts.googleapis.com/css?family=Kreon);
+@import "game_stats-modal";
+@import "itinerary_style";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #eee;
+}
 
 button{
 	a{
@@ -35,18 +41,49 @@ button{
 	a:hover{
 		color: whitesmoke;
 	}
+}
 
+.logo-color{
+	color: orange;
 }
 
 .site-headers{
+	color: whitesmoke;
 	h1{
+		font-size: 60px;
 		margin: 0;
 	}
 	h4{
 		margin:0;
+
 	}
 	margin-top: 60px;
-	background-color: #297179;
+	background:
+		/* top, transparent red, faked with gradient */
+	linear-gradient(
+			rgba(53, 149, 161, 0.8),
+			rgba(53, 149, 161, 0.8)
+	),
+	asset_url('field.jpg') no-repeat fixed center center;
+	background-size: 100%;
+	background-position: top;
+}
+
+
+
+.show-player-stats{
+
+	h3{
+		color:#3595a1;
+		background-color: #383838;
+		margin-bottom:0;
+		margin-top:0;
+		text-align: center;
+	}
+	.tables{
+		margin-top:0;
+
+	}
 }
 
 
@@ -58,15 +95,12 @@ button{
 #calendar{
   margin-top: 100px;
 }
-h1 {
-  font-size: 50px;
+//h1 {
+//  font-size: 50px;
+//
+//}
 
-}
 
-body{
-  font-family: 'Kreon', serif;
-  background-color: #eee;
-}
 
 //dashboard (weather)//////////////////////////////////////////////////////
 @font-face {
@@ -280,11 +314,11 @@ i {
 
 //itinerary styles======================================================
 .itinerary-container{
-	position: relative;
-	left: 50px;
-	display: inline-block;
-	height: 100%;
-	width: auto;
+	//position: relative;
+	//left: 50px;
+	//display: inline-block;
+	//height: 100%;
+	//width: auto;
 	//border:1px solid #000;
 }
 
@@ -458,21 +492,7 @@ i {
 
 }
 
-.show-player-stats{
-	h3{
-		color:#297179;
-		margin-bottom:0;
-	}
-	.tables{
-		margin-top:0;
-		tbody {
 
-			tr:hover > td, tr:hover > th {
-				background-color: orange;
-			}
-		}
-	}
-}
 
 #player-name {
 	background-color: #383838;
@@ -912,7 +932,7 @@ header.navigation {
     //margin-top: 0;
     //
     @include button(flat, #45b6c3);
-    color: #1e1e1e;
+    color: whitesmoke;
 		&:hover:after,
 		&:hover:before {
 			background: darken(orange, 10%);
@@ -1586,24 +1606,7 @@ $parallax-background-height: $parallax-window-height * 2;
 
 //game-stats
 
-#game-stats{
-  //margin-top: 75px;
-	.field{
-		display: inline-block;
-		width: 200px;
-		margin: 0 auto;
-		position: relative;
-		left: 20px;
-		text-align: center;
-	}
-	.team-stat-submit{
-		position: relative;
-		//left: 40px;
-		margin: 0 auto;
-		text-align: center;
 
-	}
-}
 
 //create-team///////////////////////
 

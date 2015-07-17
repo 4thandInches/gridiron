@@ -4,6 +4,9 @@
     <br>
   <div class="side-image-container"></div>
   <ul class="show-list">
+        <li>
+          <%= image_tag @player.uploaded_file %>
+        </li>
 
         <li>
           <strong>Jersey number:</strong>
@@ -41,6 +44,7 @@
           <strong>Class status:</strong>
           <%= @player.class_name %>
         </li>
+
 
 
   </ul>

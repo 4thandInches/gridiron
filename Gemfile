@@ -45,7 +45,6 @@ gem 'jquery-datetimepicker-rails', git: 'git://github.com/servtag/jquery-datetim
 gem 'devise_invitable'
 
 gem 'aws-sdk', '~> 1.6'
-
 gem "paperclip", "~> 4.3"
 
 # Spring speeds
