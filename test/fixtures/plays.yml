@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  formation_id: 1
+  name: MyString
+  pdf_file: 
+
+two:
+  formation_id: 1
+  name: MyString
+  pdf_file: 

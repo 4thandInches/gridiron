@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :plays
   resources :roles, only: [:destroy]
 
   resources :events
