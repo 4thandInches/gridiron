@@ -1,7 +1,8 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats, :add_position, :position_added]
+  before_action :set_player, only: [:show, :edit, :update, :destroy, :stats, :make_stats, :show_stats, :add_position, :position_added, :print_show]
   before_action :set_positions_and_statuses, only: [:new, :edit, :create, :index, :add_position]
   before_action :set_team
+  layout "print", only: :print_show
 
   # GET /players
   # GET /players.json
@@ -12,6 +13,10 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
+  end
+
+  def print_show
+    render "show"
   end
 
   def add_position

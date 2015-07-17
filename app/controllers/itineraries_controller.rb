@@ -1,10 +1,11 @@
 class ItinerariesController < ApplicationController
   before_action :set_itinerary, only: [:show, :edit, :update, :destroy]
+  before_action :set_team
 
   # GET /itineraries
   # GET /itineraries.json
   def index
-    @itineraries = Itinerary.all
+    @itineraries = @team.itineraries
   end
 
   # GET /itineraries/1
@@ -27,7 +28,7 @@ class ItinerariesController < ApplicationController
   # POST /itineraries.json
   def create
     @itinerary = Itinerary.new(itinerary_params)
-
+    @itinerary.update(team: @team)
     respond_to do |format|
       if @itinerary.save
         format.html { redirect_to @itinerary, notice: 'Itinerary was successfully created.' }
@@ -67,6 +68,10 @@ class ItinerariesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_itinerary
       @itinerary = Itinerary.find(params[:id])
+    end
+
+    def set_team
+      @team = Team.find(current_user.team_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

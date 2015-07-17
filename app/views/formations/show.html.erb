@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @formation.name %>
+</p>
+
+    <p>
+      <%= link_to "Show Plays", @formation.pdf_file.url %>
+    </p>
+
+
+
+<%= link_to 'Edit', edit_formation_path(@formation) %> |
+<%= link_to 'Back', formations_path %>
