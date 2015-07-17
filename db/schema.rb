@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20150717034424) do
+ActiveRecord::Schema.define(version: 20150717152629) do
 
   create_table "class_statuses", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +24,13 @@ ActiveRecord::Schema.define(version: 20150717034424) do
     t.datetime "start"
     t.datetime "end"
     t.boolean  "allDay"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "formations", force: :cascade do |t|
+    t.integer  "team_id"
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

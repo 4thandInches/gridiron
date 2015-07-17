@@ -29,8 +29,8 @@
         <li class="nav-link"><%= link_to "Calendar", calendars_index_path %></li>
         <li class="nav-link"><%= link_to "Manage Itineraries", itineraries_path %></li>
         <li class="nav-link"><%= link_to "Invite Staff", new_user_invitation_path %></li>
+        <li class="nav-link"><%= link_to "Playbook", formations_path %></li>
         <li class="nav-link"><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
-        <li class="nav-link"><%= link_to "Playbook", new_play_path %></li>
         <li class="nav-link">
           <% if user_signed_in? %>
             Signed in as <%= current_user.email %>

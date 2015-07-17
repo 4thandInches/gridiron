@@ -51,5 +51,6 @@
   <div class="nav-bottom">
     <%= link_to 'Edit', edit_player_path(@player) %> |
     <%= link_to 'Back', players_path %>
+    <%= link_to "<i class='fa fa-print'></i>".html_safe, print_show_player_path(@player) %>
   </div>
 </div>
