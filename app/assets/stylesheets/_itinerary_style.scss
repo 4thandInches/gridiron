@@ -1,0 +1,22 @@
+.itinerary-container{
+	display: inline-block;
+	@include margin(100px);
+	color: whitesmoke;
+	.i-box-show{
+		position: absolute;
+		@include size(500px 50px);
+		@include margin(0);
+		background-color: #A19F9F;
+		overflow: hidden;
+	}
+	.i-box-base{
+		//display: inline-block;
+		@include size(500px 200px);
+		@include margin(0);
+		@include padding(20px);
+		background-color: #383838;
+		overflow: scroll;
+	}
+
+}
+
