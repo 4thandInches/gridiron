@@ -338,3 +338,12 @@ $(document).ready(function() {
     }
   });
 });
+
+
+//Plays Modal
+$(function() {
+    $('.pdf-lightbox').on('click', function() {
+      var address = $(this).attr('href');
+      window.open(address, 'google', 'height=500,width=800');
+  })
+});

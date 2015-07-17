@@ -1,5 +1,5 @@
 class FormationsController < ApplicationController
-  before_action :set_formation, only: [:show, :edit, :update, :destroy]
+  before_action :set_formation, only: [:show, :edit, :update, :destroy, :show_plays]
   before_action :set_team
 
   # GET /formations
@@ -20,6 +20,10 @@ class FormationsController < ApplicationController
 
   # GET /formations/1/edit
   def edit
+  end
+
+  def show_plays
+
   end
 
   # POST /formations

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
 
-  resources :formations
+  resources :formations do
+    member do
+      get 'show_plays'
+    end
+  end
+
   resources :roles, only: [:destroy]
 
   resources :events
