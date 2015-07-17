@@ -54,9 +54,9 @@ Rails.application.configure do
   # config.log_tags = [ :subdomain, :uuid ]
   config.paperclip_defaults = {
     :storage => :s3,
+    :url =>':s3_domain_url',
+    :path => '/:class/:attachment/:id_partition/:style/:filename',
     :s3_credentials => {
-      :url =>':s3_domain_url',
-      :path => '/:class/:attachment/:id_partition/:style/:filename',
       :bucket => ENV['S3_BUCKET_NAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
