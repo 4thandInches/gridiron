@@ -11,18 +11,15 @@ class FormationsController < ApplicationController
   # GET /formations/1
   # GET /formations/1.json
   def show
-    @plays = @formation.plays
   end
 
   # GET /formations/new
   def new
     @formation = Formation.new
-    @formation.plays.build
   end
 
   # GET /formations/1/edit
   def edit
-    @formation.plays.build
   end
 
   # POST /formations
@@ -78,6 +75,6 @@ class FormationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def formation_params
-      params.require(:formation).permit(:team_id, :name, plays_attributes: [:id, :name, :pdf_file])
+      params.require(:formation).permit(:team_id, :name, :pdf_file)
     end
 end

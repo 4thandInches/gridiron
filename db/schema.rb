@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717175521) do
+ActiveRecord::Schema.define(version: 20150717180616) do
 
   create_table "class_statuses", force: :cascade do |t|
     t.string   "name"
@@ -31,8 +31,12 @@ ActiveRecord::Schema.define(version: 20150717175521) do
   create_table "formations", force: :cascade do |t|
     t.integer  "team_id"
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "pdf_file_file_name"
+    t.string   "pdf_file_content_type"
+    t.integer  "pdf_file_file_size"
+    t.datetime "pdf_file_updated_at"
   end
 
   create_table "games", force: :cascade do |t|

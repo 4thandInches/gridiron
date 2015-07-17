@@ -15,16 +15,10 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <%= fields_for(:plays) do |ff| %>
-    <div class="field">
-      <%= ff.label :name %><br>
-      <%= ff.text_field :name %>
-    </div>
-    <div class="field">
-      <%= ff.label :pdf_file %><br>
-      <%= ff.file_field :pdf_file %>
-    </div>
-  <% end %>
+  <div class="field">
+    <%= f.label :pdf_file %><br>
+    <%= f.file_field :pdf_file %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
