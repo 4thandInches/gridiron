@@ -17,15 +17,6 @@ class PlaysController < ApplicationController
     @play = Play.new
   end
 
-  def upload
-
-  end
-
-  def uploaded
-    @film = params[:film]
-    @video = Video.create!(film: @film)
-  end
-
   # GET /plays/1/edit
   def edit
   end
@@ -78,6 +69,6 @@ class PlaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def play_params
-      params.require(:play).permit(:name)
+      params.require(:play).permit(:formation_id, :name, :pdf_file)
     end
 end
