@@ -123,21 +123,21 @@ StatType.create(name: "Kicks Blocked")
 
 # if Rails.env.development?
   Team.create!(name: "Greyhounds", school: "North Surry", head_coach: "Dan McClendon", location: "Mount Airy, NC", division: "North West", conference: "NEC")
-  User.create!(email: "test@test.com", password: "password", team_id: 2)
+  User.create!(email: "test@test.com", password: "password", team_id: 7)
 
 #games
-  Game.create!(opponent: "Nevada", location: "Laramie, WY", time: DateTime.new(2015,9,5,19), home: true, team_id: 2)
-  Game.create!(opponent: "UNLV", location: "Laramie, WY", time: DateTime.new(2015,9,12,19), home: true, team_id: 2)
-  Game.create!(opponent: "Air Force", location: "Colorado Springs, CO", time: DateTime.new(2015,9,19,19), home: false, team_id: 2)
-  Game.create!(opponent: "New Mexico", location: "Laramie, WY", time: DateTime.new(2015,9,26,19), home: true, team_id: 2)
-  Game.create!(opponent: "Utah St", location: "Logan, UT", time: DateTime.new(2015,10,3,15), home: false, team_id: 2)
-  Game.create!(opponent: "SDSU", location: "San Diego, CA", time: DateTime.new(2015,10,10,19), home: false, team_id: 2)
-  Game.create!(opponent: "Boise St", location: "Boise, ID", time: DateTime.new(2015,10,17,15), home: false, team_id: 2)
-  Game.create!(opponent: "Hawaii", location: "Honolulu, HI", time: DateTime.new(2015,10,24,19), home: false, team_id: 2)
-  Game.create!(opponent: "San Jose St", location: "Laramie, WY", time: DateTime.new(2015,10,30,12), home: true, team_id: 2)
-  Game.create!(opponent: "Colorado", location: "Boulder, CO", time: DateTime.new(2015,11,7,19), home: false, team_id: 2)
-  Game.create!(opponent: "Texas", location: "Laramie, WY", time: DateTime.new(2015,11,14,12), home: true, team_id: 2)
-  Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: DateTime.new(2015,11,28,15), home: true, team_id: 2)
+  Game.create!(opponent: "Nevada", location: "Laramie, WY", time: DateTime.new(2015,9,5,19), home: true, team_id: 7)
+  Game.create!(opponent: "UNLV", location: "Laramie, WY", time: DateTime.new(2015,9,12,19), home: true, team_id: 7)
+  Game.create!(opponent: "Air Force", location: "Colorado Springs, CO", time: DateTime.new(2015,9,19,19), home: false, team_id: 7)
+  Game.create!(opponent: "New Mexico", location: "Laramie, WY", time: DateTime.new(2015,9,26,19), home: true, team_id: 7)
+  Game.create!(opponent: "Utah St", location: "Logan, UT", time: DateTime.new(2015,10,3,15), home: false, team_id: 7)
+  Game.create!(opponent: "SDSU", location: "San Diego, CA", time: DateTime.new(2015,10,10,19), home: false, team_id: 7)
+  Game.create!(opponent: "Boise St", location: "Boise, ID", time: DateTime.new(2015,10,17,15), home: false, team_id: 7)
+  Game.create!(opponent: "Hawaii", location: "Honolulu, HI", time: DateTime.new(2015,10,24,19), home: false, team_id: 7)
+  Game.create!(opponent: "San Jose St", location: "Laramie, WY", time: DateTime.new(2015,10,30,12), home: true, team_id: 7)
+  Game.create!(opponent: "Colorado", location: "Boulder, CO", time: DateTime.new(2015,11,7,19), home: false, team_id: 7)
+  Game.create!(opponent: "Texas", location: "Laramie, WY", time: DateTime.new(2015,11,14,12), home: true, team_id: 7)
+  Game.create!(opponent: "Colorado St.", location: "Laramie, WY", time: DateTime.new(2015,11,28,15), home: true, team_id: 7)
 
   class_status_array = [1,2,3,4]
   15.times do
@@ -147,7 +147,7 @@ StatType.create(name: "Kicks Blocked")
   52.times do
     Player.create!(first_name: "#{Faker::Name.first_name}", last_name: "#{Faker::Name.last_name}", jersey_number: count,
                    phone_number: "#{Faker::PhoneNumber.phone_number}", email: "#{Faker::Name.first_name}@gmail.com", height: 1, weight: 1,
-                   class_status_id: class_status_array.sample.to_i, team_id: 2)
+                   class_status_id: class_status_array.sample.to_i, team_id: 7)
     count += 1
   end
 
