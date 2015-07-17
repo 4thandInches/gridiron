@@ -154,4 +154,3 @@ StatType.create(name: "Kicks Blocked")
   Player.all.each do |p|
     Role.create(position_id: rand(1..16), player_id: p.id)
   end
-end
