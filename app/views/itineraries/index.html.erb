@@ -10,30 +10,30 @@
 
 
 
-      <div class="list-container">
-        <div class="i-box-show">
-          <h5><%= link_to itinerary.name, itinerary  %></h5>
-        </div>
-
-        <div class="i-box-base">
-          <% itinerary.situations.each do |s| %>
-            <section>
-              <aside><%= s.time %></aside>
-              <article><%= s.task %></article>
-            </section>
-          <% end %>
-        </div>
-
-        <div id="nav-block">
-          <div class="i-box-nav">
-            <p><%= link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>
-          </div>
-          <div class="i-box-nav-2">
-            <p> <%=link_to 'Delete', itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>
-          </div>
-        </div>
-
+    <div class="list-container">
+      <div class="i-box-show">
+        <h5><%= link_to itinerary.name, itinerary  %></h5>
       </div>
+
+      <div class="i-box-base">
+        <% itinerary.situations.each do |s| %>
+          <section>
+            <aside><%= s.time %></aside>
+            <article><%= s.task %></article>
+          </section>
+        <% end %>
+      </div>
+
+      <div id="nav-block">
+        <div class="i-box-nav">
+          <p><%= link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>
+        </div>
+        <div class="i-box-nav-2">
+          <p> <%=link_to 'Delete', itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>
+        </div>
+      </div>
+
+    </div>
 
 
 
