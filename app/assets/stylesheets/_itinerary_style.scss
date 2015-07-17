@@ -1,3 +1,10 @@
+.itinerary-container{
+	position: relative;
+	//@include position(relative, null null null 100px)
+	@include margin(0 auto)
+}
+
+
 
 
 .list-container{
@@ -11,8 +18,11 @@
 		position: relative;
 		@include size(500px 50px);
 		@include margin(0);
-		background-color: #A19F9F;
+		background-color: #45b6c3;
 		overflow: hidden;
+		@include border-style(solid);
+		@include border-width(3px);
+		@include border-color(#45b6c3);
 		a{
 			color: whitesmoke;
 			font-size: 30px;
@@ -22,6 +32,83 @@
 		}
 		text-align: center;
 	}
+
+	.i-box-show:hover{
+		background-color: whitesmoke;
+		a{
+			color: #45b6c3;
+		}
+
+	}
+
+
+
+
+	#nav-block{
+		display: inline-block;
+	}
+
+	.i-box-nav{
+		position: relative;
+		display: inline-block;
+		@include size(250px 50px);
+		@include margin(0);
+		background-color: #45b6c3;
+		overflow: hidden;
+		@include border-style(solid);
+		@include border-width(3px);
+		@include border-color(#45b6c3);
+		a{
+			color: whitesmoke;
+			font-size: 30px;
+		}
+		a:hover{
+			color:orange;
+		}
+		text-align: center;
+	}
+
+	.i-box-nav:hover{
+		background-color: whitesmoke;
+		a{
+			color: #45b6c3;
+		}
+
+	}
+
+	.i-box-nav-2{
+		position: relative;
+		display: inline-block;
+		@include size(250px 50px);
+		@include margin(null null null -3.5px);
+		background-color: #297179;
+		overflow: hidden;
+		@include border-style(solid);
+		@include border-width(3px);
+		@include border-color(#297179);
+		a{
+			color: whitesmoke;
+			font-size: 30px;
+		}
+		a:hover{
+			color:orange;
+		}
+		text-align: center;
+	}
+
+
+	.i-box-nav-2:hover{
+			background-color: whitesmoke;
+			@include border-style(solid);
+			@include border-width(3px);
+			@include border-color(red);
+			a{
+				color: red;
+			}
+
+	}
+
+
 	.i-box-base{
 		//display: inline-block;
 		@include size(500px 200px);
@@ -31,8 +118,8 @@
 		overflow: scroll;
 		section {
 			@include outer-container;
-			aside { @include span-columns(3); }
-			article { @include span-columns(9); }
+			aside { @include span-columns(4); }
+			article { @include span-columns(8); }
 		}
 	}
 

@@ -8,13 +8,6 @@
 <div class="itinerary-container">
   <% @itineraries.each do |itinerary|  %>
 
-        <!--<p><%# link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>-->
-
-       <!--<p><%# link_to itinerary.name, itinerary  %></p>-->
-
-       <!--<p> <%#link_to '<i class="fa fa-bomb fa-4x"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>-->
-
-
 
 
       <div class="list-container">
@@ -26,14 +19,20 @@
           <% itinerary.situations.each do |s| %>
             <section>
               <aside><%= s.time %></aside>
-              <article>s.task</article>
+              <article><%= s.task %></article>
             </section>
           <% end %>
         </div>
 
-        <div class="i-box-show">
-          <p>things</p>
+        <div id="nav-block">
+          <div class="i-box-nav">
+            <p><%= link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>
+          </div>
+          <div class="i-box-nav-2">
+            <p> <%=link_to 'Delete', itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>
+          </div>
         </div>
+
       </div>
 
 
@@ -41,6 +40,6 @@
   <% end %>
 </div>
 
-<!--<%# link_to 'New Itinerary', new_itinerary_path %>-->
+<%= link_to 'New Itinerary', new_itinerary_path %>
 
 

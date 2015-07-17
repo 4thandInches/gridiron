@@ -1,3 +1,8 @@
+<div class="site-headers">
+  <h1>Itinerary</h1>
+  <h4>Edit your Itinerary</h4>
+</div>
+
 <div class="edit-container itinerary-edition">
   <%= form_for(@itinerary) do |f| %>
     <% if @itinerary.errors.any? %>
@@ -12,7 +17,7 @@
       </div>
     <% end %>
 
-    <div class="Itinerary-field-name">
+    <div class="itinerary-field-name">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </div>
@@ -35,6 +40,8 @@
            </div>
          </div>
       <%end%>
+
+
     </div>
 
 
