@@ -1,7 +1,7 @@
 .edit-container{
 	position: relative;
 	@include margin(0 auto);
-	@include size(auto 350px);
+	@include size(100% auto);
 	color: whitesmoke;
 	background-color: #383838;
 
@@ -30,9 +30,15 @@
 
 .edit-container.itinerary-edition{
 	width: auto;
+	@include size(100% auto);
 	//overflow: hide;
 	//@include size(auto 800px);
 	//.itinerary-field
+	.itinerary-field-name{
+		text-align: center;
+		@include size(300px auto);
+		margin: 0 auto;
+	}
 	.wrapper{
 		text-align: center;
 		.situation-fields{
@@ -40,7 +46,7 @@
 			display: inline-block;
 			@include size(40% 100px);
 			//@include position(relative, null  null null null 50px);
-			margin-left: 50px;
+			//margin-left: 50px;
 		}
 		.itinerary-field{
 			position: relative;
