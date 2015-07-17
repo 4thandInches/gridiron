@@ -1,4 +1,5 @@
 class Player < ActiveRecord::Base
+  
   has_many :roles
   accepts_nested_attributes_for :roles
   has_attached_file :uploaded_file

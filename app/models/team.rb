@@ -198,7 +198,7 @@ class Team < ActiveRecord::Base
 
       def get_most(stat_name)
         stat_type = StatType.find_by_name(stat_name)
-        stat = stat_type.stats.group(:id).order(:id).joins(:player).where("players.team_id = #{id}").group(:player_id).order("sum(value)").last
+        stat = stat_type.stats.group(:id).joins(:player).where("players.team_id = #{id}").group(:player_id).order("sum(value)").last
         stat.blank? ? "N/A" : stat.value.to_i
       end
 
