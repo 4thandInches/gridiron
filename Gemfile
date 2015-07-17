@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bourbon'
 gem 'neat'
 gem 'refills'
+gem 'magnific-popup-rails'
 
 gem "font-awesome-rails"
 gem "mailgun"
