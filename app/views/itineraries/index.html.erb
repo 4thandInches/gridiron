@@ -1,29 +1,46 @@
 
-<div class="page-header">
+<div class="site-headers">
   <h1>Itineraries</h1>
+  <h4>Create Itineraries for Practice and Team Events</h4>
 </div>
 
 
 <div class="itinerary-container">
   <% @itineraries.each do |itinerary|  %>
-    <div class="diamond-wrapper">
 
-      <div class="diamond-left">
-        <p><%= link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>
+        <!--<p><%# link_to 'Edit Itinerary', edit_itinerary_path(itinerary),class:"grapes" %></p>-->
+
+       <!--<p><%# link_to itinerary.name, itinerary  %></p>-->
+
+       <!--<p> <%#link_to '<i class="fa fa-bomb fa-4x"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>-->
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><%= link_to itinerary.name, itinerary  %></h5>
+        </div>
+
+        <div class="i-box-base">
+          <% itinerary.situations.each do |s| %>
+            <section>
+              <aside><%= s.time %></aside>
+              <article>s.task</article>
+            </section>
+          <% end %>
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
       </div>
 
-      <div class="diamond-bottom">
-       <p><%= link_to itinerary.name, itinerary  %></p>
-      </div>
 
-      <div class="diamond-right">
-       <p> <%= link_to '<i class="fa fa-bomb fa-4x"></i>'.html_safe, itinerary, method: :delete, data: { confirm: 'Are you sure?' }  %></p>
-      </div>
 
-    </div>
   <% end %>
 </div>
 
-<%= link_to 'New Itinerary', new_itinerary_path %>
+<!--<%# link_to 'New Itinerary', new_itinerary_path %>-->
 
 

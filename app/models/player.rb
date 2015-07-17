@@ -1,6 +1,8 @@
 class Player < ActiveRecord::Base
   has_many :roles
   accepts_nested_attributes_for :roles
+  has_attached_file :uploaded_file
+  validates_attachment_content_type :uploaded_file, :content_type => /\Aimage\/.*\Z/
 
   has_many :memberships
   has_many :games, :through => :memberships

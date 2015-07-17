@@ -1,0 +1,40 @@
+
+
+.list-container{
+	position: relative;
+	display: inline-block;
+	@include margin(20px);
+	color: whitesmoke;
+
+
+	.i-box-show{
+		position: relative;
+		@include size(500px 50px);
+		@include margin(0);
+		background-color: #A19F9F;
+		overflow: hidden;
+		a{
+			color: whitesmoke;
+			font-size: 30px;
+		}
+		a:hover{
+			color:orange;
+		}
+		text-align: center;
+	}
+	.i-box-base{
+		//display: inline-block;
+		@include size(500px 200px);
+		@include margin(0);
+		@include padding(20px);
+		background-color: #383838;
+		overflow: scroll;
+		section {
+			@include outer-container;
+			aside { @include span-columns(3); }
+			article { @include span-columns(9); }
+		}
+	}
+
+}
+
