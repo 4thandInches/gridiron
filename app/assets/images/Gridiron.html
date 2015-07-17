@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:3000/itineraries -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Gridiron</title>
+  <link rel="stylesheet" media="all" href="http://localhost:3000/assets/font-awesome.self-2d17540bab3759939e910ca38a695f014e0c777ded3ad7a01c4658b9d3fc980d.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/theme.self-df1da30301997b52795cb0213bccd335f2897b65f84d1d7d7c63c04f048d902f.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/core.self-23329dbe1961b938278306c019037fe36ff6ccb28193f1038e52ccbf52858163.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/accordion.self-ab9f397561a07488cf14279bc7186619e859cdd485b81d3a6439e85b81d32a05.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/menu.self-5277268fc75b8d6e851ccb5ca12e162c7440315d70974f34db800bc70330f135.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/autocomplete.self-2d6dfccae4fba2fe27d00372b974d4540d75a00cea6ceaa0a6aa33852b9d3ac3.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/button.self-524bbf2d9cf9547e14eda3866ad90726890ff390563ea46013c1ca019694c320.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/datepicker.self-bf92a2196df590f06fad4ab5bb7ed4db1874a9bef0c9af85ea0490d2108b9966.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/draggable.self-ff524fb7ae3023ef910b4e6c5cd7260e4f4dc6fb2eca9a525dd478017639bbba.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/resizable.self-3a16663ae8d70cc7f633554daff3a5875f54915ae3071fc3f3a1aeb0f7c8ab24.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/dialog.self-3e41d6ad769c697e76dceeef1bf376008c8e93e85c144fea25437fa3188d86b8.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/progressbar.self-de3d9f82b3ceaaa88bb0686e77f2548a3cfea1cf4dc37df4f3bc70f99d86a95a.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/selectable.self-fa1d88ada89c5a57dae84c7cb4f17bf153cb1cff063ed4ba2091b5b5f54e77e6.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/selectmenu.self-9a2b20dc7f10d3a7b09d0dc5d038d02dd1aff160e97abf8eaa3d3f5ab09fbb4b.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/sortable.self-bd8078895e9d12cd8586eb9b507ccb4d533daadd0f103f7387554c30cc96313f.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/slider.self-57c4d255d192836d85e1253fe091b5b01fed1c389b0dbdedd71c129dcf1cfd35.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/spinner.self-2d292d2e83f1281032010a5acb9cb23492aeecdc95395a5d93f2a3bba9a2c400.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/tabs.self-3dec02555ec77af087a252cdd5be276e714d0059e052a2c92dc2c5401e9df63d.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/tooltip.self-a349b3ba7b1458eed72dc3ffba597af53b9ceb622e7a324cdfd1c01c7b351f1f.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/base.self-1b94b6a8eaf399d6f662a2ffe0b9b52a958c6180e15b6e07a7ecab0087c9234d.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui/all.self-a9629accff9d629face2489f3b6d620ded83dd62f6f04f69e5b33eea2b8d73b6.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery-ui.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/fullcalendar.self-bfd1e733800d14d6124c551399fa09d9fb4108c7623ad7bd2cf351ef92704af5.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/jquery.datetimepicker.self-d35b607b0257bc1aca342c2fa0b90fad04170dc6156c069be9aa332d67e12b1e.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/application.self-c7010fbb0e3662ca36da5d622fb20f70f208085c1ad3ab23e02c32c64cbdb92c.css?body=1">
+  <script src="./Gridiron_files/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js"></script>
+<script src="./Gridiron_files/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js"></script>
+<script src="./Gridiron_files/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js"></script>
+<script src="./Gridiron_files/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js"></script>
+<script src="./Gridiron_files/accordion.self-c95f320275150a94241b004a91e21eef9c5ae9965a793cb3e2475f6078a1670d.js"></script>
+<script src="./Gridiron_files/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js"></script>
+<script src="./Gridiron_files/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js"></script>
+<script src="./Gridiron_files/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js"></script>
+<script src="./Gridiron_files/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js"></script>
+<script src="./Gridiron_files/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js"></script>
+<script src="./Gridiron_files/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js"></script>
+<script src="./Gridiron_files/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js"></script>
+<script src="./Gridiron_files/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js"></script>
+<script src="./Gridiron_files/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js"></script>
+<script src="./Gridiron_files/droppable.self-a7a2b4c2cec8fc176f51e4e4291d92bfd3eec40b6a580b47fc54c16334d52882.js"></script>
+<script src="./Gridiron_files/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js"></script>
+<script src="./Gridiron_files/effect-blind.self-ed102209d7aa0b7374f3db8478cc7dcff5f9980d3146e8bf9fbfab959c6d5d8a.js"></script>
+<script src="./Gridiron_files/effect-bounce.self-bfcb9288797ecd234ddeedf4fbc5b4c9de94a4e6d8d44e6faa5b5e9836fad9fd.js"></script>
+<script src="./Gridiron_files/effect-clip.self-7368e4597c32360b162d264ff8bbd0cf9fb1535eb9b4564e6eb7c1db3c774bf3.js"></script>
+<script src="./Gridiron_files/effect-drop.self-294aaa72126ad9c94d6558cca792eb3716754713aca98f18a9dd7c493150ed92.js"></script>
+<script src="./Gridiron_files/effect-explode.self-68e74dc114a52f3f4d7033e40c39196961bdcf439652daa2e98baa115c7bb44b.js"></script>
+<script src="./Gridiron_files/effect-fade.self-42d542a5253e0a610717460102ee6bee339c656cc188e491d89eb0779043c963.js"></script>
+<script src="./Gridiron_files/effect-fold.self-ad9967f153423916300dbf1104b00f7ad7bbd6a222a0fcc1012ebe251bcb13c8.js"></script>
+<script src="./Gridiron_files/effect-highlight.self-f922b7179ab8ccfa7865141f38865bba0a3d2bdceba7561c27ca14544dbfd996.js"></script>
+<script src="./Gridiron_files/effect-size.self-368aecefa09656a2be5c72dc8e685b120363a3df812134cbd2dd998bafa179fd.js"></script>
+<script src="./Gridiron_files/effect-scale.self-884a5abcb6d90fcd9f9a071aa8329638184df688afced1b1d3b6be6c69f4dd7f.js"></script>
+<script src="./Gridiron_files/effect-puff.self-93415831093923a70f671d73e8d0b3d94deb37ac7472a036a4add545f565c166.js"></script>
+<script src="./Gridiron_files/effect-pulsate.self-eb107c0d136eccdfbd8a2f0f2ee71e0f6911cb300c6b63cc2fe4f6532e6a9a97.js"></script>
+<script src="./Gridiron_files/effect-shake.self-63bcc14897aac5b84e10690be94d64d5724f864aa14c913b4d1030c461a256ad.js"></script>
+<script src="./Gridiron_files/effect-slide.self-c93054a4a80d1f986760806d81ab067e4a4120bf103337e152ecc24d36e785f6.js"></script>
+<script src="./Gridiron_files/effect-transfer.self-181245634ec522320fc1081f6dbf94fd982f34eefa03555f76817dedfcdea336.js"></script>
+<script src="./Gridiron_files/progressbar.self-a259ff5a2a5e7aef0ec21bda94edd0f6bc1e9821128d901de415956edf212b0d.js"></script>
+<script src="./Gridiron_files/selectable.self-42e53fc2f95211314e36a8094c42560f869c207f16d68cfc206aa37201dcdc03.js"></script>
+<script src="./Gridiron_files/selectmenu.self-09dbcac573f0e508194bd9deff254db090889b380d030261857860309c0918e8.js"></script>
+<script src="./Gridiron_files/slider.self-8af8d2a0661743ba88b4cfb99d5c8c874cfa3fc6528ae4e9252366b388def0b7.js"></script>
+<script src="./Gridiron_files/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js"></script>
+<script src="./Gridiron_files/spinner.self-3c8c95a7bc9c877d0f9c16789246bbedda6b8e8fbf5927951babdab775aed02e.js"></script>
+<script src="./Gridiron_files/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js"></script>
+<script src="./Gridiron_files/tooltip.self-38f04ac3a6c8fb2391ec6832b68845671cc9013a94371b7eb239478f4835eb73.js"></script>
+<script src="./Gridiron_files/jquery-ui.self-52111578aa54225c9ebfe06f78a62771020ee548bb27d62228ee3f5e6633969d.js"></script>
+<script src="./Gridiron_files/calendars.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/dashboards.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/games.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/itineraries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/players.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/positions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/potatos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/modal.self-828bf34b570517ebe380c310a9c5d5e7841d3d7cff2249d1407d0eb77c3eba7b.js"></script>
+<script src="./Gridiron_files/navigation.self-7e788c6d349ee01fa61e46a6c6cc5bc426cd79c5bd10f67e0c89a0ff971b9e24.js"></script>
+<script src="./Gridiron_files/roles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/situations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/stat_types.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/teams.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/invitations_controller.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Gridiron_files/moment.self-7c169710367e715cec0e7768bb92b9339f5a767a109041e9e9861a0abc0afa44.js"></script>
+<script src="./Gridiron_files/fullcalendar.self-8668c2e6be32331fb05b9c8cb047adeb64ae3d0575ba9d2f029b9a4cb37ec3f5.js"></script>
+<script src="./Gridiron_files/jquery.datetimepicker.self-f92b6013f1e10572702cac72c30abf1a3f7ebbf48c6e710155385b49c9caa133.js"></script>
+<script src="./Gridiron_files/jquery.simpleWeather.min.self-feca56ae298d00801dc0dc0ff23efada385ac7f4c2cc017b21623bb60f9358db.js"></script>
+<script src="./Gridiron_files/application.self-2313da7ef95751e7c2d54eb5bf8001bfb42de7efacc45b9f58d9c0992d7ff41e.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="v1fjLuWcopAQbE3snXVJ7P902z9g25Kr5ag4k08wW3Mgl0Ck+R+vN3Z8+nYUNUBNREY7YiuYLqKfjEZWgl7PSA==">
+  <script src="./Gridiron_files/d3.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+<!--navbar begin-->
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="javascript:void(0)" class="logo">
+      <!-- <img src="" alt="Logo Image"> -->
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+
+    <nav role="navigation">
+
+      <ul id="js-navigation-menu" class="navigation-menu">
+        <li class="nav-link"><a href="http://localhost:3000/">Home</a> </li>
+        <li class="nav-link"><a href="http://localhost:3000/players">Roster</a> </li>
+        <!-- <li class="nav-link"><a href="/players">Player Stats</a></li> -->
+        <li class="nav-link"><a href="http://localhost:3000/positions">Depth Chart</a></li>
+        <li class="nav-link"><a href="http://localhost:3000/games">Stat Center</a></li>
+        <li class="nav-link"><a href="http://localhost:3000/calendars/index">Calendar</a></li>
+        <li class="nav-link"><a href="./Gridiron_files/Gridiron.html">Manage Itineraries</a></li>
+        <li class="nav-link"><a href="http://localhost:3000/users/invitation/new">Invite Staff</a></li>
+        <li class="nav-link"><a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">Sign out</a> </li>
+
+        <li class="nav-link">
+            Signed in as test@test.com
+        </li>
+
+
+
+
+
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+
+
+
+    
+<div class="site-headers">
+  <h1>Itineraries</h1>
+  <h4>Create Itineraries for Practice and Team Events</h4>
+</div>
+
+
+<div class="itinerary-container">
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/1">2015-07-19</a></h5>
+        </div>
+
+        <div class="i-box-base">
+            <section>
+              <aside>3:00-3:30</aside>
+              <article>s.task</article>
+            </section>
+            <section>
+              <aside>3:30-4:00</aside>
+              <article>s.task</article>
+            </section>
+            <section>
+              <aside>4:00-5:00</aside>
+              <article>s.task</article>
+            </section>
+            <section>
+              <aside>1</aside>
+              <article>s.task</article>
+            </section>
+            <section>
+              <aside>2</aside>
+              <article>s.task</article>
+            </section>
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/2">2015-07-25</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/3">2015-08-05</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/4">2015-08-06</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/5">2015-08-01</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/6">2015-07-26</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/7">2015-07-30</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/8">2015-08-07</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/9">2015-07-30</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/10">2015-07-26</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/11">2015-08-05</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/12">2015-08-05</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/13">2015-07-19</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/14">2015-07-25</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+
+        <!--<p></p>-->
+
+       <!--<p></p>-->
+
+       <!--<p> </p>-->
+
+
+
+
+
+      <div class="list-container">
+        <div class="i-box-show">
+          <h5><a href="http://localhost:3000/itineraries/15">2015-07-27</a></h5>
+        </div>
+
+        <div class="i-box-base">
+        </div>
+
+        <div class="i-box-show">
+          <p>things</p>
+        </div>
+      </div>
+
+
+
+</div>
+
+<!---->
+
+
+
+
+
+
+
+</body></html>
