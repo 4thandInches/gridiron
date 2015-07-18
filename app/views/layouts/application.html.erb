@@ -21,16 +21,16 @@
     <nav role="navigation">
 
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><%= link_to "Home", root_path %> </li>
-        <li class="nav-link"><%= link_to "Roster", players_path %> </li>
-        <!-- <li class="nav-link"><%= link_to "Player Stats", players_path %></li> -->
-        <li class="nav-link"><%= link_to "Depth Chart", positions_path %></li>
-        <li class="nav-link"><%= link_to "Stat Center", games_path %></li>
-        <li class="nav-link"><%= link_to "Calendar", calendars_index_path %></li>
-        <li class="nav-link"><%= link_to "Manage Itineraries", itineraries_path %></li>
-        <li class="nav-link"><%= link_to "Invite Staff", new_user_invitation_path %></li>
+        <li class="nav-link <%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %> </li>
+        <li class="nav-link <%= 'active' if current_page?(players_path) %>"><%= link_to "Roster", players_path %> </li>
+        <!-- <li class="nav-link"><%# link_to "Player Stats", players_path %></li> -->
+        <li class="nav-link <%= 'active' if current_page?(positions_path) %>"><%= link_to "Depth Chart", positions_path %></li>
+        <li class="nav-link <%= 'active' if current_page?(games_path) %>"><%= link_to "Stat Center", games_path %></li>
+        <li class="nav-link <%= 'active' if current_page?(calendars_index_path) %>"><%= link_to "Calendar", calendars_index_path %></li>
+        <li class="nav-link <%= 'active' if current_page?(itineraries_path) %>"><%= link_to "Manage Itineraries", itineraries_path %></li>
+        <li class="nav-link <%= 'active' if current_page?(new_user_invitation_path) %>"><%= link_to "Invite Staff", new_user_invitation_path %></li>
         <li class="nav-link"><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
-        <li class="nav-link"><%= link_to "Playbook", new_play_path %></li>
+        <li class="nav-link <%= 'active' if current_page?(new_play_path) %>"><%= link_to "Playbook", new_play_path %></li>
         <li class="nav-link">
           <% if user_signed_in? %>
             Signed in as <%= current_user.email %>
