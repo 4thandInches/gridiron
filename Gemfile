@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'bourbon'
 gem 'neat'
 gem 'refills'
+gem 'magnific-popup-rails'
 
 gem "font-awesome-rails"
 gem "mailgun"
@@ -47,6 +48,8 @@ gem 'devise_invitable'
 gem 'aws-sdk', '~> 1.6'
 gem "paperclip", "~> 4.3"
 
+gem 'faker'
+
 # Spring speeds
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -73,7 +76,7 @@ group :development, :test do
   gem 'rails-footnotes'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'faker'
+  
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '~> 1.3.6'
 end

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
 
-  resources :plays
+  resources :formations do
+    member do
+      get 'show_plays'
+    end
+  end
+
   resources :roles, only: [:destroy]
 
   resources :events
@@ -28,6 +33,7 @@ Rails.application.routes.draw do
 
   resources :players do
     member do
+        get 'print_show'
         get 'show_stats'
         get 'add_position'
         post 'position_added'
@@ -35,10 +41,13 @@ Rails.application.routes.draw do
   end
 
   resources :stat_types
-  resources :players
+
 
   resources :positions do
     put :sort, on: :collection
+    collection do
+      get 'print_index'
+    end
   end
 
   resources :dashboards

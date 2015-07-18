@@ -1,11 +1,18 @@
 class PositionsController < ApplicationController
   before_action :set_position, only: [:show, :edit, :update, :destroy]
   before_action :set_team
+  layout "print", only: :print_index
+
 
   # GET /positions
   # GET /positions.json
   def index
     @positions = Position.all
+  end
+
+  def print_index
+    @positions = Position.all
+    render 'index'
   end
 
   # GET /positions/1

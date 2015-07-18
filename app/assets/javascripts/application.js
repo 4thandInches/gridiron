@@ -17,6 +17,7 @@
 //= require moment
 //= require fullcalendar
 //= require jquery.datetimepicker
+//= require magnific-popup
 //= require_tree ../../../vendor/assets/javascripts/.
 
 
@@ -337,4 +338,10 @@ $(document).ready(function() {
       $("#weather").html('<p>'+error+'</p>');
     }
   });
+});
+
+
+//Plays Modal
+$(function() {
+  $('.pdf-lightbox').magnificPopup({type:'iframe'})
 });

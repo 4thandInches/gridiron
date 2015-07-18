@@ -1,20 +1,16 @@
-<%= form_for(@play) do |f| %>
-  <% if @play.errors.any? %>
+<%= form_for(@formation) do |f| %>
+  <% if @formation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@play.errors.count, "error") %> prohibited this play from being saved:</h2>
+      <h2><%= pluralize(@formation.errors.count, "error") %> prohibited this formation from being saved:</h2>
 
       <ul>
-      <% @play.errors.full_messages.each do |message| %>
+      <% @formation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :formation_id %><br>
-    <%= f.number_field :formation_id %>
-  </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
