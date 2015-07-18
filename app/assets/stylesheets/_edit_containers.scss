@@ -1,7 +1,7 @@
 .edit-container{
 	position: relative;
 	@include margin(0 auto);
-	@include size(100% auto);
+	@include size(100% 500px);
 	color: whitesmoke;
 	background-color: #383838;
 
@@ -11,6 +11,9 @@
 		@include outer-container();
 		@include span-columns(3);
 		//@include shift(1)
+	}
+	.forgot-pw{
+		@include shift(3)
 	}
 	.actions{
 		text-align: center;
