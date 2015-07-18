@@ -11,7 +11,7 @@
       <th>Location</th>
       <th>Time</th>
       <th>Home/Away</th>
-      <th colspan="4"> Options</th>
+      <th colspan="3"> Options</th>
     </tr>
   </thead>
 
@@ -39,7 +39,7 @@
           <%= "Away" %>
           <% end %>
         </td>
-        <td><%= link_to 'Show', game %></td>
+        <!--<td><%# link_to 'Show', game %></td>-->
         <td><%= link_to 'Add Player Stats', player_stats_game_path(game)%></td>
         <td>
 
@@ -57,7 +57,7 @@
           </div>
 
         </td>
-        <td><%= link_to '<i class="fa fa-pencil-square-o fa-2x"></i>'.html_safe, edit_game_path(game) %>  <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, game, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete'%> </td>
+        <td><%= link_to '<i class="fa fa-pencil-square-o fa-2x"></i>'.html_safe, edit_game_path(game) %>  <%# link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, game, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete'%> </td>
       </tr>
     <% end %>
   </tbody>

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PlayTest < ActiveSupport::TestCase
+class FormationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
