@@ -17,26 +17,26 @@
             <h1>Log in</h1>
 
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="field">
+                <%= f.label :email %><br />
+                <%= f.email_field  :email, autofocus: true  %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password %><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+
+              <% if devise_mapping.rememberable? -%>
                 <div class="field">
-                  <%= f.label :email %><br />
-                  <%= f.email_field  :email, autofocus: true  %>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
                 </div>
+              <% end %>
 
-                <div class="field">
-                  <%= f.label :password %><br />
-                  <%= f.password_field :password, autocomplete: "off" %>
-                </div>
-
-                <% if devise_mapping.rememberable? -%>
-                    <div class="field">
-                      <%= f.check_box :remember_me %>
-                      <%= f.label :remember_me %>
-                    </div>
-                <% end %>
-
-                <div class="actions">
-                  <%= f.submit "Log in" %>
-                </div>
+              <div class="actions">
+                <%= f.submit "Log in" %>
+              </div>
             <% end %>
 
             <%= render "devise/shared/links" %>
@@ -54,14 +54,14 @@
       <li class="bullet">
         <div class="bullet-content">
           <h2> <i class="fa fa-globe "></i>Analyze</h2>
-          <p>Statistics are a vital aspect of the game and tracking statistics is a must in order to keep a competitive edge. Gridiron allows you to store your statistics and view them in meaningful ways.</p>
+          <p>Statistics are vital  and tracking statistics is a must in order to keep a competitive edge. Track your statistics and view them in meaningful ways.</p>
         </div>
       </li>
       <li class="bullet">
 
         <div class="bullet-content">
           <h2><i class="fa fa-bar-chart "></i>Visualize</h2>
-          <p>Gridiron provides a platform that's easy for people of all technological skill level to get started. Our user interface is designed to be simple to understand so that your time using Gridiron is fast and efficient.</p>
+          <p>Gridiron's user interface is designed to be simple to understand so that your time using Gridiron is fast and efficient.</p>
         </div>
       </li>
       <li class="bullet">
@@ -70,7 +70,7 @@
         <!--</div>-->
         <div class="bullet-content">
           <h2><i class="fa fa-cog "></i>Strategize</h2>
-          <p> Once you step off the practice field log in and put gridiron to work. In addition to statistics tracking and management, Gridiron offers tools for playbook creation, itinerary/schedule preparer, team calendar and more! </p>
+          <p> Once you step off the practice field log in and put gridiron to work. Gridiron's tools help you manage your team with ease. </p>
         </div>
       </li>
     </ul>

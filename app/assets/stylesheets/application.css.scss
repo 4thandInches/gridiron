@@ -67,7 +67,10 @@ button{
 	),
 	asset_url('field.jpg') no-repeat fixed center center;
 	background-size: 100%;
-	background-position: top;
+	background-position: center bottom;
+}
+.sign-up{
+	margin-top: 0;
 }
 
 
@@ -1351,7 +1354,8 @@ $parallax-background-height: $parallax-window-height * 2;
   }
 
   .bullet-content {
-    margin-left: $icon-bullet-size * 1.4;
+    margin-left: $icon-bullet-size * 0.7;
+		margin-right:$icon-bullet-size * 0.7;
     margin-bottom: 2em;
   }
 
