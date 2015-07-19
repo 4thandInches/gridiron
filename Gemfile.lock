@@ -246,7 +246,7 @@ DEPENDENCIES
   pg
   puma
   rails (= 4.2.1)
-  rails-footnotes
+  rails-footnotes (~> 4.0)
   rails-observers
   rails_12factor
   refills
