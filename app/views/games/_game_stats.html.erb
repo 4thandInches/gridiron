@@ -1,5 +1,5 @@
 <div id="game-stats">
-<h1><%= id %></h1>
+<h1>VS. <%= Game.find(id).opponent %></h1>
   <%= form_tag("/games/#{id}/make_game_stats") do %>
 
     <% stat_types.each do |s| %>

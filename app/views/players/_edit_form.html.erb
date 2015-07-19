@@ -58,7 +58,10 @@
 
       <div class="actions">
         <%= f.submit %>
+        <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, @player, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+        </tr>
       </div>
+
 
     <% end %>
 </div>
