@@ -1,8 +1,9 @@
 <!--head image-->
 <div id="gatekeeper">
-  <div class="home-image">
 
-    <h1>Welcome to Grid<span id="logo">I</span>ron</h1>
+  <div class="home-image">
+    <h1>Welcome to Grid<span class="logo">i</span>ron</h1>
+
   <!--login modal-->
 
     <div class="modal">
@@ -18,13 +19,13 @@
 
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
               <div class="field">
-                <%= f.label :email %><br />
-                <%= f.email_field  :email, autofocus: true  %>
+                <%= f.label :email, class: "login-field-head" %><br/>
+                <%= f.email_field  :email, autofocus: true, placeholder: "Email"  %>
               </div>
 
               <div class="field">
-                <%= f.label :password %><br />
-                <%= f.password_field :password, autocomplete: "off" %>
+                <%= f.label :password, class: "login-field-head" %><br />
+                <%= f.password_field :password, autocomplete: "off", placeholder:"Password" %>
               </div>
 
               <% if devise_mapping.rememberable? -%>
