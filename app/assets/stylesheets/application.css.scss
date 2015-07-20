@@ -62,6 +62,7 @@ button{
 		color: whitesmoke;
 		margin:0;
 		padding-left: 20px;
+		padding-bottom:10px;
 
 
 	}
@@ -161,7 +162,7 @@ button{
 
 .cards{
   @include span-columns(10);
-  @include position(relative, 100px );
+  @include position(relative, 25px 100px 100px 100px );
   //td.depth-position{
   //  @include span-columns(1 of 4);
   //}
@@ -688,7 +689,8 @@ header.navigation {
   .modal-close {
     @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
     @include size(1.5em);
-    background: $modal-background;
+
+		background-color: #383838;
     cursor: pointer;
 
     &:after,
@@ -938,7 +940,7 @@ $parallax-window-height: 30em;
 $parallax-background-height: $parallax-window-height * 2;
 
 .parallax-window {
-  height: 500px;
+  height: 400px;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -1371,4 +1373,16 @@ $parallax-background-height: $parallax-window-height * 2;
 			margin: auto;
 		}
 	}
+}
+
+
+
+
+
+.no-wrap{
+	white-space: nowrap;
+}
+
+.icons{
+	font-size:1.5em;
 }

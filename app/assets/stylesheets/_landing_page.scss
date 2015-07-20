@@ -5,6 +5,9 @@
 
 }
 
+.dark {
+	background-color: #383838;
+}
 
 #gatekeeper-ribbon{
 	position: absolute;
@@ -13,7 +16,11 @@
 	//height: 100%;
 	h2{
 		padding: 0;
-		@include margin(10px null 5px null)
+		@include margin(10px null 5px null);
+		font-size:2em;
+	}
+	p{
+		font-size: 1.25em;
 	}
 
 }
