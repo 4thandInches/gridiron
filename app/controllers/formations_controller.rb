@@ -5,7 +5,7 @@ class FormationsController < ApplicationController
   # GET /formations
   # GET /formations.json
   def index
-    @formations = Formation.all
+    @formations = @team.formations
   end
 
   # GET /formations/1

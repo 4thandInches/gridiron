@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_team
 
   # GET /events
   # GET /events.json
@@ -25,7 +26,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(title: params[:title], start: params[:start], end: params[:end], allDay: params[:allDay])
-
+    @event.team_id = @team.id
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -65,6 +66,10 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+    end
+
+    def set_team
+      @team = current_user.team
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

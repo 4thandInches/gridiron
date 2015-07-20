@@ -822,15 +822,15 @@ header.navigation {
   .modal-trigger.home-button {
     //@include position(relative, 150px null null 45% );
     font-size: 30px;
-		margin-top: 5em;
+		//margin-top: 5em;
 		margin-left: 45%;
 
 
-
-    @include button(flat, #45b6c3);
+    @include button(flat,orange);
     color:whitesmoke;
     padding: 0.8em 1em;
   }
+
 
   .modal-fade-screen { // overlay
     @include transition(opacity 0.25s ease);
@@ -957,6 +957,12 @@ header.navigation {
   }
   .modal-inner.login-modal{
     width: 30em;
+		h1{
+			padding: 0;
+		}
+		.login-field-head{
+			@include position(relative, null null -20px null)
+		}
   }
 
   .modal-state:checked + .modal-fade-screen {
