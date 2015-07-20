@@ -57,6 +57,7 @@ button{
 		padding-left: 10px;
 	}
 	h4{
+		color: whitesmoke;
 		margin:0;
 		padding-left: 15px;
 
@@ -362,14 +363,14 @@ header.navigation {
   }
 
   .logo {
+		//color:whitesmoke;
     float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
+    //padding-left: $navigation-padding;
     padding-right: 2em;
 
-    img {
-      max-height: $navigation-height;
-      padding: 0.8em 0;
+    h4{
+			@include margin(15px null null null)
     }
   }
 

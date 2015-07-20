@@ -14,12 +14,11 @@
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
     <a href="javascript:void(0)" class="logo">
-      <!-- <img src="" alt="Logo Image"> -->
+     <h4 class="logo">Grid<span class="logo-color">I</span>ron</h4>
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
 
     <nav role="navigation">
-
       <ul id="js-navigation-menu" class="navigation-menu show">
         <li class="nav-link <%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %> </li>
         <li class="nav-link <%= 'active' if current_page?(players_path) %>"><%= link_to "Roster", players_path %> </li>
@@ -29,8 +28,7 @@
         <li class="nav-link <%= 'active' if current_page?(calendars_index_path) %>"><%= link_to "Calendar", calendars_index_path %></li>
         <li class="nav-link <%= 'active' if current_page?(itineraries_path) %>"><%= link_to "Manage Itineraries", itineraries_path %></li>
         <li class="nav-link <%= 'active' if current_page?(formations_path) %>"><%= link_to "Playbook", formations_path %></li>
-        <li class="nav-link <%= 'active' if current_page?(new_user_invitation_path) %>"><%= link_to "Invite Staff", new_user_invitation_path %></li>
-        <li class="nav-link <%= 'active' if current_page?(formations_path) %>"><%= link_to "Playbook Manager", formations_path %></li>
+        <!--<li class="nav-link <%# 'active' if current_page?(new_user_invitation_path) %>"><%= link_to "Invite Staff", new_user_invitation_path %></li>-->
         <li class="nav-link"><%= link_to "Sign out", destroy_user_session_path, method: :delete %> </li>
         <!--<li class="nav-link <%# 'active' if current_page?(new_play_path) %>"><%# link_to "Playbook", new_play_path %></li>-->
 
