@@ -50,9 +50,15 @@
 
 
     <div class="actions">
-      <%= f.submit %>
-      <button id="addTask">Add Field <i class="fa fa-plus-square "></i></button>
-       <button> <%= link_to 'Back', itineraries_path %> </button>
+      <% if current_page?(new_itinerary_path) %>
+        <%= f.submit %>
+        <button> <%= link_to 'Back', itineraries_path %> </button>
+      <%else %>
+        <%= f.submit %>
+        <button> <%= link_to 'Back', itineraries_path %> </button>
+        <button id="addTask">Add Field <i class="fa fa-plus-square "></i></button>
+        <%= link_to 'Delete', Itinerary.find(params[:id]), method: :delete, data: { confirm: 'Are you sure?' }  %>
+      <% end  %>
     </div>
 
 

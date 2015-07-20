@@ -1,0 +1,52 @@
+.itinerary-container {
+	margin: 0 auto;
+	@include position(relative)
+}
+
+.a-card {
+	width: 400px;
+	height: 200px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #383838;
+	border-radius: 3px;
+	float: left;
+	margin-right: 20px;
+	overflow: scroll;
+	.aheader {
+		width: 398px;
+		position: absolute;
+		border-bottom: solid;
+		border-width: 1px;
+		z-index: 99;
+		overflow: hide;
+		background: #45b6c3;
+		h1 {
+			font-size: 30px;
+			color: whitesmoke;
+			padding-left: 5px;
+			margin-top: 0;
+			margin-bottom: 0;
+			/* position:absolute; */
+			a{
+				color:whitesmoke;
+			}
+
+		}
+		p {
+			float: left;
+			color: red;
+		}
+	}
+	.somecontent {
+		position: relative;
+		padding-top: 5px;
+		margin: 50px 5px;
+		//z-index: -1;
+		section {
+			@include outer-container;
+			aside { @include span-columns(3); }
+			article { @include span-columns(9); }
+		}
+	}
+}
