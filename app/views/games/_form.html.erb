@@ -1,3 +1,8 @@
+<div class="site-headers">
+  <h1>Edit Game</h1>
+  <h4>Input Game Information</h4>
+</div>
+
 <div class="edit-container">
     <%= form_for(@game) do |f| %>
       <% if @game.errors.any? %>
@@ -31,6 +36,7 @@
       </div>
       <div class="actions">
         <%= f.submit %>
+        <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, @game, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete'%>
       </div>
     <% end %>
 </div>
