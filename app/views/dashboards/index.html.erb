@@ -29,7 +29,13 @@
             <% @games.each do |game| %>
               <tr>
                 <td> <%= game.opponent %> </td>
-                <td> <%= game.location %> </td>
+                <td>
+                <% if game.home %>
+                <%= "vs. #{game.opponent}" %>
+                <% else %>
+                <%= "@ #{game.opponent}" %>
+                <% end %>
+                </td>
 
                 <td> <%= (game.time).strftime("%D") %> </td>
 
@@ -226,4 +232,3 @@
     </div>
   </div>
 </div>
-
