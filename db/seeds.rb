@@ -145,6 +145,9 @@ StatType.create(name: "Kicks Blocked")
 	#   Itinerary.create!(name: "#{Faker::Date.forward(23)}")
   # end
 
+  Event.create!(title: "Summer Camp", start: DateTime.new(2015,7,6), end: DateTime.new(2015,7,10), allDay: true)
+  Event.create!(title: "Team Meeting", start: DateTime.new(2015,7,17), end: DateTime.new(2015,7,17), allDay: true)
+
 
 def jersey_number
   jersey_number_array = []
@@ -156,7 +159,7 @@ def jersey_number
 end
 
 Player.create!(first_name: "Cole", last_name: "Tate", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Cole@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "cole@gmail.com", height: '6\'2"', weight: 195,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
      Role.create(position_id: 1, player_id: 1)
     # count += 1
@@ -167,201 +170,201 @@ Player.create!(first_name: "Cole", last_name: "Tate", jersey_number: jersey_numb
   # end
 
 Player.create!(first_name: "Paul", last_name: "Happold", jersey_number: jersey_number,
-                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Paul@gmail.com", height: 1, weight: 1,
+                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "paul@gmail.com", height: '6\'0"', weight: 185,
                  class_status_id: class_status_array.sample.to_i, team_id: 1)
        Role.create(position_id: 1, player_id: 2)
 
 Player.create!(first_name: "Rich", last_name: "Haukap", jersey_number: jersey_number,
-              phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Rich@gmail.com", height: 1, weight: 1,
+              phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "rich@gmail.com", height: '5\'11"', weight: 190,
               class_status_id: class_status_array.sample.to_i, team_id: 1)
        Role.create(position_id: 2, player_id: 3)
 
 Player.create!(first_name: "Rand", last_name: "Taylor", jersey_number: jersey_number,
-                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Rand@gmail.com", height: 1, weight: 1,
+                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "rand@gmail.com", height: '5\'9"', weight: 175,
                  class_status_id: class_status_array.sample.to_i, team_id: 1)
         Role.create(position_id: 2, player_id: 4)
 
 Player.create!(first_name: "Mike", last_name: "Helsel", jersey_number: jersey_number,
-                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Mike@gmail.com", height: 1, weight: 1,
+                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "mike@gmail.com", height: '5\'10"', weight: 220,
                 class_status_id: class_status_array.sample.to_i, team_id: 1)
         Role.create(position_id: 3, player_id: 5)
 
 Player.create!(first_name: "Seth", last_name: "Leihsing", jersey_number: jersey_number,
-                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Seth@gmail.com", height: 1, weight: 1,
+                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "seth@gmail.com", height: '5\'11"', weight: 205,
                  class_status_id: class_status_array.sample.to_i, team_id: 1)
         Role.create(position_id: 3, player_id: 6)
 
 Player.create!(first_name: "Jarrett", last_name: "Wisdorf", jersey_number: jersey_number,
-                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Jarrett@gmail.com", height: 1, weight: 1,
+                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "jarrett@gmail.com", height: '6\'5"', weight: 185,
                 class_status_id: class_status_array.sample.to_i, team_id: 1)
         Role.create(position_id: 4, player_id: 7)
 
 Player.create!(first_name: "John", last_name: "Lahnert", jersey_number: jersey_number,
-                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "John@gmail.com", height: 1, weight: 1,
+                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "john@gmail.com", height: '6\'2"', weight: 160,
                  class_status_id: class_status_array.sample.to_i, team_id: 1)
          Role.create(position_id: 4, player_id: 8)
 
 Player.create!(first_name: "Tracy", last_name: "Pilch", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Tracy@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "tracy@gmail.com", height: '6\'3"', weight: 170,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
          Role.create(position_id: 4, player_id: 9)
 
 Player.create!(first_name: "Eric", last_name: "Craft", jersey_number: jersey_number,
-                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Eric@gmail.com", height: 1, weight: 1,
+                 phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "eric@gmail.com", height: '6\'1"', weight: 177,
                  class_status_id: class_status_array.sample.to_i, team_id: 1)
          Role.create(position_id: 4, player_id: 10)
 
 Player.create!(first_name: "William", last_name: "Bartlett", jersey_number: jersey_number,
-                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "William@gmail.com", height: 1, weight: 1,
+                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "william@gmail.com", height: '6\'2"', weight: 215,
                 class_status_id: class_status_array.sample.to_i, team_id: 1)
           Role.create(position_id: 5, player_id: 11)
 
 Player.create!(first_name: "Anthony", last_name: "Bell", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Anthony@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "anthony@gmail.com", height:'6\'3"', weight: 222,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 5, player_id: 12)
 
 Player.create!(first_name: "Russell", last_name: "Davis", jersey_number: jersey_number,
-                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Russell@gmail.com", height: 1, weight: 1,
+                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "russell@gmail.com", height: '6\'0"', weight: 275,
                 class_status_id: class_status_array.sample.to_i, team_id: 1)
         Role.create(position_id: 8, player_id: 13)
 
 Player.create!(first_name: "Joe", last_name: "Taylor", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Joe@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "joe@gmail.com", height: '6\'2"', weight: 256,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 8, player_id: 14)
 
 Player.create!(first_name: "Scott", last_name: "Winchell", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Scott@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "scott@gmail.com", height: '6\'0"', weight: 235,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 6, player_id: 15)
 
 Player.create!(first_name: "Chris", last_name: "Ernst", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Chris@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "chris@gmail.com", height: '5\'11"', weight: 244,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 6, player_id: 16)
 
 Player.create!(first_name: "Greg", last_name: "Hayes", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Greg@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "greg@gmail.com", height: '6\'1"', weight: 224,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 6, player_id: 17)
 
 Player.create!(first_name: "Tim", last_name: "Ciz", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Tim@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "tim@gmail.com", height: '6\'7"', weight: 289,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 7, player_id: 18)
 
 Player.create!(first_name: "Will", last_name: "Hayes", jersey_number: jersey_number,
-                    phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Will@gmail.com", height: 1, weight: 1,
+                    phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "will@gmail.com", height: '6\'5"', weight: 283,
                     class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 7, player_id: 19)
 
 Player.create!(first_name: "Richard", last_name: "Gracia", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Richard@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "richard@gmail.com", height: '6\'4"', weight: 269,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 7, player_id: 20)
 
 Player.create!(first_name: "Terry", last_name: "Bobenmoyer", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Terry@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "terry@gmail.com", height: '6\'3"', weight: 182,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 15, player_id: 21)
 
 Player.create!(first_name: "James", last_name: "Crumpler", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "James@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "james@gmail.com", height: '5\'10"', weight: 175,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 16, player_id: 22)
 
 Player.create!(first_name: "Justin", last_name: "Wisdorf", jersey_number: jersey_number,
-                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Justin@gmail.com", height: 1, weight: 1,
+                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "justin@gmail.com", height: '6\'2"', weight: 245,
                 class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 9, player_id: 23)
 
 Player.create!(first_name: "Fred", last_name: "Danni", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Fred@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "fred@gmail.com", height: '6\'1"', weight: 234,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 9, player_id: 24)
 
 Player.create!(first_name: "Allen", last_name: "Munoz", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Allen@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "allen@gmail.com", height: '6\'0"', weight: 223,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 9, player_id: 25)
 
 Player.create!(first_name: "Ryan", last_name: "Cole", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Ryan@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "ryan@gmail.com", height: '6\'3"', weight: 216,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 9, player_id: 26)
 
 Player.create!(first_name: "Jim", last_name: "Green", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Jim@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "jim@gmail.com", height: '6\'5"', weight: 232,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 10, player_id: 27)
 
 Player.create!(first_name: "Billy", last_name: "Jones", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Billy@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "billy@gmail.com", height: '6\'4"', weight: 221,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 10, player_id: 28)
 
 Player.create!(first_name: "Marcus", last_name: "Pender", jersey_number: jersey_number,
-                    phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Marcus@gmail.com", height: 1, weight: 1,
+                    phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "marcus@gmail.com", height: '6\'1"', weight: 198,
                     class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 10, player_id: 29)
 
 Player.create!(first_name: "Will", last_name: "Sauls", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Will@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "will@gmail.com", height: '6\'0"', weight: 195,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 11, player_id: 30)
 
 Player.create!(first_name: "Daniel", last_name: "Corbett", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Daniel@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "daniel@gmail.com", height: '6\'2"', weight: 205,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 11, player_id: 31)
 
 Player.create!(first_name: "George", last_name: "McNamara", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "George@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "george@gmail.com", height: '5\'11"', weight: 200,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 11, player_id: 32)
 
 Player.create!(first_name: "Lee", last_name: "Crocker", jersey_number: jersey_number,
-                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Lee@gmail.com", height: 1, weight: 1,
+                phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "lee@gmail.com", height: '6\'1"', weight: 187,
                 class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 11, player_id: 33)
 
 Player.create!(first_name: "Sean", last_name: "Spells", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Sean@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "sean@gmail.com", height: '6\'1"', weight: 190,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 12, player_id: 34)
 
 Player.create!(first_name: "Travis", last_name: "Allen", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Travis@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "travis@gmail.com", height: '6\'0"', weight: 184,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 12, player_id: 35)
 
 Player.create!(first_name: "Tim", last_name: "Howington", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Tim@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "tim@gmail.com", height: '5\'8"', weight: 166,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 13, player_id: 36)
 
 Player.create!(first_name: "Bob", last_name: "Baskerville", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Bob@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "bob@gmail.com", height: '5\'11"', weight:167,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 13, player_id: 37)
 
 Player.create!(first_name: "Jimmy", last_name: "Breen", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Jimmy@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "jimmy@gmail.com", height: '5\'10"', weight: 145,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 14, player_id: 38)
 
 Player.create!(first_name: "Allen", last_name: "Anderson", jersey_number: jersey_number,
-                    phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Allen@gmail.com", height: 1, weight: 1,
+                    phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "allen@gmail.com", height: '5\'11"', weight: 180,
                     class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 14, player_id: 39)
 
 Player.create!(first_name: "Justin", last_name: "Sebastian", jersey_number: jersey_number,
-                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Justin@gmail.com", height: 1, weight: 1,
+                   phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "justin@gmail.com", height: '5\'11"', weight: 190,
                    class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 14, player_id: 40)
 
 Player.create!(first_name: "Greg", last_name: "Bass", jersey_number: jersey_number,
-                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "Greg@gmail.com", height: 1, weight: 1,
+                  phone_number: "#{Faker::Base.numerify('(###) ### ####')}", email: "greg@gmail.com", height: '6\'2"', weight: 175,
                   class_status_id: class_status_array.sample.to_i, team_id: 1)
            Role.create(position_id: 14, player_id: 41)
