@@ -192,9 +192,10 @@
 
 
   <div class="flex-box">
-    <h1 class="flex-title">Next Game</h1>
+    <h1 class="flex-title">Current Weather Conditions</h1>
     <!-- need to figure out how to write code to get the next upcoming game -->
-    <p class="flex-paragraph">
+
+    <!-- <p class="flex-paragraph">
       <% if !@games.empty? %>
       <p class="flex-paragraph">
         <% if @games.first.home %>
@@ -205,7 +206,8 @@
       </p>
       <p class="flex-paragraph"><%= @games.first.location %></p>
       <p class="flex-paragraph"><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
-      <% end %>
+      <% end %> -->
+        <div id="weather"></div>
   </div>
 </div>
 
@@ -231,5 +233,5 @@
     <% end %>
     </tbody>
   </table>
-  <div id="weather"></div>
+  <!-- <div id="weather"></div> -->
 </div>

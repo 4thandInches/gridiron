@@ -311,26 +311,51 @@ $(document).ready(function(){
 
 //dashboard weather/////////////////////////////////////////////////////////////
 // Docs at http://simpleweatherjs.com
+// $(document).ready(function() {
+//   $.simpleWeather({
+//     woeid: '2357536', //2357536
+//     location: 'Durham, NC',
+//     unit: 'f',
+//     success: function(weather) {
+//       html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+//       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+//       html += '<li class="currently">'+weather.currently+'</li>';
+//
+//
+//
+//       for(var i=0;i<weather.forecast.length;i++) {
+//         html += '<p>'+weather.forecast[i].day+': hi: '+weather.forecast[i].high+' lo: '+weather.forecast[i].low+'</p>';
+//       }
+//
+//
+//       html += '<p>wind: '+weather.wind.speed+' '+weather.wind.direction+'</p>';
+//       html += '<p>humidity: '+weather.humidity+'%</p>';
+//       html += '<p>'+weather.title+'</p>';
+//
+//       $("#weather").html(html);
+//     },
+//     error: function(error) {
+//       $("#weather").html('<p>'+error+'</p>');
+//     }
+//   });
+// });
+
 $(document).ready(function() {
   $.simpleWeather({
-    woeid: '2357536', //2357536
     location: 'Durham, NC',
+    woeid: '',
     unit: 'f',
     success: function(weather) {
-      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
+      html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      // html += '<div id="conditions">'
+      html += '<ul><li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li>';
+      // html += '</div>'
+      html += '<li>'+weather.city+', '+weather.region+'</li></ul>'
 
-
-
-      for(var i=0;i<weather.forecast.length;i++) {
-        html += '<p>'+weather.forecast[i].day+': hi: '+weather.forecast[i].high+' lo: '+weather.forecast[i].low+'</p>';
-      }
-
-
-      html += '<p>wind: '+weather.wind.speed+' '+weather.wind.direction+'</p>';
-      html += '<p>humidity: '+weather.humidity+'%</p>';
-      html += '<p>'+weather.title+'</p>';
+    //   for(var i=0;i<weather.forecast.length;i++) {
+    //    html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
+    //  }
 
       $("#weather").html(html);
     },
