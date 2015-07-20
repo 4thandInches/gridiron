@@ -371,7 +371,8 @@ header.navigation {
     padding-right: 2em;
 
     h4{
-			@include margin(15px null null null)
+			@include margin(15px null null null);
+			color:#45b6c3;
     }
   }
 
