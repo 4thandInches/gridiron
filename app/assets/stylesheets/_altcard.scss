@@ -1,17 +1,21 @@
 .itinerary-container {
 	margin: 0 auto;
-	@include position(relative, null null null 20px)
+	@include position(relative, null null null 20px);
+	#itinerary-button{
+	@include span-columns(12);
+	@include shift(5);
+	padding-top: 20px;
+}
 }
 
 .a-card {
-	width: 400px;
-	height: 200px;
+	@include size(400px 200px);
 	border-style: solid;
 	border-width: 1px;
 	border-color: #383838;
 	border-radius: 3px;
 	float: left;
-	margin-right: 20px;
+	@include margin(20px 20px null null);
 	overflow: scroll;
 	.aheader {
 		width: 398px;
