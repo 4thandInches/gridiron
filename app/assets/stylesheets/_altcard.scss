@@ -1,6 +1,6 @@
 .itinerary-container {
 	margin: 0 auto;
-	@include position(relative)
+	@include position(relative, null null null 20px)
 }
 
 .a-card {
