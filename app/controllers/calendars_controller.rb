@@ -2,7 +2,7 @@ class CalendarsController < ApplicationController
   before_action :set_team
 
   def index
-    @events = Event.where(team: @team)
+    @events = @team.events
   end
 
   private

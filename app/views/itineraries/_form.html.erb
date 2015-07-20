@@ -19,7 +19,7 @@
 
     <div class="itinerary-field-name">
       <%= f.label :name %><br>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, placeholder: "Itinerary Name" %>
     </div>
 
 
@@ -31,12 +31,12 @@
          <div class="situation-fields">
            <div class="itinerary-field">
              <%= ff.label :time %><br>
-             <%= ff.text_field :time %>
+             <%= ff.text_field :time, placeholder: "Time" %>
            </div>
 
            <div class="itinerary-field">
              <%= ff.label :task %><br>
-             <%= ff.text_field :task %>
+             <%= ff.text_field :task, placeholder: "Task" %>
            </div>
          </div>
       <%end%>
@@ -65,8 +65,3 @@
 
   <% end %>
 </div>
-
-
-
-
-
