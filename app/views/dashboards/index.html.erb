@@ -10,201 +10,220 @@
   <div id="js-parallax-background" class="parallax-background"></div>
 </div>
 
-<div class="flex-boxes">
 
+<div class="outer">
+  <div class="inner-left">
+    <div id="schedule-dashboard">
+      <div class="flex-boxes">
+        <div class="flex-box ">
+          <h1 class="flex-title">Season Schedule</h1>
+          <table class="tables" >
+            <thead>
+            <tr>
+              <th>Opponent</th>
+              <th>Location</th>
+              <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @games.each do |game| %>
+              <tr>
+                <td> <%= game.opponent %> </td>
+                <td> <%= game.location %> </td>
 
-  <div class="flex-box ">
-    <h1 class="flex-title">Offensive Leaders</h1>
-    <section class="small">
-      <aside><%= @team.get_passer %></aside>
-      <article><%= @team.most_passing_yards %> yd Passing</article>
-    </section>
-    <br>
-    <section class="small">
-      <aside><%= @team.get_rusher %></aside>
-      <article><%= @team.most_rushing_yards %> Rushing</article>
-    </section>
-    <br>
-    <section class="small">
-      <aside><%= @team.get_receiver_yards %> </aside>
-      <article><%= @team.most_receiving_yards %> yd Rec.</article>
-    </section>
-    <br>
-    <section class="small">
-      <aside><%= @team.get_receiver_catches %></aside>
-      <article><%= @team.most_catches %> Catches</article>
-    </section>
+                <td> <%= (game.time).strftime("%D") %> </td>
+
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="inner-right">
+    <div class="flex-boxes">
+
+
+      <div class="flex-box ">
+        <h1 class="flex-title">Offensive Leaders</h1>
+        <section class="small">
+          <aside><%= @team.get_passer %></aside>
+          <article><%= @team.most_passing_yards %> yd Passing</article>
+        </section>
+        <br>
+        <section class="small">
+          <aside><%= @team.get_rusher %></aside>
+          <article><%= @team.most_rushing_yards %> Rushing</article>
+        </section>
+        <br>
+        <section class="small">
+          <aside><%= @team.get_receiver_yards %> </aside>
+          <article><%= @team.most_receiving_yards %> yd Rec.</article>
+        </section>
+        <br>
+        <section class="small">
+          <aside><%= @team.get_receiver_catches %></aside>
+          <article><%= @team.most_catches %> Catches</article>
+        </section>
+      </div>
 
 
 
 
 
-  <div class="flex-box flex-box-big">
-    <h1 class="flex-title">Offensive Team Stats</h1>
-    <section>
-      <aside>Passing Yards</aside>
-      <article><%= @team.passing_yards %></article>
+      <div class="flex-box flex-box-big">
+        <h1 class="flex-title">Offensive Team Stats</h1>
+        <section>
+          <aside>Passing Yards</aside> <article><%= @team.passing_yards %></article>
+          <aside>Passing TD</aside> <article><%= @team.passing_touchdowns %></article>
+          <aside>Rushing Yards</aside> <article><%= @team.rushing_touchdowns %></article>
+        </section>
+        <br>
+        <br>
+        <section>
+          <aside>Rushing TD</aside> <article><%= @team.rushing_touchdowns %></article>
+          <aside>3rd Down Efficiency</aside> <article><%= @team.third_down_eff %></article>
+          <aside>4th Down Efficiency</aside> <article><%= @team.fourth_down_eff %></article>
+        </section>
 
-      <aside>Passing Touchdowns</aside>
-      <article><%= @team.passing_touchdowns %></article>
+          <!--<aside>Passing Touchdowns</aside>-->
+          <!--<article><%= @team.passing_touchdowns %></article>-->
 
-      <aside>Rushing Yards</aside>
-      <article><%= @team.rushing_yards %></article>
+          <!--<aside>Rushing Yards</aside>-->
+          <!--<article><%= @team.rushing_yards %></article>-->
 
-      <aside>Rushing Touchdowns</aside>
-      <article><%= @team.rushing_touchdowns %></article>
-    </section>
-    <br>
-    <br>
-    <section>
-      <aside>3rd Down Efficiency</aside>
-      <article><%= @team.third_down_eff %>%</article>
-
-      <aside>4th Down Efficiency</aside>
-      <article><%= @team.fourth_down_eff %>%</article>
-
-      <aside>Red Zone Efficiency</aside>
-      <article><%= @team.red_zone_eff %>%</article>
-
-      <aside>Turnovers</aside>
-      <article><%= @team.total_turnovers %></article>
-    </section>
-  </div>
+          <!--<aside>Rushing Touchdowns</aside>-->
+          <!--<article><%= @team.rushing_touchdowns %></article>-->
 
 
+        <section>
 
+          <!--<aside>3rd Down Efficiency</aside>-->
+          <!--<article><%= @team.third_down_eff %>%</article>-->
 
+          <!--<aside>4th Down Efficiency</aside>-->
+          <!--<article><%= @team.fourth_down_eff %>%</article>-->
 
+          <!--<aside>Red Zone Efficiency</aside>-->
+          <!--<article><%= @team.red_zone_eff %>%</article>-->
 
-
-  <div class="flex-box">
-    <h1 class="flex-title">Special Teams Stats</h1>
-    <section class="small">
-      <aside>2pt Efficiency </aside>
-      <article><%= @team.two_point_eff %>%</article>
-    </section>
-    <br>
-    <section class="small">
-      <aside> Kick Return Yds</aside>
-      <article><%= @team.total_kick_return_yards %></article>
-    </section>
-    <br>
-    <section class="small">
-      <aside>FG Efficiency</aside>
-      <article><%= @team.field_goal_eff %>% </article>
-    </section>
-    <br>
-    <section class="small">
-      <aside> Punts/Kicks Blocked</aside>
-      <article> <%= @team.total_blocked_kicks %></article>
-    </section>
-  </div>
+          <!--<aside>Turnovers</aside>-->
+          <!--<article><%= @team.total_turnovers %></article>-->
+        </section>
+      </div>
 
 
 
 
 
-  <div class="flex-box ">
-    <h1 class="flex-title">Defensive Leaders</h1>
-    <section class="small">
-      <aside><%= @team.get_tackler %></aside>
-      <article><%= @team.most_tackles %> Solo Tackles</article>
-    </section>
-    <br>
-    <section class="small">
-      <aside><%= @team.get_asst_tackler %></aside>
-      <article><%= @team.most_asst_tackles %> Asst. Tackle</article>
-    </section>
-    <br>
-    <section class="small">
-      <aside><%= @team.get_sacker %></aside>
-      <article><%= @team.most_sacks %> Sacks </article>
-    </section>
-    <br>
-    <section class="small">
-      <aside><%= @team.get_interceptor %></aside>
-      <article><%= @team.most_interceptions %> Int.</article>
-    </section>
-  </div>
+
+
+      <div class="flex-box">
+        <h1 class="flex-title">Special Teams Stats</h1>
+        <section class="small">
+          <aside>2pt Efficiency </aside>
+          <article><%= @team.two_point_eff %>%</article>
+        </section>
+        <br>
+        <section class="small">
+          <aside> Kick Return Yds</aside>
+          <article><%= @team.total_kick_return_yards %></article>
+        </section>
+        <br>
+        <section class="small">
+          <aside>FG Efficiency</aside>
+          <article><%= @team.field_goal_eff %>% </article>
+        </section>
+        <br>
+        <section class="small">
+          <aside> Punts/Kicks Blocked</aside>
+          <article> <%= @team.total_blocked_kicks %></article>
+        </section>
+      </div>
 
 
 
-  <div class="flex-box flex-box-big">
-    <h1 class="flex-title">Defensive Team Stats</h1>
-    <section>
-      <aside>Tackles</aside>
-      <article><%= @team.total_tackles %></article>
 
-      <aside>Sacks</aside>
-      <article><%= @team.total_sacks %></article>
 
-      <aside>3rd Down Stops</aside>
-      <article><%= @team.total_third_down_stops %></article>
-
-      <aside>4th Down Stops</aside>
-      <article><%= @team.total_fourth_down_stops %></article>
-    </section>
-    <br>
-    <br>
-    <section>
-      <aside>Takeaways</aside>
-      <article><%= @team.total_takeaways %></article>
-
-      <aside>Forced Fumbles</aside>
-      <article><%= @team.total_forced_fumbles %></article>
-
-      <aside>Fumble Recoveries</aside>
-      <article><%= @team.total_fumble_recoveries %></article>
-
-      <aside>Interceptions</aside>
-      <article><%= @team.total_interceptions %></article>
-    </section>
-  </div>
+      <div class="flex-box ">
+        <h1 class="flex-title">Defensive Leaders</h1>
+        <section class="small">
+          <aside><%= @team.get_tackler %></aside>
+          <article><%= @team.most_tackles %> Solo Tackles</article>
+        </section>
+        <br>
+        <section class="small">
+          <aside><%= @team.get_asst_tackler %></aside>
+          <article><%= @team.most_asst_tackles %> Asst. Tackle</article>
+        </section>
+        <br>
+        <section class="small">
+          <aside><%= @team.get_sacker %></aside>
+          <article><%= @team.most_sacks %> Sacks </article>
+        </section>
+        <br>
+        <section class="small">
+          <aside><%= @team.get_interceptor %></aside>
+          <article><%= @team.most_interceptions %> Int.</article>
+        </section>
+      </div>
 
 
 
-  <div class="flex-box">
-    <h1 class="flex-title">Current Weather Conditions</h1>
-    <!-- need to figure out how to write code to get the next upcoming game -->
+      <div class="flex-box flex-box-big">
+        <h1 class="flex-title">Defensive Team Stats</h1>
+        <section>
+          <aside>Tackles</aside>
+          <article><%= @team.total_tackles %></article>
 
-    <!-- <p class="flex-paragraph">
-      <% if !@games.empty? %>
-      <p class="flex-paragraph">
-        <% if @games.first.home %>
-        <%= "vs. #{@games.first.opponent}" %>
-        <% else %>
-        <%= "@ #{@games.first.opponent}" %>
-        <% end %>
-      </p>
-      <p class="flex-paragraph"><%= @games.first.location %></p>
-      <p class="flex-paragraph"><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
-      <% end %> -->
-        <div id="weather"></div>
+          <aside>Sacks</aside>
+          <article><%= @team.total_sacks %></article>
+
+          <aside>3rd Down Stops</aside>
+          <article><%= @team.total_third_down_stops %></article>
+
+          <aside>4th Down Stops</aside>
+          <article><%= @team.total_fourth_down_stops %></article>
+        </section>
+        <br>
+        <br>
+        <section>
+          <aside>Takeaways</aside>
+          <article><%= @team.total_takeaways %></article>
+
+          <aside>Forced Fumbles</aside>
+          <article><%= @team.total_forced_fumbles %></article>
+
+          <aside>Fumble Recoveries</aside>
+          <article><%= @team.total_fumble_recoveries %></article>
+
+          <aside>Interceptions</aside>
+          <article><%= @team.total_interceptions %></article>
+        </section>
+      </div>
+
+
+
+      <div class="flex-box">
+        <h1 class="flex-title">Current Weather Conditions</h1>
+        <!-- need to figure out how to write code to get the next upcoming game -->
+
+        <!-- <p class="flex-paragraph">
+          <% if !@games.empty? %>
+          <p class="flex-paragraph">
+            <% if @games.first.home %>
+            <%= "vs. #{@games.first.opponent}" %>
+            <% else %>
+            <%= "@ #{@games.first.opponent}" %>
+            <% end %>
+          </p>
+          <p class="flex-paragraph"><%= @games.first.location %></p>
+          <p class="flex-paragraph"><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
+          <% end %> -->
+            <div id="weather"></div>
+      </div>
+    </div>
   </div>
 </div>
 
-
-<div id="schedule-dashboard">
-  <table  class="tables" >
-    <thead>
-      <tr>
-        <th>Opponent</th>
-        <th>Location</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @games.each do |game| %>
-      <tr>
-        <td> <%= game.opponent %> </td>
-        <td> <%= game.location %> </td>
-
-        <td> <%= (game.time).strftime("%D") %> </td>
-
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-
-</div>
