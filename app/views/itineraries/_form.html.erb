@@ -56,8 +56,8 @@
       <%else %>
         <%= f.submit %>
         <button> <%= link_to 'Back', itineraries_path %> </button>
-        <button id="addTask">Add Field <i class="fa fa-plus-square "></i></button>
-        <%= link_to 'Delete', Itinerary.find(params[:id]), method: :delete, data: { confirm: 'Are you sure?' }  %>
+        <button id="addTask">Add Field </button>
+        <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, Itinerary.find(params[:id]), method: :delete, data: { confirm: 'Are you sure?' },class: "delete-x"  %>
       <% end  %>
     </div>
 

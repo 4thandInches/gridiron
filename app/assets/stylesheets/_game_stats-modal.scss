@@ -1,16 +1,21 @@
 #game-stats{
 	//margin-top: 75px;
 	.field{
-		display: inline-block;
-		width: 200px;
-		margin: 0 auto;
-		position: relative;
-		left: 20px;
+		//display: inline-block;
+		//width: 200px;
+		//margin: 0 auto;
+		//position: relative;
+		//left: 20px;
+		@include outer-container();
+		@include span-columns(3);
+		//@include shift(1);
+		@include position(relative, null null null 125px)
 	}
 	.team-stat-submit{
 		position: relative;
 		//left: 40px;
 		margin: 0 auto;
-	text-align: center;
+		text-align: center;
+		@include span-columns(12)
 	}
 }
