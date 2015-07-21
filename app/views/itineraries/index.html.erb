@@ -1,7 +1,7 @@
 
 <div class="site-headers">
   <h1>Itineraries</h1>
-  <h4>Create Itineraries for Practice and Team Events</h4>
+  <h4>Create It<span class="logo-color">i</span>neraries for Practice and Team Events</h4>
 </div>
 
 
@@ -9,7 +9,7 @@
   <% @itineraries.each do |itinerary|  %>
     <div class="a-card">
       <div class="aheader">
-        <h1 ><%= link_to itinerary.name, itinerary  %> <%= link_to '<i class="fa fa-pencil-square-o 2x"></i>'.html_safe, edit_itinerary_path(itinerary)%> </h1>
+        <h1 ><%= link_to itinerary.name, itinerary  %>        <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_itinerary_path(itinerary), id: "move-icon-right"%> </h1>
       </div>
       <div class="somecontent">
         <% itinerary.situations.each do |s| %>
@@ -23,7 +23,7 @@
     </div>
   <% end %>
   <div id="itinerary-button">
-    <button><%= link_to 'New Itinerary <i class="fa fa-plus-square"></i>'.html_safe, new_itinerary_path %></button>
+    <button><%= link_to 'New Itinerary', new_itinerary_path %></button>
   </div>
 </div>
 

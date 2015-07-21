@@ -12,16 +12,18 @@
 	@include size(400px 200px);
 	border-style: solid;
 	border-width: 1px;
-	border-color: #383838;
+	border-color: #e3e3e3;
 	border-radius: 3px;
 	float: left;
 	@include margin(20px 20px null null);
 	overflow: scroll;
+	background-color: white;
 	.aheader {
 		width: 398px;
 		position: absolute;
 		border-bottom: solid;
 		border-width: 1px;
+		border-color: #e3e3e3;
 		z-index: 99;
 		overflow: hide;
 		background: #45b6c3;
@@ -34,6 +36,9 @@
 			/* position:absolute; */
 			a{
 				color:whitesmoke;
+			}
+			#move-icon_right{
+				margin-left: 50px;
 			}
 
 		}
@@ -54,3 +59,4 @@
 		}
 	}
 }
+
