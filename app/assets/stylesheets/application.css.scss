@@ -127,8 +127,8 @@ button{
 
 .form-button{
 	position: relative;
-	//left: 200px;
-	margin-left: 10px;
+	@include shift(5.5);
+	margin-top: 20px;
 	a{
 		color:whitesmoke;
 	}
@@ -180,7 +180,7 @@ button{
     @include span-columns(2 of 12);
   }
   #player-stat-submit{
-    @include  span-columns(2)
+    //@include  span-columns(2)
   }
 
 }
@@ -729,8 +729,8 @@ header.navigation {
     }
     #player-stat-submit{
       @include  span-columns(12);
-			position: relative;
-			left:275px;
+			@include shift(5);
+
     }
 
 
