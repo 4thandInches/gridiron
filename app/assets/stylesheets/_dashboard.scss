@@ -99,9 +99,11 @@
 			//@include outer-container;
 			aside{
 				@include span-columns(3);
+
 			}
 			article{
 				@include span-columns(1);
+				color: #6E6E6E;
 			}
 		}
 		section.small{

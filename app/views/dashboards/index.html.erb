@@ -86,30 +86,13 @@
           <aside>3rd Down Efficiency</aside> <article><%= @team.third_down_eff %></article>
           <aside>4th Down Efficiency</aside> <article><%= @team.fourth_down_eff %></article>
         </section>
-
-          <!--<aside>Passing Touchdowns</aside>-->
-          <!--<article><%= @team.passing_touchdowns %></article>-->
-
-          <!--<aside>Rushing Yards</aside>-->
-          <!--<article><%= @team.rushing_yards %></article>-->
-
-          <!--<aside>Rushing Touchdowns</aside>-->
-          <!--<article><%= @team.rushing_touchdowns %></article>-->
-
-
+        <br>
+        <br>
         <section>
+          <aside>Red Zone Efficiency</aside> <article><%= @team.red_zone_eff %></article>
+          <aside>Turnovers</aside> <article><%= @team.total_turnovers %></article>
+          <aside>TBD</aside> <article>TBD</article>
 
-          <!--<aside>3rd Down Efficiency</aside>-->
-          <!--<article><%= @team.third_down_eff %>%</article>-->
-
-          <!--<aside>4th Down Efficiency</aside>-->
-          <!--<article><%= @team.fourth_down_eff %>%</article>-->
-
-          <!--<aside>Red Zone Efficiency</aside>-->
-          <!--<article><%= @team.red_zone_eff %>%</article>-->
-
-          <!--<aside>Turnovers</aside>-->
-          <!--<article><%= @team.total_turnovers %></article>-->
         </section>
       </div>
 
@@ -173,34 +156,32 @@
 
       <div class="flex-box flex-box-big">
         <h1 class="flex-title">Defensive Team Stats</h1>
-        <section>
-          <aside>Tackles</aside>
-          <article><%= @team.total_tackles %></article>
 
-          <aside>Sacks</aside>
-          <article><%= @team.total_sacks %></article>
 
-          <aside>3rd Down Stops</aside>
-          <article><%= @team.total_third_down_stops %></article>
+          <section>
+            <aside>Tackles</aside> <article><%= @team.total_tackles %></article>
+            <aside>Sacks</aside> <article><%= @team.total_sacks %></article>
+            <aside>3rd Down Stops</aside> <article><%= @team.total_third_down_stops %></article>
+          </section>
+          <br>
+          <br>
+          <section>
+            <aside>4th Down Stops</aside> <article><%= @team.total_fourth_down_stops %></article>
+            <aside>Takeaways</aside> <article><%= @team.total_takeaways %></article>
+            <aside>Forced Fumbles</aside> <article><%= @team.total_forced_fumbles %></article>
+          </section>
+          <br>
+          <br>
+          <section>
+            <aside>Fumble Recoveries</aside> <article><%= @team.total_fumble_recoveries %></article>
+            <aside>Interceptions</aside> <article><%= @team.total_interceptions %></article>
+            <aside>TBD</aside> <article>TBD</article>
+          </section>
 
-          <aside>4th Down Stops</aside>
-          <article><%= @team.total_fourth_down_stops %></article>
-        </section>
-        <br>
-        <br>
-        <section>
-          <aside>Takeaways</aside>
-          <article><%= @team.total_takeaways %></article>
 
-          <aside>Forced Fumbles</aside>
-          <article><%= @team.total_forced_fumbles %></article>
 
-          <aside>Fumble Recoveries</aside>
-          <article><%= @team.total_fumble_recoveries %></article>
 
-          <aside>Interceptions</aside>
-          <article><%= @team.total_interceptions %></article>
-        </section>
+
       </div>
 
 
