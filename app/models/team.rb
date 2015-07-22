@@ -68,6 +68,10 @@ class Team < ActiveRecord::Base
     calculate_total("Rushing TD's")
   end
 
+  def total_receptions
+    calculate_total("Receptions")
+  end
+
   def total_tackles
     calculate_total("Tackles")
   end
@@ -98,6 +102,10 @@ class Team < ActiveRecord::Base
 
   def total_takeaways
     total_fumble_recoveries + total_interceptions
+  end
+
+  def defensive_touchdowns
+    calculate_total("Defensive TD")
   end
 
   def total_blocked_kicks
