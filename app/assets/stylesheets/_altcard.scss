@@ -34,11 +34,15 @@
 			margin-top: 0;
 			margin-bottom: 0;
 			/* position:absolute; */
-			a{
+			a {
 				color:whitesmoke;
 			}
-			#move-icon_right{
-				margin-left: 50px;
+			.right-icon {
+				float: right;
+				vertical-align: middle;
+				font-size: .75em;
+				margin-top: .25em;
+				margin-right: .25em;
 			}
 
 		}
