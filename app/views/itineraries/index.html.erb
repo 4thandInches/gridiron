@@ -9,7 +9,9 @@
   <% @itineraries.each do |itinerary|  %>
     <div class="a-card">
       <div class="aheader">
-        <h1 ><%= link_to itinerary.name, itinerary  %>        <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_itinerary_path(itinerary), id: "move-icon-right"%> </h1>
+        <h1 ><%= link_to itinerary.name, itinerary  %>
+          <div class="right-icon"><%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_itinerary_path(itinerary) %></div>
+        </h1>
       </div>
       <div class="somecontent">
         <% itinerary.situations.each do |s| %>
