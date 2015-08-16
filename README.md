@@ -1,28 +1,4 @@
-== README
+# Grid-Iron
+Grid-Iron is a sports management system geared towards high school football coaches that tracks vital statistics. Grid-Iron allows coaches to keep track of their schedules, players, depth charts, playbook, and statistics all in one convenient location.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+#### More features and better documentation to come soon!
