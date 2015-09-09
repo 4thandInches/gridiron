@@ -274,7 +274,7 @@ header.navigation {
     float: left;
     max-height: $navigation-height;
     //padding-left: $navigation-padding;
-    padding-right: 2em;
+    padding-right: 1em;
 
     h4{
 			@include margin(15px null null null);
@@ -1278,4 +1278,3 @@ $parallax-background-height: $parallax-window-height * 2;
 	position: relative;
 	top:5px;
 }
-
