@@ -29,13 +29,15 @@
 
             <% @games.sort{|a,b| a.time <=> b.time}.each do |game| %>
               <tr>
-                <td> <%= game.opponent %> </td>
                 <td>
                 <% if game.home %>
                 <%= "vs. #{game.opponent}" %>
                 <% else %>
                 <%= "@ #{game.opponent}" %>
                 <% end %>
+                </td>
+                <td>
+                  <%= game.location %>
                 </td>
 
                 <td> <%= (game.time).strftime("%D") %> </td>
@@ -184,32 +186,35 @@
             <aside>Interceptions</aside> <article><%= @team.total_interceptions %></article>
             <aside>Defensive TD</aside> <article><%= @team.defensive_touchdowns %></article>
           </section>
-
-
-
-
-
       </div>
-
-
-
       <div class="flex-box">
         <h1 class="flex-title">Current Weather Conditions</h1>
-        <!-- need to figure out how to write code to get the next upcoming game -->
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $.simpleWeather({
+                <% @games.each do |game| %>
+                  <% if game.home %>
+                    <% location = game.location %>
+                  <% end %>
+                location: '<%= location %>',
+                <% end %>
 
-        <!-- <p class="flex-paragraph">
-          <% if !@games.empty? %>
-          <p class="flex-paragraph">
-            <% if @games.first.home %>
-            <%= "vs. #{@games.first.opponent}" %>
-            <% else %>
-            <%= "@ #{@games.first.opponent}" %>
-            <% end %>
-          </p>
-          <p class="flex-paragraph"><%= @games.first.location %></p>
-          <p class="flex-paragraph"><%= (@games.first.time).strftime("%D @ %l:%M PM") %></P>
-          <% end %> -->
-            <div id="weather"></div>
+                woeid: '',
+                unit: 'f',
+                success: function(weather) {
+                  html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+                  html += '<ul><li class="currently">'+weather.currently+'</li>';
+                  html += '<li>'+weather.wind.direction+' '+weather.wind.speed+' '+weather.units.speed+'</li>';
+                  html += '<li>'+weather.city+', '+weather.region+'</li></ul>'
+                  $("#weather").html(html);
+                },
+                error: function(error) {
+                  $("#weather").html('<p>'+error+'</p>');
+                }
+              });
+            });
+          </script>
+          <div id="weather"></div>
       </div>
     </div>
   </div>
