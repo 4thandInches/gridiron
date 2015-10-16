@@ -192,13 +192,15 @@
           <script type="text/javascript">
             $(document).ready(function() {
               $.simpleWeather({
+                <% location = 'Durham, NC' %>
                 <% @games.each do |game| %>
                   <% if game.home %>
                     <% location = game.location %>
+                    <% break %>
                   <% end %>
-                location: '<%= location %>',
                 <% end %>
 
+                location: '<%= location %>',
                 woeid: '',
                 unit: 'f',
                 success: function(weather) {
