@@ -16,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @games.each do |game| %>
+    <% @games.sort{|a,b| a.time <=> b.time}.each do |game| %>
       <tr>
         <td><%= (game.time).strftime("%D") %></td>
         <td>
