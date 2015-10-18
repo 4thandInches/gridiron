@@ -16,53 +16,55 @@
   </thead>
 
   <tbody>
-    <% @games.sort{|a,b| a.time <=> b.time}.each do |game| %>
-      <tr>
-        <td><%= (game.time).strftime("%D") %></td>
-        <td>
-          <% if game.home %>
-          <%= "vs. #{game.opponent}" %>
-          <% else %>
-          <%= "@ #{game.opponent}" %>
-          <% end %>
-        </td>
+    <% if @game %>
+      <% @game.sort{|a,b| a.time <=> b.time}.each do |game| %>
+        <tr>
+          <td><%= (game.time).strftime("%D") %></td>
+          <td>
+            <% if game.home %>
+            <%= "vs. #{game.opponent}" %>
+            <% else %>
+            <%= "@ #{game.opponent}" %>
+            <% end %>
+          </td>
 
-        <td>
-          <%= game.location %>
-        </td>
-        <td><%= (game.time).strftime("%l:%M PM") %></td>
+          <td>
+            <%= game.location %>
+          </td>
+          <td><%= (game.time).strftime("%l:%M PM") %></td>
 
-        <td>
-          <% if game.home %>
-          <%= "Home" %>
-          <% else %>
-          <%= "Away" %>
-          <% end %>
-        </td>
-        <!--<td><%# link_to 'Show', game %></td>-->
-        <td><%= link_to 'Add Player Stats', player_stats_game_path(game)%></td>
-        <td class="no-wrap">
+          <td>
+            <% if game.home %>
+            <%= "Home" %>
+            <% else %>
+            <%= "Away" %>
+            <% end %>
+          </td>
+          <!--<td><%# link_to 'Show', game %></td>-->
+          <td><%= link_to 'Add Player Stats', player_stats_game_path(game)%></td>
+          <td class="no-wrap">
 
-          <div class="modal">
-            <label for="modal-<%=game.id%>">
-              <div class="modal-trigger">Add Team Stats</div>
-            </label>
-            <input class="modal-state" id="modal-<%=game.id%>" type="checkbox" />
-            <div class="modal-fade-screen">
-              <div class="modal-inner">
-                <div class="modal-close" for="modal-<%=game.id%>"></div>
-                <%= render partial: 'games/game_stats', locals: { id: game.id, stat_types: @stat_types} %>
+            <div class="modal">
+              <label for="modal-<%=game.id%>">
+                <div class="modal-trigger">Add Team Stats</div>
+              </label>
+              <input class="modal-state" id="modal-<%=game.id%>" type="checkbox" />
+              <div class="modal-fade-screen">
+                <div class="modal-inner">
+                  <div class="modal-close" for="modal-<%=game.id%>"></div>
+                  <%= render partial: 'games/game_stats', locals: { id: game.id, stat_types: @stat_types} %>
+                </div>
               </div>
             </div>
-          </div>
 
-        </td>
-        <td class="icons"><%= link_to '<i class="fa fa-pencil-square-o "></i>'.html_safe, edit_game_path(game) %> </td>
-      </tr>
+          </td>
+          <td class="icons"><%= link_to '<i class="fa fa-pencil-square-o "></i>'.html_safe, edit_game_path(game) %> </td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<button class="form-button"><%= link_to 'New Game'.html_safe, new_game_path %> </button>
+<%= link_to '<button class="form-button">New Game</button>'.html_safe, new_game_path %>
