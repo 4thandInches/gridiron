@@ -122,7 +122,7 @@ StatType.create(name: "4th Down Stops")
 StatType.create(name: "Kicks Blocked")
 
 # if Rails.env.development?
-  Team.create!(name: "Greyhounds", school: "North Surry", head_coach: "Dan McClendon", location: "Mount Airy, NC", division: "North West", conference: "NEC")
+  Team.create!(name: "Cowboys", school: "University of Wyoming", head_coach: "Dan McClendon", location: "Laramie, WY", division: "West", conference: "Mountain West Conference")
   User.create!(email: "test@test.com", password: "password", team_id: 1)
 
 #games
