@@ -26,8 +26,8 @@
             </tr>
             </thead>
             <tbody>
-              <% if @game %>
-                <% @game.sort{|a,b| a.time <=> b.time}.each do |game| %>
+              <% if @games %>
+                <% @games.sort{|a,b| a.time <=> b.time}.each do |game| %>
                   <tr>
                     <td>
                     <% if game.home %>
